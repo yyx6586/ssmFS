@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:tx="http://www.springframework.org/schema/tx" xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                        http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+                        http://www.springframework.org/schema/tx
+                        http://www.springframework.org/schema/tx/spring-tx.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- 加载properties文件 -->
+    <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="location" value="classpath:properties/mysql.properties"/>
+    </bean>
+
+
+    <!-- 配置数据源 -->
+    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+        <property name="driverClass" value="${jdbc.driverClass}"></property>
+        <property name="jdbcUrl" value="${jdbc.url}"></property>
+        <property name="user" value="${jdbc.user}"></property>
+        <property name="password" value="${jdbc.password}"></property>
+        <property name="minPoolSize" value="${jdbc.minPoolSize}"></property>
+        <property name="maxPoolSize" value="${jdbc.maxPoolSize}"></property>
+        <property name="initialPoolSize" value="${jdbc.initialPoolSize}"></property>
+        <property name="acquireIncrement" value="${jdbc.acquireIncrement}"></property>
+    </bean>
+
+    <!-- mybatis和spring完美整合，不需要mybatis的配置映射文件 -->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <!-- 扫描model包 -->
+        <property name="typeAliasesPackage" value="com.aloogn"/>
+        <!-- 扫描sql配置文件:mapper需要的xml文件-->
+        <property name="configLocation" value="classpath:mybatis/mybatis-config.xml"></property>
+        <property name="mapperLocations" value="classpath:**/*Mapper.xml"/>
+    </bean>
+
+    <!-- Mapper动态代理开发，扫描dao接口包-->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <!-- 注入sqlSessionFactory -->
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
+        <!-- 给出需要扫描Dao接口包 -->
+        <property name="basePackage" value="com.aloogn"/>
+    </bean>
+
+    <import resource="applicationContext-redis.xml"/>
+
+    <import resource="user/applicationContext-service.xml"/>
+    <import resource="redis/applicationContext-service.xml"/>
+
+    <!-- 事务管理 -->
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <!--数据库连接池-->
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+</beans>

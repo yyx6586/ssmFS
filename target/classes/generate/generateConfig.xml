@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+    <!-- 数据库驱动 -->
+    <properties resource="properties/mysql.properties" />
+    <!-- 指定数据连接驱动jar地址 -->
+    <!-- <classPathEntry location="${driverPath}" /> -->
+    <context id="context" targetRuntime="MyBatis3">
+        <plugin type="org.mybatis.generator.plugins.SerializablePlugin" />
+        <plugin type="org.mybatis.generator.plugins.EqualsHashCodePlugin" />
+        <plugin type="org.mybatis.generator.plugins.RenameExampleClassPlugin">
+            <property name="searchString" value="Example$" />
+            <property name="replaceString" value="Criteria" />
+        </plugin>
+
+        <!-- 去掉生成出来的代码的注解 -->
+        <commentGenerator>
+        	<!-- **阻止**生成注释，默认为false -->
+            <property name="suppressAllComments" value="true" />
+            <!-- **阻止**生成的注释包含时间戳，默认为false -->
+            <property name="suppressDate" value="true" />
+        </commentGenerator>
+
+        <!--数据库链接URL，用户名、密码 -->
+        <jdbcConnection driverClass="${jdbc.driverClass}"
+           connectionURL="${jdbc.url}" userId="${jdbc.user}" password="${jdbc.password}">
+           <!-- 对于 MySQL 数据库，在生成 User 实体类时，还会同时生成 Userkey 和 UserWithBlobs 实体类，
+           原因在于 MySQL 不支持 catalogs 和 schema。在 MySQL 8.0 以上的版本中，在生成 User 表的实体类时，
+           Mybatis Generator 会找到多张 User 表，包括 MySQL information schemas 中的多张 User 表，生成了多个 User 相关的实体类。
+				-->
+			<property name="nullCatalogMeansCurrent" value="true"/>
+        </jdbcConnection>
+        
+		<!-- 这个元素的配置用来指定JDBC类型和Java类型如何转换。 -->
+        <javaTypeResolver>
+            <property name="forceBigDecimals" value="false" />
+        </javaTypeResolver>
+        
+        <!-- 
+        生成模型的包名和位置 
+        
+         是否对model添加 构造函数<property name="constructorBased" value="true"/>
+         是否允许子包，即targetPackage.schemaName.tableName <property name="enableSubPackages" value="false"/>
+         建立的Model对象是否 不可改变  即生成的Model对象不会有 setter方法，只有构造方法 <property name="immutable" value="true"/>
+         给Model添加一个父类 <property name="rootClass" value="com.dubbo.model"/>
+         是否对类CHAR类型的列的数据进行trim操作 <property name="trimStrings" value="true"/>   
+        -->
+        <javaModelGenerator targetPackage="com.aloogn.fs.user.bean"
+                            targetProject="./src/main/java">
+            <property name="enableSubPackages" value="true" />
+            <property name="trimStrings" value="true" />
+        </javaModelGenerator>
+        
+        <!-- 生成映射文件的包名和位置 -->
+        <sqlMapGenerator targetPackage="com.aloogn.fs.mapper"
+                         targetProject="./src/main/resources">
+            <property name="enableSubPackages" value="true" />
+        </sqlMapGenerator>
+        
+        <!-- 生成DAO的包名和位置 -->
+        <javaClientGenerator 
+        	type="XMLMAPPER"
+            targetPackage="com.aloogn.fs.user.mapper"
+            targetProject="./src/main/java">
+            <property name="enableSubPackages" value="true" />
+        </javaClientGenerator>
+        
+        <!-- 要生成的表 tableName是数据库中的表名或视图名 domainObjectName是实体类名 -->
+        <table tableName="user" domainObjectName="User">
+        	 <property name="useActualColumnNames" value="true"/>
+        </table>
+
+    </context>
+</generatorConfiguration>
