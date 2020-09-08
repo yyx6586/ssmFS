@@ -6,7 +6,9 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68f2d31a-99d9-4e9f-ba74-88732a19abb9" name="Default Changelist" comment="" />
+    <list default="true" id="68f2d31a-99d9-4e9f-ba74-88732a19abb9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aloogn/common/interceptor/LoginInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aloogn/common/interceptor/LoginInterceptor.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,7 +40,7 @@
         <counts>
           <entry key="class" value="19" />
           <entry key="dtd" value="1" />
-          <entry key="java" value="185" />
+          <entry key="java" value="187" />
           <entry key="jsp" value="1" />
           <entry key="properties" value="19" />
           <entry key="xml" value="90" />
@@ -48,7 +50,7 @@
         <counts>
           <entry key="CLASS" value="19" />
           <entry key="DTD" value="1" />
-          <entry key="JAVA" value="185" />
+          <entry key="JAVA" value="187" />
           <entry key="JSP" value="1" />
           <entry key="Properties" value="19" />
           <entry key="XML" value="90" />
@@ -70,11 +72,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/user/controller/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="87" selection-start-line="87" selection-end-line="87" />
+            <state relative-caret-position="-901">
+              <caret column="13" selection-start-column="13" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -82,7 +84,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/common/utils/TokenUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
+            <state relative-caret-position="-846">
               <caret line="67" selection-start-line="67" selection-end-line="67" />
               <folding>
                 <element signature="e#1990#2006#0" expanded="true" />
@@ -91,11 +93,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/common/interceptor/LoginInterceptor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="59" selection-start-line="59" selection-end-line="59" />
+            <state relative-caret-position="-494">
+              <caret line="77" column="19" lean-forward="true" selection-start-line="74" selection-start-column="18" selection-end-line="77" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -103,8 +105,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/user/service/impl/UserServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="98" selection-start-line="98" selection-end-line="98" />
+            <state relative-caret-position="1230">
+              <caret line="78" selection-start-line="78" selection-end-line="78" />
             </state>
           </provider>
         </entry>
@@ -182,7 +184,6 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/aloogn/common/utils/Constant.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/aloogn/common/utils/ConvertUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aloogn/common/interceptor/LoginInterceptor.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/aloogn/common/utils/StringUtils.java" />
         <option value="$PROJECT_DIR$/src/main/resources/spring/applicationContext-redis.xml" />
@@ -196,6 +197,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/aloogn/fs/user/service/UserService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/aloogn/fs/user/service/impl/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/aloogn/common/utils/TokenUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/aloogn/common/interceptor/LoginInterceptor.java" />
       </list>
     </option>
   </component>
@@ -227,7 +229,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="877" />
@@ -296,6 +298,111 @@
             <path>
               <item name="ssmFS" type="b2602c69:ProjectViewProjectNode" />
               <item name="ssmFS" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ssmFS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ssmFS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ssmFS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ssmFS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ssmFS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ssmFS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ssmFS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ssmFS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="aloogn" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ssmFS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ssmFS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="aloogn" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ssmFS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ssmFS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="aloogn" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ssmFS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ssmFS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="aloogn" type="462c0819:PsiDirectoryNode" />
+              <item name="fs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ssmFS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ssmFS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="aloogn" type="462c0819:PsiDirectoryNode" />
+              <item name="fs" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ssmFS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ssmFS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="aloogn" type="462c0819:PsiDirectoryNode" />
+              <item name="fs" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ssmFS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ssmFS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="aloogn" type="462c0819:PsiDirectoryNode" />
+              <item name="fs" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ssmFS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ssmFS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="aloogn" type="462c0819:PsiDirectoryNode" />
+              <item name="fs" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ssmFS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ssmFS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -492,12 +599,12 @@
       <workItem from="1599466845936" duration="175000" />
       <workItem from="1577836940052" duration="238000" />
       <workItem from="1599472066873" duration="2444000" />
-      <workItem from="1599544306826" duration="5352000" />
+      <workItem from="1599544306826" duration="8252000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="119281000" />
+    <option name="totallyTimeSpent" value="122181000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -509,9 +616,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="877" extended-state="1" />
+    <frame x="0" y="23" width="1440" height="877" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49882352" visible="true" weight="0.30114448" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49882352" visible="true" weight="0.30114448" />
       <window_info id="Structure" order="1" sideWeight="0.5011765" side_tool="true" weight="0.2811159" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -522,7 +630,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3299363" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3299363" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49928468" visible="true" weight="0.40382165" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49928468" weight="0.40382165" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3299363" />
@@ -596,30 +704,6 @@
           <properties />
           <option name="timeStamp" value="10" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/user/service/impl/UserServiceImpl.java</url>
-          <line>85</line>
-          <properties />
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/aloogn/common/utils/TokenUtil.java</url>
-          <line>67</line>
-          <properties />
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/aloogn/common/interceptor/LoginInterceptor.java</url>
-          <line>55</line>
-          <properties />
-          <option name="timeStamp" value="19" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/user/service/impl/UserServiceImpl.java</url>
-          <line>56</line>
-          <properties />
-          <option name="timeStamp" value="20" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
@@ -635,13 +719,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="638">
           <caret line="29" column="46" selection-start-line="29" selection-start-column="46" selection-end-line="29" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/common/utils/JSONUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -912,30 +989,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/common/interceptor/LoginInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="59" selection-start-line="59" selection-end-line="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/common/utils/TokenUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="67" selection-start-line="67" selection-end-line="67" />
-          <folding>
-            <element signature="e#1990#2006#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/user/service/impl/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="98" selection-start-line="98" selection-end-line="98" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/maven-repo/org/springframework/spring-web/4.3.14.RELEASE/spring-web-4.3.14.RELEASE-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
@@ -943,10 +996,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/user/service/impl/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1230">
+          <caret line="78" selection-start-line="78" selection-end-line="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/common/utils/JSONUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/common/utils/TokenUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-846">
+          <caret line="67" selection-start-line="67" selection-end-line="67" />
+          <folding>
+            <element signature="e#1990#2006#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/user/controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="87" selection-start-line="87" selection-end-line="87" />
+        <state relative-caret-position="-901">
+          <caret column="13" selection-start-column="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/common/interceptor/LoginInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-494">
+          <caret line="77" column="19" lean-forward="true" selection-start-line="74" selection-start-column="18" selection-end-line="77" selection-end-column="19" />
         </state>
       </provider>
     </entry>

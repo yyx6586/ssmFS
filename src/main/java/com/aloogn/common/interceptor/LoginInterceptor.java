@@ -72,10 +72,10 @@ public class LoginInterceptor implements HandlerInterceptor {
                 //解析携带的token载体中的id
                 String account = (String) jsonObject.get("account");
                 //获取存入缓存中的token,每次登录就添加，登出就删除，更改密码或其它就替换
-                String rToken = (String)redisService.hashGet(Constant.REDIS_TOKEN_KEY, account);
-                if(!token.equals(rToken)) {
-                    loginError(response,"帐户己在其它地方登录，你己被迫下线");
-                }
+//                String rToken = (String)redisService.hashGet(Constant.REDIS_TOKEN_KEY, account);
+//                if(!token.equals(rToken)) {
+//                    loginError(response,"帐户己在其它地方登录，你己被迫下线");
+//                }
 
                 return true;
             } else if (i == 2) {//token已经过期
