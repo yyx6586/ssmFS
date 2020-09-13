@@ -427,4 +427,9 @@
       parent_address = #{parent_address,jdbcType=VARCHAR}
     where id = #{id,jdbcType=CHAR}
   </update>
+
+  <!--  模糊查询  %名字%        -->
+  <select id="findUserById" parameterType="java.lang.String" resultType="com.aloogn.fs.user.bean.User">
+        select * from user where id like '%' #{id} '%'
+    </select>
 </mapper>

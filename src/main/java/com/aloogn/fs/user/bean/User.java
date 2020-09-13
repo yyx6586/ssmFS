@@ -3,7 +3,7 @@ package com.aloogn.fs.user.bean;
 import java.io.Serializable;
 import java.util.Date;
 
-public class User implements Serializable {
+public class User1 implements Serializable {
     private String id;
 
     private String name;
@@ -207,7 +207,7 @@ public class User implements Serializable {
         if (getClass() != that.getClass()) {
             return false;
         }
-        User other = (User) that;
+        User1 other = (User1) that;
         return (this.getId() == null ? other.getId() == null : this.getId().equals(other.getId()))
             && (this.getName() == null ? other.getName() == null : this.getName().equals(other.getName()))
             && (this.getSex() == null ? other.getSex() == null : this.getSex().equals(other.getSex()))
