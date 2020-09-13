@@ -1,4 +1,7 @@
 package com.aloogn.fs.grade.service;
 
-public class GradeService {
+import org.springframework.stereotype.Service;
+
+@Service
+public interface GradeService {
 }

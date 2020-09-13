@@ -6,33 +6,33 @@ import com.aloogn.fs.redis.service.RedisService;
 import com.aloogn.fs.user.bean.AuthUser;
 import com.aloogn.fs.user.bean.User;
 import com.aloogn.fs.user.service.UserService;
-import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
+import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.SessionAttributes;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
+import java.util.List;
 
 @Controller
 @RequestMapping("/user")
 public class UserController {
 
-    @Qualifier("userService")
+//    @Qualifier("userService")
     @Autowired
     UserService userService;
 
     @Autowired
     RedisService redisService;
 
+    JSONUtil jsonUtil = new JSONUtil();
+
     @RequestMapping("/signIn")
     @ResponseBody
     public JSONUtil signIn(String account, String password, HttpServletRequest request) throws Exception {
-        JSONUtil jsonUtil = new JSONUtil();
         jsonUtil.setCode(-1);
         if(StringUtils.isNullOrEmpty(account)){
             jsonUtil.setMsg("账号不能为空");
@@ -64,7 +64,6 @@ public class UserController {
     @RequestMapping("/updatePassword")
     @ResponseBody
     public JSONUtil updatePassword(String account, String password, String resetPassword, String token) throws Exception{
-        JSONUtil jsonUtil = new JSONUtil();
         jsonUtil.setCode(-1);
 
         if(StringUtils.isNullOrEmpty(account)){
@@ -90,7 +89,7 @@ public class UserController {
 
     @RequestMapping("/personalInformationFamily")
     @ResponseBody
-    public JSONUtil personalInformationFamily(String account, String studentName, String studentSex, String parentName, String parentPhone, String token) throws Exception{
+    public JSONUtil personalInformationFamily(String account, String studentName, String studentSex, String parentName, String parentPhone, String parentQQ, String parentWechat, String email, String token) throws Exception{
         JSONUtil jsonUtil = new JSONUtil();
         jsonUtil.setCode(-1);
 
@@ -120,11 +119,66 @@ public class UserController {
         }
 
         try {
-            userService.personalInformationFamily(account, studentName, studentSex, parentName, parentPhone, token);
+            userService.personalInformationFamily(account, studentName, studentSex, parentName, parentPhone, parentQQ, parentWechat, email, token);
             jsonUtil.setCode(1);
             jsonUtil.setMsg("保存成功");
         }catch (Exception e){
             jsonUtil.setMsg("保存失败，请重新修改" + e.getMessage());
+        }
+        return jsonUtil;
+    }
+
+    @RequestMapping("/personalInformationSchool")
+    @ResponseBody
+    public JSONUtil personalInformationSchool(String account, String name, String sex, String phone, String QQ, String wechat, String email, String token) throws Exception{
+        jsonUtil.setCode(-1);
+        if(StringUtils.isNullOrEmpty(account)){
+            jsonUtil.setMsg("账号错误，请联系管理员");
+            return jsonUtil;
+        }
+
+        if(StringUtils.isNullOrEmpty(name)){
+            jsonUtil.setMsg("姓名不能为空");
+            return jsonUtil;
+        }
+
+        if(StringUtils.isNullOrEmpty(sex)){
+            jsonUtil.setMsg("性别不能为空");
+            return jsonUtil;
+        }
+
+        if(StringUtils.isNullOrEmpty(phone)){
+            jsonUtil.setMsg("手机号不能为空");
+            return jsonUtil;
+        }
+
+        try{
+            userService.personalInformationSchool(account, name, sex, phone, QQ, wechat, email, token);
+            jsonUtil.setCode(1);
+            jsonUtil.setMsg("保存成功");
+        }catch (Exception e){
+            jsonUtil.setMsg("保存失败，请重新修改" + e.getMessage());
+        }
+        return jsonUtil;
+    }
+
+    @RequestMapping("/familyPersonalDetails")
+    @ResponseBody
+    public JSONUtil familyPersonalDetails(String account, String token) throws Exception{
+        jsonUtil.setCode(-1);
+
+        if(StringUtils.isNullOrEmpty(account)){
+            jsonUtil.setMsg("账号错误，请联系管理员");
+            return jsonUtil;
+        }
+
+        try {
+            User user = userService.familyPersonalDetails(account, token);
+            jsonUtil.setCode(1);
+            jsonUtil.setMsg("获取联系人成功");
+            jsonUtil.setData(user);
+        }catch (Exception e){
+            jsonUtil.setMsg("获取联系人错误" + e.getMessage());
         }
         return jsonUtil;
     }

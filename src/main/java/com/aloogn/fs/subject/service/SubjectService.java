@@ -1,4 +1,7 @@
 package com.aloogn.fs.subject.service;
 
-public class SubjectService {
+import org.springframework.stereotype.Service;
+
+@Service
+public interface SubjectService {
 }

@@ -26,7 +26,7 @@
     </bean>
 
     <!-- mybatis和spring完美整合，不需要mybatis的配置映射文件 -->
-    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource"/>
         <!-- 扫描model包 -->
         <property name="typeAliasesPackage" value="com.aloogn"/>
@@ -46,6 +46,10 @@
     <import resource="applicationContext-redis.xml"/>
 
     <import resource="user/applicationContext-service.xml"/>
+    <import resource="grade/applicationContext-service.xml"/>
+    <import resource="user_grade/applicationContext-service.xml"/>
+    <import resource="subject/applicationContext-service.xml"/>
+    <import resource="user_subject/applicationContext-service.xml"/>
     <import resource="redis/applicationContext-service.xml"/>
 
     <!-- 事务管理 -->

@@ -1,6 +1,5 @@
 package com.aloogn.fs.user.service.impl;
 
-import com.aloogn.common.utils.Constant;
 import com.aloogn.common.utils.TokenUtil;
 import com.aloogn.fs.redis.service.RedisService;
 import com.aloogn.fs.user.bean.AuthUser;
@@ -12,10 +11,7 @@ import com.nimbusds.jose.JOSEException;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class UserServiceImpl implements UserService {
 
@@ -99,7 +95,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public void personalInformationFamily(String account, String studentName, String studentSex, String parentName, String parentPhone, String token) throws Exception {
+    public void personalInformationFamily(String account, String studentName, String studentSex, String parentName, String parentPhone, String parentQQ, String parentWechat, String email, String token) throws Exception {
         //根据账号进行修改信息
         User user = userMapper.selectByPrimaryKey(account);
         if(user == null){
@@ -113,6 +109,38 @@ public class UserServiceImpl implements UserService {
         user.setSex(studentSex);
         user.setParent_name(parentName);
         user.setParent_phone(parentPhone);
+        user.setParent_QQ(parentQQ);
+        user.setParent_wechat(parentWechat);
+        user.setEmail(email);
         userMapper.updateByPrimaryKeySelective(user);
     }
+
+    @Override
+    public void personalInformationSchool(String account, String name, String sex, String phone, String QQ, String wechat, String email, String token) throws Exception {
+        //根据账号进行修改信息
+        User user = userMapper.selectByPrimaryKey(account);
+        if(user == null){
+            new Exception("账号不正确，请联系管理员");
+        }
+
+        //修改信息
+        user = new User();
+        user.setId(account);
+        user.setName(name);
+        user.setSex(sex);
+        user.setPhone(phone);
+        user.setQQ(QQ);
+        user.setWechat(wechat);
+        user.setEmail(email);
+        userMapper.updateByPrimaryKeySelective(user);
+    }
+
+    @Override
+    public User familyPersonalDetails(String account, String token) throws Exception {
+        //根据账号进行查询
+        User user = userMapper.selectByPrimaryKey(account);
+        return user;
+    }
+
+
 }

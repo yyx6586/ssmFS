@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.aloogn.fs.grade.mapper.GradeMapper">
+  <resultMap id="BaseResultMap" type="com.aloogn.fs.grade.bean.Grade">
+    <id column="id" jdbcType="CHAR" property="id" />
+    <result column="grade_name" jdbcType="CHAR" property="grade_name" />
+    <result column="grade_number" jdbcType="CHAR" property="grade_number" />
+    <result column="class_name" jdbcType="CHAR" property="class_name" />
+    <result column="class_number" jdbcType="CHAR" property="class_number" />
+    <result column="creat_time" jdbcType="TIMESTAMP" property="creat_time" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="update_time" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    id, grade_name, grade_number, class_name, class_number, creat_time, update_time
+  </sql>
+  <select id="selectByExample" parameterType="com.aloogn.fs.grade.bean.GradeCriteria" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from grade
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from grade
+    where id = #{id,jdbcType=CHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from grade
+    where id = #{id,jdbcType=CHAR}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.aloogn.fs.grade.bean.GradeCriteria">
+    delete from grade
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.aloogn.fs.grade.bean.Grade">
+    insert into grade (id, grade_name, grade_number, 
+      class_name, class_number, creat_time, 
+      update_time)
+    values (#{id,jdbcType=CHAR}, #{grade_name,jdbcType=CHAR}, #{grade_number,jdbcType=CHAR}, 
+      #{class_name,jdbcType=CHAR}, #{class_number,jdbcType=CHAR}, #{creat_time,jdbcType=TIMESTAMP}, 
+      #{update_time,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.aloogn.fs.grade.bean.Grade">
+    insert into grade
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="grade_name != null">
+        grade_name,
+      </if>
+      <if test="grade_number != null">
+        grade_number,
+      </if>
+      <if test="class_name != null">
+        class_name,
+      </if>
+      <if test="class_number != null">
+        class_number,
+      </if>
+      <if test="creat_time != null">
+        creat_time,
+      </if>
+      <if test="update_time != null">
+        update_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=CHAR},
+      </if>
+      <if test="grade_name != null">
+        #{grade_name,jdbcType=CHAR},
+      </if>
+      <if test="grade_number != null">
+        #{grade_number,jdbcType=CHAR},
+      </if>
+      <if test="class_name != null">
+        #{class_name,jdbcType=CHAR},
+      </if>
+      <if test="class_number != null">
+        #{class_number,jdbcType=CHAR},
+      </if>
+      <if test="creat_time != null">
+        #{creat_time,jdbcType=TIMESTAMP},
+      </if>
+      <if test="update_time != null">
+        #{update_time,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.aloogn.fs.grade.bean.GradeCriteria" resultType="java.lang.Long">
+    select count(*) from grade
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update grade
+    <set>
+      <if test="record.id != null">
+        id = #{record.id,jdbcType=CHAR},
+      </if>
+      <if test="record.grade_name != null">
+        grade_name = #{record.grade_name,jdbcType=CHAR},
+      </if>
+      <if test="record.grade_number != null">
+        grade_number = #{record.grade_number,jdbcType=CHAR},
+      </if>
+      <if test="record.class_name != null">
+        class_name = #{record.class_name,jdbcType=CHAR},
+      </if>
+      <if test="record.class_number != null">
+        class_number = #{record.class_number,jdbcType=CHAR},
+      </if>
+      <if test="record.creat_time != null">
+        creat_time = #{record.creat_time,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.update_time != null">
+        update_time = #{record.update_time,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update grade
+    set id = #{record.id,jdbcType=CHAR},
+      grade_name = #{record.grade_name,jdbcType=CHAR},
+      grade_number = #{record.grade_number,jdbcType=CHAR},
+      class_name = #{record.class_name,jdbcType=CHAR},
+      class_number = #{record.class_number,jdbcType=CHAR},
+      creat_time = #{record.creat_time,jdbcType=TIMESTAMP},
+      update_time = #{record.update_time,jdbcType=TIMESTAMP}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.aloogn.fs.grade.bean.Grade">
+    update grade
+    <set>
+      <if test="grade_name != null">
+        grade_name = #{grade_name,jdbcType=CHAR},
+      </if>
+      <if test="grade_number != null">
+        grade_number = #{grade_number,jdbcType=CHAR},
+      </if>
+      <if test="class_name != null">
+        class_name = #{class_name,jdbcType=CHAR},
+      </if>
+      <if test="class_number != null">
+        class_number = #{class_number,jdbcType=CHAR},
+      </if>
+      <if test="creat_time != null">
+        creat_time = #{creat_time,jdbcType=TIMESTAMP},
+      </if>
+      <if test="update_time != null">
+        update_time = #{update_time,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=CHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.aloogn.fs.grade.bean.Grade">
+    update grade
+    set grade_name = #{grade_name,jdbcType=CHAR},
+      grade_number = #{grade_number,jdbcType=CHAR},
+      class_name = #{class_name,jdbcType=CHAR},
+      class_number = #{class_number,jdbcType=CHAR},
+      creat_time = #{creat_time,jdbcType=TIMESTAMP},
+      update_time = #{update_time,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=CHAR}
+  </update>
+</mapper>

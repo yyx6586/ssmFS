@@ -4,7 +4,6 @@ import com.aloogn.common.utils.Constant;
 import com.aloogn.common.utils.StringUtils;
 import com.aloogn.common.utils.TokenUtil;
 import com.aloogn.fs.redis.service.RedisService;
-import com.aloogn.fs.user.bean.User;
 import net.minidev.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -15,7 +14,6 @@ import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Map;
