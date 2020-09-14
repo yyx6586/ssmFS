@@ -2,10 +2,9 @@ package com.aloogn.fs.user.mapper;
 
 import com.aloogn.fs.user.bean.User;
 import com.aloogn.fs.user.bean.UserCriteria;
-import java.util.List;
-
-import com.aloogn.fs.user_grade.bean.UserGrade;
 import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 public interface UserMapper {
     long countByExample(UserCriteria example);//按条件计数

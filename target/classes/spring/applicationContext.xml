@@ -50,6 +50,7 @@
     <import resource="user_grade/applicationContext-service.xml"/>
     <import resource="subject/applicationContext-service.xml"/>
     <import resource="user_subject/applicationContext-service.xml"/>
+    <import resource="notice_information/applicationContext-service.xml"/>
     <import resource="redis/applicationContext-service.xml"/>
 
     <!-- 事务管理 -->

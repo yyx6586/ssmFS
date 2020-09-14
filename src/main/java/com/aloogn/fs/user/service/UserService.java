@@ -6,7 +6,6 @@ import com.aloogn.fs.user.bean.User;
 import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.List;
 
 
 @Service
