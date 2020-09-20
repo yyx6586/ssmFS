@@ -14,7 +14,7 @@ public interface NoticeInformationMapper {
 
     int insert(NoticeInformation record);
 
-    int insertSelective(String record);
+    int insertSelective(NoticeInformation record);
 
     List<NoticeInformation> selectByExample(NoticeInformationCriteria example);
 
@@ -28,7 +28,6 @@ public interface NoticeInformationMapper {
 
     int updateByPrimaryKey(NoticeInformation record);
 
-//    //自定义
-//    //插入语句
-//    NoticeInformation insertInformationByExample(String id);
+    //自定义查询
+    List<NoticeInformation> selectInforationByExample(String id);
 }

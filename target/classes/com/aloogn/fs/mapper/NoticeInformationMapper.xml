@@ -3,9 +3,11 @@
 <mapper namespace="com.aloogn.fs.notice_information.mapper.NoticeInformationMapper">
   <resultMap id="BaseResultMap" type="com.aloogn.fs.notice_information.bean.NoticeInformation">
     <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="account" jdbcType="CHAR" property="account" />
     <result column="information" jdbcType="VARCHAR" property="information" />
     <result column="creat_time" jdbcType="TIMESTAMP" property="creat_time" />
     <result column="update_time" jdbcType="TIMESTAMP" property="update_time" />
+    <result column="grade_id" jdbcType="CHAR" property="grade_id" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -66,7 +68,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    id, information, creat_time, update_time
+    id, account, information, creat_time, update_time, grade_id
   </sql>
   <select id="selectByExample" parameterType="com.aloogn.fs.notice_information.bean.NoticeInformationCriteria" resultMap="BaseResultMap">
     select
@@ -99,16 +101,21 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.aloogn.fs.notice_information.bean.NoticeInformation">
-    insert into notice_information (id, information, creat_time, 
-      update_time)
-    values (#{id,jdbcType=INTEGER}, #{information,jdbcType=VARCHAR}, #{creat_time,jdbcType=TIMESTAMP}, 
-      #{update_time,jdbcType=TIMESTAMP})
+    insert into notice_information (id, account, information, 
+      creat_time, update_time, grade_id
+      )
+    values (#{id,jdbcType=INTEGER}, #{account,jdbcType=CHAR}, #{information,jdbcType=VARCHAR}, 
+      #{creat_time,jdbcType=TIMESTAMP}, #{update_time,jdbcType=TIMESTAMP}, #{grade_id,jdbcType=CHAR}
+      )
   </insert>
   <insert id="insertSelective" parameterType="com.aloogn.fs.notice_information.bean.NoticeInformation">
     insert into notice_information
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="id != null">
         id,
+      </if>
+      <if test="account != null">
+        account,
       </if>
       <if test="information != null">
         information,
@@ -119,10 +126,16 @@
       <if test="update_time != null">
         update_time,
       </if>
+      <if test="grade_id != null">
+        grade_id,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
       <if test="id != null">
         #{id,jdbcType=INTEGER},
+      </if>
+      <if test="account != null">
+        #{account,jdbcType=CHAR},
       </if>
       <if test="information != null">
         #{information,jdbcType=VARCHAR},
@@ -132,6 +145,9 @@
       </if>
       <if test="update_time != null">
         #{update_time,jdbcType=TIMESTAMP},
+      </if>
+      <if test="grade_id != null">
+        #{grade_id,jdbcType=CHAR},
       </if>
     </trim>
   </insert>
@@ -147,6 +163,9 @@
       <if test="record.id != null">
         id = #{record.id,jdbcType=INTEGER},
       </if>
+      <if test="record.account != null">
+        account = #{record.account,jdbcType=CHAR},
+      </if>
       <if test="record.information != null">
         information = #{record.information,jdbcType=VARCHAR},
       </if>
@@ -156,6 +175,9 @@
       <if test="record.update_time != null">
         update_time = #{record.update_time,jdbcType=TIMESTAMP},
       </if>
+      <if test="record.grade_id != null">
+        grade_id = #{record.grade_id,jdbcType=CHAR},
+      </if>
     </set>
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
@@ -164,9 +186,11 @@
   <update id="updateByExample" parameterType="map">
     update notice_information
     set id = #{record.id,jdbcType=INTEGER},
+      account = #{record.account,jdbcType=CHAR},
       information = #{record.information,jdbcType=VARCHAR},
       creat_time = #{record.creat_time,jdbcType=TIMESTAMP},
-      update_time = #{record.update_time,jdbcType=TIMESTAMP}
+      update_time = #{record.update_time,jdbcType=TIMESTAMP},
+      grade_id = #{record.grade_id,jdbcType=CHAR}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -174,6 +198,9 @@
   <update id="updateByPrimaryKeySelective" parameterType="com.aloogn.fs.notice_information.bean.NoticeInformation">
     update notice_information
     <set>
+      <if test="account != null">
+        account = #{account,jdbcType=CHAR},
+      </if>
       <if test="information != null">
         information = #{information,jdbcType=VARCHAR},
       </if>
@@ -183,20 +210,24 @@
       <if test="update_time != null">
         update_time = #{update_time,jdbcType=TIMESTAMP},
       </if>
+      <if test="grade_id != null">
+        grade_id = #{grade_id,jdbcType=CHAR},
+      </if>
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.aloogn.fs.notice_information.bean.NoticeInformation">
     update notice_information
-    set information = #{information,jdbcType=VARCHAR},
+    set account = #{account,jdbcType=CHAR},
+      information = #{information,jdbcType=VARCHAR},
       creat_time = #{creat_time,jdbcType=TIMESTAMP},
-      update_time = #{update_time,jdbcType=TIMESTAMP}
+      update_time = #{update_time,jdbcType=TIMESTAMP},
+      grade_id = #{grade_id,jdbcType=CHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
 
-  <!--&lt;!&ndash;    插入语句    &ndash;&gt;-->
-  <!--<insert id="insertInformationByExample" parameterType="java.lang.String">-->
-        <!--insert into notice_information(information) values (#{information,jdbcType=VARCHAR})-->
-    <!--</insert>-->
-
+  <!--  自定义查询  -->
+  <select id="selectInforationByExample" parameterType="java.lang.String" resultType="com.aloogn.fs.notice_information.bean.NoticeInformation">
+        select notice_information.* from notice_information where account = #{value}
+    </select>
 </mapper>

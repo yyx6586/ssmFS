@@ -165,6 +165,76 @@ public class NoticeInformationCriteria {
             return (Criteria) this;
         }
 
+        public Criteria andAccountIsNull() {
+            addCriterion("account is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andAccountIsNotNull() {
+            addCriterion("account is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andAccountEqualTo(String value) {
+            addCriterion("account =", value, "account");
+            return (Criteria) this;
+        }
+
+        public Criteria andAccountNotEqualTo(String value) {
+            addCriterion("account <>", value, "account");
+            return (Criteria) this;
+        }
+
+        public Criteria andAccountGreaterThan(String value) {
+            addCriterion("account >", value, "account");
+            return (Criteria) this;
+        }
+
+        public Criteria andAccountGreaterThanOrEqualTo(String value) {
+            addCriterion("account >=", value, "account");
+            return (Criteria) this;
+        }
+
+        public Criteria andAccountLessThan(String value) {
+            addCriterion("account <", value, "account");
+            return (Criteria) this;
+        }
+
+        public Criteria andAccountLessThanOrEqualTo(String value) {
+            addCriterion("account <=", value, "account");
+            return (Criteria) this;
+        }
+
+        public Criteria andAccountLike(String value) {
+            addCriterion("account like", value, "account");
+            return (Criteria) this;
+        }
+
+        public Criteria andAccountNotLike(String value) {
+            addCriterion("account not like", value, "account");
+            return (Criteria) this;
+        }
+
+        public Criteria andAccountIn(List<String> values) {
+            addCriterion("account in", values, "account");
+            return (Criteria) this;
+        }
+
+        public Criteria andAccountNotIn(List<String> values) {
+            addCriterion("account not in", values, "account");
+            return (Criteria) this;
+        }
+
+        public Criteria andAccountBetween(String value1, String value2) {
+            addCriterion("account between", value1, value2, "account");
+            return (Criteria) this;
+        }
+
+        public Criteria andAccountNotBetween(String value1, String value2) {
+            addCriterion("account not between", value1, value2, "account");
+            return (Criteria) this;
+        }
+
         public Criteria andInformationIsNull() {
             addCriterion("information is null");
             return (Criteria) this;
@@ -352,6 +422,76 @@ public class NoticeInformationCriteria {
 
         public Criteria andUpdate_timeNotBetween(Date value1, Date value2) {
             addCriterion("update_time not between", value1, value2, "update_time");
+            return (Criteria) this;
+        }
+
+        public Criteria andGrade_idIsNull() {
+            addCriterion("grade_id is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andGrade_idIsNotNull() {
+            addCriterion("grade_id is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andGrade_idEqualTo(String value) {
+            addCriterion("grade_id =", value, "grade_id");
+            return (Criteria) this;
+        }
+
+        public Criteria andGrade_idNotEqualTo(String value) {
+            addCriterion("grade_id <>", value, "grade_id");
+            return (Criteria) this;
+        }
+
+        public Criteria andGrade_idGreaterThan(String value) {
+            addCriterion("grade_id >", value, "grade_id");
+            return (Criteria) this;
+        }
+
+        public Criteria andGrade_idGreaterThanOrEqualTo(String value) {
+            addCriterion("grade_id >=", value, "grade_id");
+            return (Criteria) this;
+        }
+
+        public Criteria andGrade_idLessThan(String value) {
+            addCriterion("grade_id <", value, "grade_id");
+            return (Criteria) this;
+        }
+
+        public Criteria andGrade_idLessThanOrEqualTo(String value) {
+            addCriterion("grade_id <=", value, "grade_id");
+            return (Criteria) this;
+        }
+
+        public Criteria andGrade_idLike(String value) {
+            addCriterion("grade_id like", value, "grade_id");
+            return (Criteria) this;
+        }
+
+        public Criteria andGrade_idNotLike(String value) {
+            addCriterion("grade_id not like", value, "grade_id");
+            return (Criteria) this;
+        }
+
+        public Criteria andGrade_idIn(List<String> values) {
+            addCriterion("grade_id in", values, "grade_id");
+            return (Criteria) this;
+        }
+
+        public Criteria andGrade_idNotIn(List<String> values) {
+            addCriterion("grade_id not in", values, "grade_id");
+            return (Criteria) this;
+        }
+
+        public Criteria andGrade_idBetween(String value1, String value2) {
+            addCriterion("grade_id between", value1, value2, "grade_id");
+            return (Criteria) this;
+        }
+
+        public Criteria andGrade_idNotBetween(String value1, String value2) {
+            addCriterion("grade_id not between", value1, value2, "grade_id");
             return (Criteria) this;
         }
     }

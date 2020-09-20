@@ -10,6 +10,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.List;
+
 @Controller
 @RequestMapping("/noticeInformation")
 public class NoticeInformationController {
@@ -23,19 +25,45 @@ public class NoticeInformationController {
 
     @RequestMapping("/schoolNoticeInformationRelease")
     @ResponseBody
-    public JSONUtil schoolNoticeInformationRelease(String information, String token){
+    public JSONUtil schoolNoticeInformationRelease(String account, String information, String token){
         jsonUtil.setCode(-1);
+
+        if(StringUtils.isNullOrEmpty(account)){
+            jsonUtil.setMsg("账号信息错误，请联系管理员");
+            return jsonUtil;
+        }
         if(StringUtils.isNullOrEmpty(information)){
             jsonUtil.setMsg("发布信息不能为空");
             return jsonUtil;
         }
 
         try{
-            noticeInformationService.schoolNoticeInformationRelease(information, token);
+            noticeInformationService.schoolNoticeInformationRelease(account, information, token);
             jsonUtil.setCode(1);
             jsonUtil.setMsg("信息发布成功");
         } catch (Exception e) {
             jsonUtil.setMsg("信息发布失败" + e.getMessage());
+        }
+        return jsonUtil;
+    }
+
+    @RequestMapping("/schoolNoticeInformationAreledy")
+    @ResponseBody
+    public JSONUtil schoolNoticeInformationAreledy(String account, String token){
+        jsonUtil.setCode(-1);
+
+        if(StringUtils.isNullOrEmpty(account)){
+            jsonUtil.setMsg("账号错误，请联系管理员");
+            return jsonUtil;
+        }
+
+        try {
+            List<NoticeInformation> list = noticeInformationService.schoolNoticeInformationAreledy(account, token);
+            jsonUtil.setCode(1);
+            jsonUtil.setMsg("获取发布通知成功");
+            jsonUtil.setData(list);
+        } catch (Exception e) {
+            jsonUtil.setMsg("发布通知查询错误，请重新登录" + e.getMessage());
         }
         return jsonUtil;
     }
