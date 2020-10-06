@@ -25,20 +25,26 @@ public class NoticeInformationController {
 
     @RequestMapping("/schoolNoticeInformationRelease")
     @ResponseBody
-    public JSONUtil schoolNoticeInformationRelease(String account, String information, String token){
+    public JSONUtil schoolNoticeInformationRelease(String account, String grade_id, String information, String token){
         jsonUtil.setCode(-1);
 
         if(StringUtils.isNullOrEmpty(account)){
             jsonUtil.setMsg("账号信息错误，请联系管理员");
             return jsonUtil;
         }
+
+        if(StringUtils.isNullOrEmpty(grade_id)){
+            jsonUtil.setMsg("班级错误，请联系管理员");
+            return jsonUtil;
+        }
+
         if(StringUtils.isNullOrEmpty(information)){
             jsonUtil.setMsg("发布信息不能为空");
             return jsonUtil;
         }
 
         try{
-            noticeInformationService.schoolNoticeInformationRelease(account, information, token);
+            noticeInformationService.schoolNoticeInformationRelease(account, grade_id, information, token);
             jsonUtil.setCode(1);
             jsonUtil.setMsg("信息发布成功");
         } catch (Exception e) {
@@ -65,6 +71,47 @@ public class NoticeInformationController {
         } catch (Exception e) {
             jsonUtil.setMsg("发布通知查询错误，请重新登录" + e.getMessage());
         }
+        return jsonUtil;
+    }
+
+    @RequestMapping("/noticeSchool")
+    @ResponseBody
+    public JSONUtil noticeSchool(String account, String grade_id, String information, String token){
+        jsonUtil.setCode(-1);
+
+        try{
+            boolean result = noticeInformationService.noticeSchool(account, grade_id, information, token);
+            if(result){
+                jsonUtil.setCode(1);
+                jsonUtil.setMsg("删除成功");
+            }else {
+                jsonUtil.setMsg("删除失败，请重新删除");
+            }
+        } catch (Exception e) {
+            jsonUtil.setMsg("删除失败，请重新删除" + e.getMessage());
+        }
+        return jsonUtil;
+    }
+
+    @RequestMapping("/noticeFamilyDetails")
+    @ResponseBody
+    public JSONUtil noticeFamilyDetails(String grade_id, String token){
+        jsonUtil.setCode(-1);
+
+        if(StringUtils.isNullOrEmpty(grade_id)){
+            jsonUtil.setMsg("班级错误，请联系管理员");
+            return jsonUtil;
+        }
+
+        try{
+            List<NoticeInformation> list = noticeInformationService.noticeFamilyDetails(grade_id, token);
+            jsonUtil.setCode(1);
+            jsonUtil.setMsg("获取通知成功");
+            jsonUtil.setData(list);
+        } catch (Exception e) {
+            jsonUtil.setMsg("获取通知失败" + e.getMessage());
+        }
+
         return jsonUtil;
     }
 }

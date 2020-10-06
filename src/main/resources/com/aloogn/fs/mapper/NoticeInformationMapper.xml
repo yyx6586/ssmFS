@@ -227,7 +227,12 @@
   </update>
 
   <!--  自定义查询  -->
-  <select id="selectInforationByExample" parameterType="java.lang.String" resultType="com.aloogn.fs.notice_information.bean.NoticeInformation">
-        select notice_information.* from notice_information where account = #{value}
+  <select id="selectInforationByExample" parameterType="java.lang.String" resultMap="BaseResultMap">
+        select notice_information.*from notice_information where account = #{value}
     </select>
+
+  <!--  自定义删除  -->
+  <delete id="deleteInforationByExample" parameterType="java.lang.String">
+        delete from notice_information where account = #{account} and grade_id = #{grade_id} and information = #{information}
+    </delete>
 </mapper>

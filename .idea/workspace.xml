@@ -7,35 +7,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="68f2d31a-99d9-4e9f-ba74-88732a19abb9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/aloogn/fs/article/service/ArticleService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/aloogn/fs/article/service/impl/ArticleServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/aloogn/fs/user_homework/controller/UserHomeworkController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/aloogn/fs/user_homework/service/UserHomeworkService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/aloogn/fs/user_homework/service/impl/UserHomeworkServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/spring/article/applicationContext-service.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/spring/user_homework/applicationContext-service.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aloogn/fs/notice_information/bean/NoticeInformation.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aloogn/fs/notice_information/bean/NoticeInformationCriteria.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/aloogn/fs/notice_information/controller/NoticeInformationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aloogn/fs/notice_information/controller/NoticeInformationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aloogn/fs/notice_information/mapper/NoticeInformationMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aloogn/fs/notice_information/mapper/NoticeInformationMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aloogn/fs/notice_information/mapper/NoticeInformationMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/aloogn/fs/notice_information/service/NoticeInformationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aloogn/fs/notice_information/service/NoticeInformationService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/aloogn/fs/notice_information/service/impl/NoticeInformationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aloogn/fs/notice_information/service/impl/NoticeInformationServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/aloogn/fs/mapper/NoticeInformationMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/aloogn/fs/mapper/NoticeInformationMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/aloogn/fs/mapper/NoticeInformationMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/generate/generateConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/generate/generateConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/spring/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/spring/applicationContext.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/aloogn/fs/mapper/NoticeInformationMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/aloogn/fs/mapper/NoticeInformationMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/aloogn/fs/notice_information/bean/NoticeInformation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/aloogn/fs/notice_information/bean/NoticeInformation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/aloogn/fs/notice_information/bean/NoticeInformationCriteria$Criteria.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/aloogn/fs/notice_information/bean/NoticeInformationCriteria$Criteria.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/aloogn/fs/notice_information/bean/NoticeInformationCriteria$Criterion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/aloogn/fs/notice_information/bean/NoticeInformationCriteria$Criterion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/aloogn/fs/notice_information/bean/NoticeInformationCriteria$GeneratedCriteria.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/aloogn/fs/notice_information/bean/NoticeInformationCriteria$GeneratedCriteria.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/aloogn/fs/notice_information/controller/NoticeInformationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/aloogn/fs/notice_information/controller/NoticeInformationController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/aloogn/fs/notice_information/mapper/NoticeInformationMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/aloogn/fs/notice_information/mapper/NoticeInformationMapper.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/aloogn/fs/notice_information/service/NoticeInformationService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/aloogn/fs/notice_information/service/NoticeInformationService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/aloogn/fs/notice_information/service/impl/NoticeInformationServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/aloogn/fs/notice_information/service/impl/NoticeInformationServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/generate/generateConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/generate/generateConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/spring/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/spring/applicationContext.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/mapper/NoticeInformationMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/mapper/NoticeInformationMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/notice_information/bean/NoticeInformation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/notice_information/bean/NoticeInformation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/notice_information/bean/NoticeInformationCriteria$Criteria.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/notice_information/bean/NoticeInformationCriteria$Criteria.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/notice_information/bean/NoticeInformationCriteria$Criterion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/notice_information/bean/NoticeInformationCriteria$Criterion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/notice_information/bean/NoticeInformationCriteria$GeneratedCriteria.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/notice_information/bean/NoticeInformationCriteria$GeneratedCriteria.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/notice_information/controller/NoticeInformationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/notice_information/controller/NoticeInformationController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/notice_information/mapper/NoticeInformationMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/notice_information/mapper/NoticeInformationMapper.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/notice_information/service/NoticeInformationService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/notice_information/service/NoticeInformationService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/notice_information/service/impl/NoticeInformationServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/notice_information/service/impl/NoticeInformationServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/generate/generateConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/generate/generateConfig.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -49,96 +47,63 @@
     <session id="1714180878">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="12" />
+          <entry key="project.closed" value="16" />
           <entry key="project.open.time.1" value="3" />
-          <entry key="project.open.time.12" value="1" />
-          <entry key="project.open.time.14" value="4" />
+          <entry key="project.open.time.12" value="2" />
+          <entry key="project.open.time.13" value="1" />
+          <entry key="project.open.time.14" value="5" />
           <entry key="project.open.time.15" value="2" />
           <entry key="project.open.time.16" value="2" />
           <entry key="project.open.time.18" value="2" />
-          <entry key="project.open.time.2" value="3" />
+          <entry key="project.open.time.2" value="4" />
           <entry key="project.open.time.23" value="1" />
           <entry key="project.open.time.25" value="1" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.37" value="1" />
           <entry key="project.open.time.49" value="1" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="23" />
+          <entry key="project.opened" value="27" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="19" />
           <entry key="dtd" value="1" />
-          <entry key="java" value="339" />
+          <entry key="java" value="375" />
           <entry key="jsp" value="1" />
           <entry key="properties" value="19" />
-          <entry key="xml" value="159" />
+          <entry key="xml" value="181" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="19" />
           <entry key="DTD" value="1" />
-          <entry key="JAVA" value="339" />
+          <entry key="JAVA" value="375" />
           <entry key="JSP" value="1" />
           <entry key="Properties" value="19" />
-          <entry key="XML" value="159" />
+          <entry key="XML" value="181" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="4" />
-          <entry key="java" value="6341" />
-          <entry key="xml" value="1535" />
+          <entry key="java" value="8584" />
+          <entry key="xml" value="1884" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="6341" />
+          <entry key="JAVA" value="8584" />
           <entry key="PLAIN_TEXT" value="4" />
-          <entry key="SQL" value="25" />
-          <entry key="XML" value="1510" />
+          <entry key="SQL" value="28" />
+          <entry key="XML" value="1856" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/notice_information/controller/NoticeInformationController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="316">
-              <caret line="60" selection-start-line="60" selection-end-line="60" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/notice_information/service/impl/NoticeInformationServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/common/interceptor/LoginInterceptor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="53" selection-start-line="53" selection-end-line="53" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -175,15 +140,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aloogn/common/utils/Constant.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aloogn/common/utils/ConvertUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aloogn/common/utils/StringUtils.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/spring/applicationContext-redis.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/com.aloogn/junit/WesocketTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com.aloogn/junit/RedisTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com.aloogn/junit/UserTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/aloogn/fs/redis/service/RedisService.java" />
         <option value="$PROJECT_DIR$/src/test/java/com.aloogn/ToolsTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/aloogn/fs/user/bean/AuthUser.java" />
@@ -207,7 +163,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/aloogn/fs/subject/service/impl/SubjectServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/aloogn/fs/user_subject/bean/schoolUserSubject.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/aloogn/fs/user_subject/bean/SchoolUserSubject.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/com/aloogn/fs/mapper/UserSubjectMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/aloogn/fs/user_subject/mapper/UserSubjectMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/aloogn/fs/user_subject/service/impl/UserSubjectServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/aloogn/fs/user_subject/controller/UserSubjectController.java" />
@@ -215,17 +170,27 @@
         <option value="$PROJECT_DIR$/src/main/java/com/aloogn/fs/user/service/impl/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/aloogn/fs/user/controller/UserController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/spring/notice_information/applicationContext-service.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/spring/applicationContext.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/aloogn/fs/user/service/UserService.java" />
         <option value="$PROJECT_DIR$/src/main/resources/com/aloogn/fs/mapper/UserMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/aloogn/fs/user/bean/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/aloogn/fs/user/mapper/UserMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/generate/generateConfig.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/aloogn/fs/mapper/UserSubjectMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/aloogn/fs/notice_information/mapper/NoticeInformationMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aloogn/fs/notice_information/service/impl/NoticeInformationServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aloogn/fs/notice_information/service/NoticeInformationService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aloogn/fs/notice_information/controller/NoticeInformationController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/com/aloogn/fs/mapper/NoticeInformationMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/aloogn/fs/notice_information/service/NoticeInformationService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/aloogn/fs/notice_information/service/impl/NoticeInformationServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/spring/user_homework/applicationContext-service.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/aloogn/fs/mapper/UserHomeworkMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/aloogn/fs/user_homework/mapper/UserHomeworkMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/aloogn/fs/user_homework/service/UserHomeworkService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/aloogn/fs/user_homework/service/impl/UserHomeworkServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/aloogn/fs/notice_information/controller/NoticeInformationController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/aloogn/fs/user_homework/controller/UserHomeworkController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/aloogn/fs/article/service/ArticleService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/aloogn/fs/article/service/impl/ArticleServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/spring/article/applicationContext-service.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/spring/applicationContext.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/generate/generateConfig.xml" />
       </list>
     </option>
   </component>
@@ -257,7 +222,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="877" />
@@ -371,16 +336,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="aloogn" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="interceptor" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ssmFS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ssmFS" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="aloogn" type="462c0819:PsiDirectoryNode" />
               <item name="fs" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -391,63 +346,7 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="aloogn" type="462c0819:PsiDirectoryNode" />
               <item name="fs" type="462c0819:PsiDirectoryNode" />
-              <item name="notice_information" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ssmFS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ssmFS" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="aloogn" type="462c0819:PsiDirectoryNode" />
-              <item name="fs" type="462c0819:PsiDirectoryNode" />
-              <item name="notice_information" type="462c0819:PsiDirectoryNode" />
-              <item name="bean" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ssmFS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ssmFS" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="aloogn" type="462c0819:PsiDirectoryNode" />
-              <item name="fs" type="462c0819:PsiDirectoryNode" />
-              <item name="notice_information" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ssmFS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ssmFS" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="aloogn" type="462c0819:PsiDirectoryNode" />
-              <item name="fs" type="462c0819:PsiDirectoryNode" />
-              <item name="notice_information" type="462c0819:PsiDirectoryNode" />
-              <item name="mapper" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ssmFS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ssmFS" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="aloogn" type="462c0819:PsiDirectoryNode" />
-              <item name="fs" type="462c0819:PsiDirectoryNode" />
-              <item name="notice_information" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ssmFS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ssmFS" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="aloogn" type="462c0819:PsiDirectoryNode" />
-              <item name="fs" type="462c0819:PsiDirectoryNode" />
-              <item name="notice_information" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
+              <item name="article" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ssmFS" type="b2602c69:ProjectViewProjectNode" />
@@ -472,18 +371,26 @@
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="generate" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="ssmFS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ssmFS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="spring" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1600604685063" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1601997175637" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/test/java" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -504,11 +411,11 @@
       <recent name="com.aloogn.fs.user.service" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/spring/article" />
+      <recent name="$PROJECT_DIR$/src/main/resources/spring/user_homework" />
       <recent name="$PROJECT_DIR$/src/main/resources/com/aloogn/fs/mapper" />
       <recent name="$PROJECT_DIR$/src/main/resources/spring/notice_information" />
       <recent name="$PROJECT_DIR$/src/main/resources/spring/user_subject" />
-      <recent name="$PROJECT_DIR$/src/main/resources/spring/subject" />
-      <recent name="$PROJECT_DIR$/src/main/resources/spring/user_grade" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.aloogn.fs.user.mapper" />
@@ -676,12 +583,16 @@
       <workItem from="1600473063985" duration="3233000" />
       <workItem from="1600524454026" duration="1784000" />
       <workItem from="1600565078520" duration="74000" />
-      <workItem from="1600566074207" duration="6982000" />
+      <workItem from="1600566074207" duration="7436000" />
+      <workItem from="1600608028270" duration="9712000" />
+      <workItem from="1601171725351" duration="3804000" />
+      <workItem from="1601339592836" duration="17312000" />
+      <workItem from="1601996556492" duration="1210000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="194673000" />
+    <option name="totallyTimeSpent" value="227165000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -693,11 +604,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="877" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="23" width="1440" height="877" extended-state="1" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4957265" visible="true" weight="0.28612304" />
-      <window_info id="Structure" order="1" sideWeight="0.50427353" side_tool="true" weight="0.25822604" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49358973" visible="true" weight="0.30329043" />
+      <window_info id="Structure" order="1" sideWeight="0.50641024" side_tool="true" weight="0.29041487" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="UI Designer" order="4" />
@@ -782,105 +692,15 @@
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/aloogn/common/interceptor/LoginInterceptor.java</url>
-          <line>53</line>
+          <url>file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/user_subject/controller/UserSubjectController.java</url>
+          <line>25</line>
           <properties />
-          <option name="timeStamp" value="22" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/notice_information/service/impl/NoticeInformationServiceImpl.java</url>
-          <line>33</line>
-          <properties />
-          <option name="timeStamp" value="23" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/notice_information/controller/NoticeInformationController.java</url>
-          <line>52</line>
-          <properties />
-          <option name="timeStamp" value="24" />
+          <option name="timeStamp" value="25" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/common/config/WebMvcConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="22" lean-forward="true" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/aloogn/fs/mapper/GradeMapper.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/user_grade/bean/UserGradeCriteria.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-772">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/grade/bean/Grade.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/grade/bean/GradeCriteria.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/grade/mapper/GradeMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/user_grade/bean/UserGrade.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-780">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-943">
-          <caret line="304" column="29" selection-start-line="304" selection-start-column="29" selection-end-line="304" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/grade/applicationContext-service.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/user_grade/service/UserGradeService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/user_subject/service/impl/UserSubjectService.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/user_subject/user_subject/service/UserSubjectService.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/grade/service/GradeService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/subject/service/impl/SubjectServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
@@ -965,20 +785,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/user_subject/controller/UserSubjectController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" selection-start-line="36" selection-end-line="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/aloogn/fs/mapper/UserSubjectMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="212" column="129" selection-start-line="212" selection-start-column="129" selection-end-line="212" selection-end-column="129" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/user_subject/service/UserSubjectService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -990,20 +796,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="462">
           <caret line="21" column="8" lean-forward="true" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/user/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="173" lean-forward="true" selection-start-line="173" selection-end-line="173" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/applicationContext.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="667">
-          <caret line="52" column="24" selection-start-line="52" selection-start-column="24" selection-end-line="52" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -1035,24 +827,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/aloogn/fs/mapper/UserGradeMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="606">
-          <caret line="214" column="13" lean-forward="true" selection-start-line="211" selection-start-column="2" selection-end-line="214" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/spring/notice_information/applicationContext-service.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="17" column="123" selection-start-line="17" selection-start-column="123" selection-end-line="17" selection-end-column="123" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/user/service/impl/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1091,31 +869,162 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/notice_information/bean/NoticeInformation.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/aloogn/fs/mapper/UserGradeMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-824">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        <state relative-caret-position="351">
+          <caret line="214" column="13" lean-forward="true" selection-start-line="211" selection-start-column="2" selection-end-line="214" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/generate/generateConfig.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/user_subject/controller/UserSubjectController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="496">
-          <caret line="68" column="81" selection-start-line="68" selection-start-column="81" selection-end-line="68" selection-end-column="81" />
+        <state relative-caret-position="518">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/aloogn/fs/mapper/UserSubjectMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="434">
+          <caret line="220" column="23" lean-forward="true" selection-start-line="220" selection-start-column="23" selection-end-line="220" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/user/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2549">
+          <caret line="173" lean-forward="true" selection-start-line="173" selection-end-line="173" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/aloogn/fs/mapper/SubjectMapper.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/common/utils/TokenUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="68" selection-start-line="68" selection-end-line="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/common/interceptor/LoginInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="88" selection-start-line="88" selection-end-line="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/notice_information/bean/NoticeInformation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="6" column="19" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/aloogn/fs/mapper/NoticeInformationMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="236" column="13" lean-forward="true" selection-start-line="228" selection-start-column="2" selection-end-line="236" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/aloogn/fs/mapper/UserHomeworkMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="597">
+          <caret line="250" column="113" selection-start-line="250" selection-start-column="113" selection-end-line="250" selection-end-column="113" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/notice_information/mapper/NoticeInformationMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="616">
-          <caret line="31" column="65" selection-start-line="31" selection-start-column="65" selection-end-line="31" selection-end-column="65" />
+        <state relative-caret-position="606">
+          <caret line="35" column="1" lean-forward="true" selection-start-line="30" selection-start-column="4" selection-end-line="35" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/notice_information/service/NoticeInformationService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/user_homework/mapper/UserHomeworkMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="75" selection-start-line="11" selection-start-column="75" selection-end-line="11" selection-end-column="75" />
+        <state relative-caret-position="594">
+          <caret line="35" column="140" selection-start-line="35" selection-start-column="140" selection-end-line="35" selection-end-column="140" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/notice_information/service/impl/NoticeInformationServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-14">
+          <caret line="19" column="43" lean-forward="true" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/user_homework/service/UserHomeworkService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="44" lean-forward="true" selection-start-column="44" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/user_homework/applicationContext-service.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="17" column="108" selection-start-line="17" selection-start-column="108" selection-end-line="17" selection-end-column="108" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/article/service/Article.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/user/service/impl/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/article/applicationContext-service.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="17" column="92" selection-start-line="17" selection-start-column="92" selection-end-line="17" selection-end-column="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/article/service/impl/ArticleServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="57" selection-start-line="4" selection-start-column="57" selection-end-line="4" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/article/service/ArticleService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/user_homework/controller/UserHomeworkController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="694">
+          <caret line="114" column="34" selection-start-line="114" selection-start-column="20" selection-end-line="114" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/user_homework/service/impl/UserHomeworkServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="474">
+          <caret line="42" column="44" selection-start-line="42" selection-start-column="30" selection-end-line="42" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1124,35 +1033,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/notice_information/controller/NoticeInformationController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="60" selection-start-line="60" selection-end-line="60" />
+        <state>
+          <caret line="43" column="9" selection-start-line="30" selection-start-column="8" selection-end-line="43" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/aloogn/fs/mapper/NoticeInformationMapper.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/notice_information/service/NoticeInformationService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="226" column="11" lean-forward="true" selection-start-line="226" selection-start-column="11" selection-end-line="226" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/notice_information/service/impl/NoticeInformationServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
+        <state relative-caret-position="330">
+          <caret line="15" column="63" selection-start-line="15" selection-start-column="63" selection-end-line="15" selection-end-column="63" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/common/interceptor/LoginInterceptor.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/applicationContext.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="53" selection-start-line="53" selection-end-line="53" />
+        <state relative-caret-position="474">
+          <caret line="54" column="29" selection-start-line="54" selection-start-column="29" selection-end-line="54" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/applicationContext-redis.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/generate/generateConfig.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="496">
+          <caret line="68" column="51" selection-start-line="68" selection-start-column="51" selection-end-line="68" selection-end-column="51" />
         </state>
       </provider>
     </entry>
