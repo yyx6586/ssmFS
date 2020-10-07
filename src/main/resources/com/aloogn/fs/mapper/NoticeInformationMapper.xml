@@ -231,6 +231,11 @@
         select notice_information.*from notice_information where account = #{value}
     </select>
 
+  <!--  自定义查询  -->
+  <select id="selectInforationByGrade_id" parameterType="java.lang.String" resultMap="BaseResultMap">
+        select notice_information.*from notice_information where grade_id = #{value}
+    </select>
+
   <!--  自定义删除  -->
   <delete id="deleteInforationByExample" parameterType="java.lang.String">
         delete from notice_information where account = #{account} and grade_id = #{grade_id} and information = #{information}

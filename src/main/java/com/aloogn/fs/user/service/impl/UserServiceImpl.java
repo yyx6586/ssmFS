@@ -141,6 +141,36 @@ public class UserServiceImpl implements UserService {
         User user = userMapper.selectByPrimaryKey(account);
         return user;
     }
+//
+//    @Override
+//    public List<User> findPassword(String account, HttpServletRequest request) throws Exception {
+//        //检查账号是否存在
+//        UserCriteria example = new UserCriteria();
+//        example.createCriteria().andIdEqualTo(account);
+//
+//        List<User> list = userMapper.selectByExample(example);
+//
+//        if(list.size() > 1){
+//            new Exception("存在多个帐号,请联系管理员");
+//        }
+//
+//        if(list.size() <= 0){
+//            new Exception("帐号不存在");
+//        }
+//
+////        //检查密码
+////        User user = list.get(0);
+////
+////        AuthUser authUser = new AuthUser();
+////        authUser.setUserId(user.getId());
+////        authUser.setUserName(user.getName());
+////        authUser.setUserPassword(user.getPassword());
+////        authUser.setParentPhone(user.getParent_phone());
+////        authUser.setUserSex(user.getSex());
+////        authUser.setRole(user.getRole());
+////        authUser.setUserPhone(user.getPhone());
+//        return list;
+//    }
 
 
 }

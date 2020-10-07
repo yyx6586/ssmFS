@@ -31,6 +31,8 @@ public interface NoticeInformationMapper {
     //自定义查询
     List<NoticeInformation> selectInforationByExample(String id);
 
+    List<NoticeInformation> selectInforationByGrade_id(String id);
+
     //自定义删除
     boolean deleteInforationByExample(@Param("account") String account, @Param("grade_id") String grade_id, @Param("information") String information);
 }

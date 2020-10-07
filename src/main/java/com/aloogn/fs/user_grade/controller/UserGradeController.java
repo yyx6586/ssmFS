@@ -2,6 +2,7 @@ package com.aloogn.fs.user_grade.controller;
 
 import com.aloogn.common.utils.JSONUtil;
 import com.aloogn.common.utils.StringUtils;
+import com.aloogn.fs.grade.bean.Grade;
 import com.aloogn.fs.user.bean.User;
 import com.aloogn.fs.user_grade.service.UserGradeService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,6 +34,23 @@ public class UserGradeController {
             jsonUtil.setData(list);
         }catch (Exception e){
             jsonUtil.setMsg("获取数据错误" + e.getMessage());
+        }
+        return jsonUtil;
+    }
+
+    @RequestMapping("/userClass")
+    @ResponseBody
+    public JSONUtil userClass(String account, String token){
+        if(StringUtils.isNullOrEmpty(account)){
+            jsonUtil.setMsg("班级错误，请联系管理员");
+            return jsonUtil;
+        }
+
+        try{
+            List<Grade> list = userGradeService.userClass(account, token);
+            jsonUtil.setData(list);
+        } catch (Exception e) {
+            jsonUtil.setMsg("获取数据错误，请重新登录" + e.getMessage());
         }
         return jsonUtil;
     }

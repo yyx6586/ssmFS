@@ -32,6 +32,10 @@ public interface UserHomeworkMapper {
     //自定义查询
     List<UserHomework> selectHomeworkByExample(String id);
 
+    List<UserHomework> selectHomeworkByGrade_id(String id);
+
+    List<UserHomework> selectHomework(@Param("grade_id") String grade_id, @Param("subject_name") String subject_name);
+
     //自定义删除
     boolean deleteHomeworkByExample(@Param("account") String account, @Param("grade_id") String grade_id, @Param("homework") String homework);
 }

@@ -182,4 +182,37 @@ public class UserController {
         }
         return jsonUtil;
     }
+
+//    @RequestMapping("/findPassword")
+//    @ResponseBody
+//    public JSONUtil findPassword(String account, HttpServletRequest request){
+//        jsonUtil.setCode(-1);
+//
+//        if(StringUtils.isNullOrEmpty(account)){
+//            jsonUtil.setMsg("账号不能为空");
+//            return jsonUtil;
+//        }
+//
+//        try {
+////            AuthUser authUser = userService.findPassword(account, request);
+//
+//            List<User> list = userService.findPassword(account, request);
+//            if(list.size() > 0){
+//                jsonUtil.setCode(1);
+//                jsonUtil.setData(list);
+//            }else {
+//                jsonUtil.setMsg("该用户不存在，请重新输入");
+//            }
+////            if (authUser.getUserPassword() == null){
+////                jsonUtil.setMsg("该用户不存在,请重新输入");
+////                return jsonUtil;
+////            }else {
+////                jsonUtil.setCode(1);
+////                jsonUtil.setData(authUser);
+////            }
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//        return jsonUtil;
+//    }
 }

@@ -42,7 +42,7 @@ public class UserHomeworkServiceImpl implements UserHomeworkService {
     @Override
     public List<UserHomework> homeworkFamily(String grade_id, String token) throws Exception {
         //根据班级 id 查询作业的信息
-        List<UserHomework> list = userHomeworkMapper.selectHomeworkByExample(grade_id);
+        List<UserHomework> list = userHomeworkMapper.selectHomeworkByGrade_id(grade_id);
         return list;
     }
 }

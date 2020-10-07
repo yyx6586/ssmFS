@@ -46,7 +46,7 @@ public class NoticeInformationServiceImpl implements NoticeInformationService {
     @Override
     public List<NoticeInformation> noticeFamilyDetails(String garde_id, String token) throws Exception {
         //根据班级 id 查询发布的信息
-        List<NoticeInformation> list = noticeInformationMapper.selectInforationByExample(garde_id);
+        List<NoticeInformation> list = noticeInformationMapper.selectInforationByGrade_id(garde_id);
         return list;
     }
 

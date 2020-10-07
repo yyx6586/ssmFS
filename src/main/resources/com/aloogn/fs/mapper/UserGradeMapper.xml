@@ -213,4 +213,9 @@
   <select id="selectUserByExample" parameterType="java.lang.String" resultType="com.aloogn.fs.user.bean.User">
         select user.* from user where id in(select account from user_grade where grade_id = #{value})
     </select>
+
+  <!--  嵌套查询  -->
+  <select id="selectGradeByExample" parameterType="java.lang.String" resultType="com.aloogn.fs.grade.bean.Grade">
+        select grade.* from grade where id in(select grade_id from user_grade where account = #{account})
+    </select>
 </mapper>

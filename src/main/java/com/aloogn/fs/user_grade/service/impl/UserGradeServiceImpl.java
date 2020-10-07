@@ -1,5 +1,6 @@
 package com.aloogn.fs.user_grade.service.impl;
 
+import com.aloogn.fs.grade.bean.Grade;
 import com.aloogn.fs.redis.service.RedisService;
 import com.aloogn.fs.user.bean.User;
 import com.aloogn.fs.user_grade.bean.UserGrade;
@@ -20,6 +21,13 @@ public class UserGradeServiceImpl implements UserGradeService {
     public List<User> userGrade(String grade_id, String token) throws Exception {
         //查询所在班级的学生
         List<User> list = userGradeMapper.selectUserByExample(grade_id);
+        return list;
+    }
+
+    @Override
+    public List<Grade> userClass(String account, String token) throws Exception {
+        //根据账号查询学生所在的班级
+        List<Grade> list = userGradeMapper.selectGradeByExample(account);
         return list;
     }
 }
