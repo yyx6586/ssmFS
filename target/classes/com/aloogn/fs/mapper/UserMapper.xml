@@ -14,13 +14,13 @@
     <result column="QQ" jdbcType="VARCHAR" property="QQ" />
     <result column="wechat" jdbcType="VARCHAR" property="wechat" />
     <result column="address" jdbcType="VARCHAR" property="address" />
-    <result column="creat_time" jdbcType="TIMESTAMP" property="creat_time" />
-    <result column="update_time" jdbcType="TIMESTAMP" property="update_time" />
     <result column="parent_name" jdbcType="VARCHAR" property="parent_name" />
     <result column="parent_phone" jdbcType="CHAR" property="parent_phone" />
     <result column="parent_QQ" jdbcType="VARCHAR" property="parent_QQ" />
     <result column="parent_wechat" jdbcType="VARCHAR" property="parent_wechat" />
     <result column="parent_address" jdbcType="VARCHAR" property="parent_address" />
+    <result column="creat_time" jdbcType="TIMESTAMP" property="creat_time" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="update_time" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -82,7 +82,8 @@
   </sql>
   <sql id="Base_Column_List">
     id, name, sex, birthdate, password, role, state, email, phone, QQ, wechat, address, 
-    creat_time, update_time, parent_name, parent_phone, parent_QQ, parent_wechat, parent_address
+    parent_name, parent_phone, parent_QQ, parent_wechat, parent_address, creat_time, 
+    update_time
   </sql>
   <select id="selectByExample" parameterType="com.aloogn.fs.user.bean.UserCriteria" resultMap="BaseResultMap">
     select
@@ -118,15 +119,15 @@
     insert into user (id, name, sex, birthdate, 
       password, role, state, email, 
       phone, QQ, wechat, address, 
-      creat_time, update_time, parent_name, 
-      parent_phone, parent_QQ, parent_wechat, 
-      parent_address)
+      parent_name, parent_phone, parent_QQ, 
+      parent_wechat, parent_address, creat_time, 
+      update_time)
     values (#{id,jdbcType=CHAR}, #{name,jdbcType=VARCHAR}, #{sex,jdbcType=CHAR}, #{birthdate,jdbcType=CHAR}, 
       #{password,jdbcType=VARCHAR}, #{role,jdbcType=CHAR}, #{state,jdbcType=CHAR}, #{email,jdbcType=VARCHAR}, 
       #{phone,jdbcType=CHAR}, #{QQ,jdbcType=VARCHAR}, #{wechat,jdbcType=VARCHAR}, #{address,jdbcType=VARCHAR}, 
-      #{creat_time,jdbcType=TIMESTAMP}, #{update_time,jdbcType=TIMESTAMP}, #{parent_name,jdbcType=VARCHAR}, 
-      #{parent_phone,jdbcType=CHAR}, #{parent_QQ,jdbcType=VARCHAR}, #{parent_wechat,jdbcType=VARCHAR}, 
-      #{parent_address,jdbcType=VARCHAR})
+      #{parent_name,jdbcType=VARCHAR}, #{parent_phone,jdbcType=CHAR}, #{parent_QQ,jdbcType=VARCHAR}, 
+      #{parent_wechat,jdbcType=VARCHAR}, #{parent_address,jdbcType=VARCHAR}, #{creat_time,jdbcType=TIMESTAMP}, 
+      #{update_time,jdbcType=TIMESTAMP})
   </insert>
   <insert id="insertSelective" parameterType="com.aloogn.fs.user.bean.User">
     insert into user
@@ -167,12 +168,6 @@
       <if test="address != null">
         address,
       </if>
-      <if test="creat_time != null">
-        creat_time,
-      </if>
-      <if test="update_time != null">
-        update_time,
-      </if>
       <if test="parent_name != null">
         parent_name,
       </if>
@@ -187,6 +182,12 @@
       </if>
       <if test="parent_address != null">
         parent_address,
+      </if>
+      <if test="creat_time != null">
+        creat_time,
+      </if>
+      <if test="update_time != null">
+        update_time,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
@@ -226,12 +227,6 @@
       <if test="address != null">
         #{address,jdbcType=VARCHAR},
       </if>
-      <if test="creat_time != null">
-        #{creat_time,jdbcType=TIMESTAMP},
-      </if>
-      <if test="update_time != null">
-        #{update_time,jdbcType=TIMESTAMP},
-      </if>
       <if test="parent_name != null">
         #{parent_name,jdbcType=VARCHAR},
       </if>
@@ -246,6 +241,12 @@
       </if>
       <if test="parent_address != null">
         #{parent_address,jdbcType=VARCHAR},
+      </if>
+      <if test="creat_time != null">
+        #{creat_time,jdbcType=TIMESTAMP},
+      </if>
+      <if test="update_time != null">
+        #{update_time,jdbcType=TIMESTAMP},
       </if>
     </trim>
   </insert>
@@ -294,12 +295,6 @@
       <if test="record.address != null">
         address = #{record.address,jdbcType=VARCHAR},
       </if>
-      <if test="record.creat_time != null">
-        creat_time = #{record.creat_time,jdbcType=TIMESTAMP},
-      </if>
-      <if test="record.update_time != null">
-        update_time = #{record.update_time,jdbcType=TIMESTAMP},
-      </if>
       <if test="record.parent_name != null">
         parent_name = #{record.parent_name,jdbcType=VARCHAR},
       </if>
@@ -314,6 +309,12 @@
       </if>
       <if test="record.parent_address != null">
         parent_address = #{record.parent_address,jdbcType=VARCHAR},
+      </if>
+      <if test="record.creat_time != null">
+        creat_time = #{record.creat_time,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.update_time != null">
+        update_time = #{record.update_time,jdbcType=TIMESTAMP},
       </if>
     </set>
     <if test="_parameter != null">
@@ -334,13 +335,13 @@
       QQ = #{record.QQ,jdbcType=VARCHAR},
       wechat = #{record.wechat,jdbcType=VARCHAR},
       address = #{record.address,jdbcType=VARCHAR},
-      creat_time = #{record.creat_time,jdbcType=TIMESTAMP},
-      update_time = #{record.update_time,jdbcType=TIMESTAMP},
       parent_name = #{record.parent_name,jdbcType=VARCHAR},
       parent_phone = #{record.parent_phone,jdbcType=CHAR},
       parent_QQ = #{record.parent_QQ,jdbcType=VARCHAR},
       parent_wechat = #{record.parent_wechat,jdbcType=VARCHAR},
-      parent_address = #{record.parent_address,jdbcType=VARCHAR}
+      parent_address = #{record.parent_address,jdbcType=VARCHAR},
+      creat_time = #{record.creat_time,jdbcType=TIMESTAMP},
+      update_time = #{record.update_time,jdbcType=TIMESTAMP}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -381,12 +382,6 @@
       <if test="address != null">
         address = #{address,jdbcType=VARCHAR},
       </if>
-      <if test="creat_time != null">
-        creat_time = #{creat_time,jdbcType=TIMESTAMP},
-      </if>
-      <if test="update_time != null">
-        update_time = #{update_time,jdbcType=TIMESTAMP},
-      </if>
       <if test="parent_name != null">
         parent_name = #{parent_name,jdbcType=VARCHAR},
       </if>
@@ -401,6 +396,12 @@
       </if>
       <if test="parent_address != null">
         parent_address = #{parent_address,jdbcType=VARCHAR},
+      </if>
+      <if test="creat_time != null">
+        creat_time = #{creat_time,jdbcType=TIMESTAMP},
+      </if>
+      <if test="update_time != null">
+        update_time = #{update_time,jdbcType=TIMESTAMP},
       </if>
     </set>
     where id = #{id,jdbcType=CHAR}
@@ -418,13 +419,13 @@
       QQ = #{QQ,jdbcType=VARCHAR},
       wechat = #{wechat,jdbcType=VARCHAR},
       address = #{address,jdbcType=VARCHAR},
-      creat_time = #{creat_time,jdbcType=TIMESTAMP},
-      update_time = #{update_time,jdbcType=TIMESTAMP},
       parent_name = #{parent_name,jdbcType=VARCHAR},
       parent_phone = #{parent_phone,jdbcType=CHAR},
       parent_QQ = #{parent_QQ,jdbcType=VARCHAR},
       parent_wechat = #{parent_wechat,jdbcType=VARCHAR},
-      parent_address = #{parent_address,jdbcType=VARCHAR}
+      parent_address = #{parent_address,jdbcType=VARCHAR},
+      creat_time = #{creat_time,jdbcType=TIMESTAMP},
+      update_time = #{update_time,jdbcType=TIMESTAMP}
     where id = #{id,jdbcType=CHAR}
   </update>
 

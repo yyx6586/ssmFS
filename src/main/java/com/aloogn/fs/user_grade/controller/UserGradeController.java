@@ -4,6 +4,7 @@ import com.aloogn.common.utils.JSONUtil;
 import com.aloogn.common.utils.StringUtils;
 import com.aloogn.fs.grade.bean.Grade;
 import com.aloogn.fs.user.bean.User;
+import com.aloogn.fs.user_grade.bean.UserGrade;
 import com.aloogn.fs.user_grade.service.UserGradeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -47,8 +48,8 @@ public class UserGradeController {
         }
 
         try{
-            List<Grade> list = userGradeService.userClass(account, token);
-            jsonUtil.setData(list);
+            UserGrade userGrade = userGradeService.userClass(account, token);
+            jsonUtil.setData(userGrade);
         } catch (Exception e) {
             jsonUtil.setMsg("获取数据错误，请重新登录" + e.getMessage());
         }

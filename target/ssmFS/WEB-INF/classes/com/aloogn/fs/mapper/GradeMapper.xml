@@ -2,11 +2,12 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.aloogn.fs.grade.mapper.GradeMapper">
   <resultMap id="BaseResultMap" type="com.aloogn.fs.grade.bean.Grade">
-    <id column="id" jdbcType="CHAR" property="id" />
-    <result column="grade_name" jdbcType="CHAR" property="grade_name" />
-    <result column="grade_number" jdbcType="CHAR" property="grade_number" />
-    <result column="class_name" jdbcType="CHAR" property="class_name" />
-    <result column="class_number" jdbcType="CHAR" property="class_number" />
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="gradeclass_id" jdbcType="CHAR" property="gradeclass_id" />
+    <result column="grade_name" jdbcType="VARCHAR" property="grade_name" />
+    <result column="grade_number" jdbcType="VARCHAR" property="grade_number" />
+    <result column="class_name" jdbcType="VARCHAR" property="class_name" />
+    <result column="class_number" jdbcType="VARCHAR" property="class_number" />
     <result column="creat_time" jdbcType="TIMESTAMP" property="creat_time" />
     <result column="update_time" jdbcType="TIMESTAMP" property="update_time" />
   </resultMap>
@@ -69,7 +70,8 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    id, grade_name, grade_number, class_name, class_number, creat_time, update_time
+    id, gradeclass_id, grade_name, grade_number, class_name, class_number, creat_time, 
+    update_time
   </sql>
   <select id="selectByExample" parameterType="com.aloogn.fs.grade.bean.GradeCriteria" resultMap="BaseResultMap">
     select
@@ -85,15 +87,15 @@
       order by ${orderByClause}
     </if>
   </select>
-  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
     from grade
-    where id = #{id,jdbcType=CHAR}
+    where id = #{id,jdbcType=INTEGER}
   </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from grade
-    where id = #{id,jdbcType=CHAR}
+    where id = #{id,jdbcType=INTEGER}
   </delete>
   <delete id="deleteByExample" parameterType="com.aloogn.fs.grade.bean.GradeCriteria">
     delete from grade
@@ -102,18 +104,21 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.aloogn.fs.grade.bean.Grade">
-    insert into grade (id, grade_name, grade_number, 
-      class_name, class_number, creat_time, 
-      update_time)
-    values (#{id,jdbcType=CHAR}, #{grade_name,jdbcType=CHAR}, #{grade_number,jdbcType=CHAR}, 
-      #{class_name,jdbcType=CHAR}, #{class_number,jdbcType=CHAR}, #{creat_time,jdbcType=TIMESTAMP}, 
-      #{update_time,jdbcType=TIMESTAMP})
+    insert into grade (id, gradeclass_id, grade_name, 
+      grade_number, class_name, class_number, 
+      creat_time, update_time)
+    values (#{id,jdbcType=INTEGER}, #{gradeclass_id,jdbcType=CHAR}, #{grade_name,jdbcType=VARCHAR}, 
+      #{grade_number,jdbcType=VARCHAR}, #{class_name,jdbcType=VARCHAR}, #{class_number,jdbcType=VARCHAR}, 
+      #{creat_time,jdbcType=TIMESTAMP}, #{update_time,jdbcType=TIMESTAMP})
   </insert>
   <insert id="insertSelective" parameterType="com.aloogn.fs.grade.bean.Grade">
     insert into grade
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="id != null">
         id,
+      </if>
+      <if test="gradeclass_id != null">
+        gradeclass_id,
       </if>
       <if test="grade_name != null">
         grade_name,
@@ -136,19 +141,22 @@
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
       <if test="id != null">
-        #{id,jdbcType=CHAR},
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="gradeclass_id != null">
+        #{gradeclass_id,jdbcType=CHAR},
       </if>
       <if test="grade_name != null">
-        #{grade_name,jdbcType=CHAR},
+        #{grade_name,jdbcType=VARCHAR},
       </if>
       <if test="grade_number != null">
-        #{grade_number,jdbcType=CHAR},
+        #{grade_number,jdbcType=VARCHAR},
       </if>
       <if test="class_name != null">
-        #{class_name,jdbcType=CHAR},
+        #{class_name,jdbcType=VARCHAR},
       </if>
       <if test="class_number != null">
-        #{class_number,jdbcType=CHAR},
+        #{class_number,jdbcType=VARCHAR},
       </if>
       <if test="creat_time != null">
         #{creat_time,jdbcType=TIMESTAMP},
@@ -168,19 +176,22 @@
     update grade
     <set>
       <if test="record.id != null">
-        id = #{record.id,jdbcType=CHAR},
+        id = #{record.id,jdbcType=INTEGER},
+      </if>
+      <if test="record.gradeclass_id != null">
+        gradeclass_id = #{record.gradeclass_id,jdbcType=CHAR},
       </if>
       <if test="record.grade_name != null">
-        grade_name = #{record.grade_name,jdbcType=CHAR},
+        grade_name = #{record.grade_name,jdbcType=VARCHAR},
       </if>
       <if test="record.grade_number != null">
-        grade_number = #{record.grade_number,jdbcType=CHAR},
+        grade_number = #{record.grade_number,jdbcType=VARCHAR},
       </if>
       <if test="record.class_name != null">
-        class_name = #{record.class_name,jdbcType=CHAR},
+        class_name = #{record.class_name,jdbcType=VARCHAR},
       </if>
       <if test="record.class_number != null">
-        class_number = #{record.class_number,jdbcType=CHAR},
+        class_number = #{record.class_number,jdbcType=VARCHAR},
       </if>
       <if test="record.creat_time != null">
         creat_time = #{record.creat_time,jdbcType=TIMESTAMP},
@@ -195,11 +206,12 @@
   </update>
   <update id="updateByExample" parameterType="map">
     update grade
-    set id = #{record.id,jdbcType=CHAR},
-      grade_name = #{record.grade_name,jdbcType=CHAR},
-      grade_number = #{record.grade_number,jdbcType=CHAR},
-      class_name = #{record.class_name,jdbcType=CHAR},
-      class_number = #{record.class_number,jdbcType=CHAR},
+    set id = #{record.id,jdbcType=INTEGER},
+      gradeclass_id = #{record.gradeclass_id,jdbcType=CHAR},
+      grade_name = #{record.grade_name,jdbcType=VARCHAR},
+      grade_number = #{record.grade_number,jdbcType=VARCHAR},
+      class_name = #{record.class_name,jdbcType=VARCHAR},
+      class_number = #{record.class_number,jdbcType=VARCHAR},
       creat_time = #{record.creat_time,jdbcType=TIMESTAMP},
       update_time = #{record.update_time,jdbcType=TIMESTAMP}
     <if test="_parameter != null">
@@ -209,17 +221,20 @@
   <update id="updateByPrimaryKeySelective" parameterType="com.aloogn.fs.grade.bean.Grade">
     update grade
     <set>
+      <if test="gradeclass_id != null">
+        gradeclass_id = #{gradeclass_id,jdbcType=CHAR},
+      </if>
       <if test="grade_name != null">
-        grade_name = #{grade_name,jdbcType=CHAR},
+        grade_name = #{grade_name,jdbcType=VARCHAR},
       </if>
       <if test="grade_number != null">
-        grade_number = #{grade_number,jdbcType=CHAR},
+        grade_number = #{grade_number,jdbcType=VARCHAR},
       </if>
       <if test="class_name != null">
-        class_name = #{class_name,jdbcType=CHAR},
+        class_name = #{class_name,jdbcType=VARCHAR},
       </if>
       <if test="class_number != null">
-        class_number = #{class_number,jdbcType=CHAR},
+        class_number = #{class_number,jdbcType=VARCHAR},
       </if>
       <if test="creat_time != null">
         creat_time = #{creat_time,jdbcType=TIMESTAMP},
@@ -228,16 +243,27 @@
         update_time = #{update_time,jdbcType=TIMESTAMP},
       </if>
     </set>
-    where id = #{id,jdbcType=CHAR}
+    where id = #{id,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.aloogn.fs.grade.bean.Grade">
     update grade
-    set grade_name = #{grade_name,jdbcType=CHAR},
-      grade_number = #{grade_number,jdbcType=CHAR},
-      class_name = #{class_name,jdbcType=CHAR},
-      class_number = #{class_number,jdbcType=CHAR},
+    set gradeclass_id = #{gradeclass_id,jdbcType=CHAR},
+      grade_name = #{grade_name,jdbcType=VARCHAR},
+      grade_number = #{grade_number,jdbcType=VARCHAR},
+      class_name = #{class_name,jdbcType=VARCHAR},
+      class_number = #{class_number,jdbcType=VARCHAR},
       creat_time = #{creat_time,jdbcType=TIMESTAMP},
       update_time = #{update_time,jdbcType=TIMESTAMP}
-    where id = #{id,jdbcType=CHAR}
+    where id = #{id,jdbcType=INTEGER}
   </update>
+
+  <!--根据班级与年级名称查询班级与年级id-->
+  <select id="selectGradeClassByAccount" parameterType="java.lang.String" resultMap="BaseResultMap">
+  select * from grade where grade_name = #{grade_name} and class_name = #{class_name}
+</select>
+
+  <!--根据班级与年级id查询班级与年级名称-->
+  <select id="selectIdByGradeClassName" parameterType="java.lang.String" resultMap="BaseResultMap">
+  select * from grade where gradeclass_id = #{gradeclass_id}
+</select>
 </mapper>

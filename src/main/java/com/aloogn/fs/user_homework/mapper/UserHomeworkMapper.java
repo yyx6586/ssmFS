@@ -1,6 +1,5 @@
 package com.aloogn.fs.user_homework.mapper;
 
-import com.aloogn.fs.notice_information.bean.NoticeInformation;
 import com.aloogn.fs.user_homework.bean.UserHomework;
 import com.aloogn.fs.user_homework.bean.UserHomeworkCriteria;
 import java.util.List;
@@ -17,15 +16,21 @@ public interface UserHomeworkMapper {
 
     int insertSelective(UserHomework record);
 
+    List<UserHomework> selectByExampleWithBLOBs(UserHomeworkCriteria example);
+
     List<UserHomework> selectByExample(UserHomeworkCriteria example);
 
     UserHomework selectByPrimaryKey(Integer id);
 
     int updateByExampleSelective(@Param("record") UserHomework record, @Param("example") UserHomeworkCriteria example);
 
+    int updateByExampleWithBLOBs(@Param("record") UserHomework record, @Param("example") UserHomeworkCriteria example);
+
     int updateByExample(@Param("record") UserHomework record, @Param("example") UserHomeworkCriteria example);
 
     int updateByPrimaryKeySelective(UserHomework record);
+
+    int updateByPrimaryKeyWithBLOBs(UserHomework record);
 
     int updateByPrimaryKey(UserHomework record);
 
@@ -38,4 +43,5 @@ public interface UserHomeworkMapper {
 
     //自定义删除
     boolean deleteHomeworkByExample(@Param("account") String account, @Param("grade_id") String grade_id, @Param("homework") String homework);
+
 }

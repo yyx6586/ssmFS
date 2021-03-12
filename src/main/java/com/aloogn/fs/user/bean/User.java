@@ -28,10 +28,6 @@ public class User implements Serializable {
 
     private String address;
 
-    private Date creat_time;
-
-    private Date update_time;
-
     private String parent_name;
 
     private String parent_phone;
@@ -41,6 +37,10 @@ public class User implements Serializable {
     private String parent_wechat;
 
     private String parent_address;
+
+    private Date creat_time;
+
+    private Date update_time;
 
     private static final long serialVersionUID = 1L;
 
@@ -140,22 +140,6 @@ public class User implements Serializable {
         this.address = address == null ? null : address.trim();
     }
 
-    public Date getCreat_time() {
-        return creat_time;
-    }
-
-    public void setCreat_time(Date creat_time) {
-        this.creat_time = creat_time;
-    }
-
-    public Date getUpdate_time() {
-        return update_time;
-    }
-
-    public void setUpdate_time(Date update_time) {
-        this.update_time = update_time;
-    }
-
     public String getParent_name() {
         return parent_name;
     }
@@ -196,6 +180,22 @@ public class User implements Serializable {
         this.parent_address = parent_address == null ? null : parent_address.trim();
     }
 
+    public Date getCreat_time() {
+        return creat_time;
+    }
+
+    public void setCreat_time(Date creat_time) {
+        this.creat_time = creat_time;
+    }
+
+    public Date getUpdate_time() {
+        return update_time;
+    }
+
+    public void setUpdate_time(Date update_time) {
+        this.update_time = update_time;
+    }
+
     @Override
     public boolean equals(Object that) {
         if (this == that) {
@@ -220,13 +220,13 @@ public class User implements Serializable {
             && (this.getQQ() == null ? other.getQQ() == null : this.getQQ().equals(other.getQQ()))
             && (this.getWechat() == null ? other.getWechat() == null : this.getWechat().equals(other.getWechat()))
             && (this.getAddress() == null ? other.getAddress() == null : this.getAddress().equals(other.getAddress()))
-            && (this.getCreat_time() == null ? other.getCreat_time() == null : this.getCreat_time().equals(other.getCreat_time()))
-            && (this.getUpdate_time() == null ? other.getUpdate_time() == null : this.getUpdate_time().equals(other.getUpdate_time()))
             && (this.getParent_name() == null ? other.getParent_name() == null : this.getParent_name().equals(other.getParent_name()))
             && (this.getParent_phone() == null ? other.getParent_phone() == null : this.getParent_phone().equals(other.getParent_phone()))
             && (this.getParent_QQ() == null ? other.getParent_QQ() == null : this.getParent_QQ().equals(other.getParent_QQ()))
             && (this.getParent_wechat() == null ? other.getParent_wechat() == null : this.getParent_wechat().equals(other.getParent_wechat()))
-            && (this.getParent_address() == null ? other.getParent_address() == null : this.getParent_address().equals(other.getParent_address()));
+            && (this.getParent_address() == null ? other.getParent_address() == null : this.getParent_address().equals(other.getParent_address()))
+            && (this.getCreat_time() == null ? other.getCreat_time() == null : this.getCreat_time().equals(other.getCreat_time()))
+            && (this.getUpdate_time() == null ? other.getUpdate_time() == null : this.getUpdate_time().equals(other.getUpdate_time()));
     }
 
     @Override
@@ -245,13 +245,13 @@ public class User implements Serializable {
         result = prime * result + ((getQQ() == null) ? 0 : getQQ().hashCode());
         result = prime * result + ((getWechat() == null) ? 0 : getWechat().hashCode());
         result = prime * result + ((getAddress() == null) ? 0 : getAddress().hashCode());
-        result = prime * result + ((getCreat_time() == null) ? 0 : getCreat_time().hashCode());
-        result = prime * result + ((getUpdate_time() == null) ? 0 : getUpdate_time().hashCode());
         result = prime * result + ((getParent_name() == null) ? 0 : getParent_name().hashCode());
         result = prime * result + ((getParent_phone() == null) ? 0 : getParent_phone().hashCode());
         result = prime * result + ((getParent_QQ() == null) ? 0 : getParent_QQ().hashCode());
         result = prime * result + ((getParent_wechat() == null) ? 0 : getParent_wechat().hashCode());
         result = prime * result + ((getParent_address() == null) ? 0 : getParent_address().hashCode());
+        result = prime * result + ((getCreat_time() == null) ? 0 : getCreat_time().hashCode());
+        result = prime * result + ((getUpdate_time() == null) ? 0 : getUpdate_time().hashCode());
         return result;
     }
 }

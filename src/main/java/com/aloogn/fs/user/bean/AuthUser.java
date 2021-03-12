@@ -8,9 +8,15 @@ public class AuthUser implements Serializable {
     private String userName;
     private String role;
     private String token;
-    private String userSex;
-    private String userPhone;
-    private String parentPhone;
+    private String msg;
+
+    public String getMsg() {
+        return msg;
+    }
+
+    public void setMsg(String msg) {
+        this.msg = msg;
+    }
 
     public String getUserId() {
         return userId;
@@ -50,29 +56,5 @@ public class AuthUser implements Serializable {
 
     public void setToken(String token) {
         this.token = token;
-    }
-
-    public String getUserSex() {
-        return userSex;
-    }
-
-    public void setUserSex(String userSex) {
-        this.userSex = userSex;
-    }
-
-    public String getParentPhone() {
-        return parentPhone;
-    }
-
-    public void setParentPhone(String parentPhone) {
-        this.parentPhone = parentPhone;
-    }
-
-    public String getUserPhone() {
-        return userPhone;
-    }
-
-    public void setUserPhone(String userPhone) {
-        this.userPhone = userPhone;
     }
 }

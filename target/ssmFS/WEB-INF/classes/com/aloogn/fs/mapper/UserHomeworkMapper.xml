@@ -5,10 +5,13 @@
     <id column="id" jdbcType="INTEGER" property="id" />
     <result column="account" jdbcType="CHAR" property="account" />
     <result column="subject_name" jdbcType="VARCHAR" property="subject_name" />
-    <result column="grade_id" jdbcType="CHAR" property="grade_id" />
-    <result column="Homework" jdbcType="VARCHAR" property="homework" />
+    <result column="gradeclass_id" jdbcType="CHAR" property="gradeclass_id" />
+    <result column="title" jdbcType="VARCHAR" property="title" />
     <result column="creat_time" jdbcType="TIMESTAMP" property="creat_time" />
     <result column="update_time" jdbcType="TIMESTAMP" property="update_time" />
+  </resultMap>
+  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.aloogn.fs.user_homework.bean.UserHomework">
+    <result column="homework" jdbcType="LONGVARCHAR" property="homework" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -69,8 +72,27 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    id, account, subject_name, grade_id, Homework, creat_time, update_time
+    id, account, subject_name, gradeclass_id, title, creat_time, update_time
   </sql>
+  <sql id="Blob_Column_List">
+    homework
+  </sql>
+  <select id="selectByExampleWithBLOBs" parameterType="com.aloogn.fs.user_homework.bean.UserHomeworkCriteria" resultMap="ResultMapWithBLOBs">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from user_homework
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
   <select id="selectByExample" parameterType="com.aloogn.fs.user_homework.bean.UserHomeworkCriteria" resultMap="BaseResultMap">
     select
     <if test="distinct">
@@ -85,9 +107,11 @@
       order by ${orderByClause}
     </if>
   </select>
-  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="ResultMapWithBLOBs">
     select 
     <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
     from user_homework
     where id = #{id,jdbcType=INTEGER}
   </select>
@@ -103,11 +127,11 @@
   </delete>
   <insert id="insert" parameterType="com.aloogn.fs.user_homework.bean.UserHomework">
     insert into user_homework (id, account, subject_name, 
-      grade_id, Homework, creat_time, 
-      update_time)
+      gradeclass_id, title, creat_time, 
+      update_time, homework)
     values (#{id,jdbcType=INTEGER}, #{account,jdbcType=CHAR}, #{subject_name,jdbcType=VARCHAR}, 
-      #{grade_id,jdbcType=CHAR}, #{homework,jdbcType=VARCHAR}, #{creat_time,jdbcType=TIMESTAMP}, 
-      #{update_time,jdbcType=TIMESTAMP})
+      #{gradeclass_id,jdbcType=CHAR}, #{title,jdbcType=VARCHAR}, #{creat_time,jdbcType=TIMESTAMP}, 
+      #{update_time,jdbcType=TIMESTAMP}, #{homework,jdbcType=LONGVARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.aloogn.fs.user_homework.bean.UserHomework">
     insert into user_homework
@@ -121,17 +145,20 @@
       <if test="subject_name != null">
         subject_name,
       </if>
-      <if test="grade_id != null">
-        grade_id,
+      <if test="gradeclass_id != null">
+        gradeclass_id,
       </if>
-      <if test="homework != null">
-        Homework,
+      <if test="title != null">
+        title,
       </if>
       <if test="creat_time != null">
         creat_time,
       </if>
       <if test="update_time != null">
         update_time,
+      </if>
+      <if test="homework != null">
+        homework,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
@@ -144,17 +171,20 @@
       <if test="subject_name != null">
         #{subject_name,jdbcType=VARCHAR},
       </if>
-      <if test="grade_id != null">
-        #{grade_id,jdbcType=CHAR},
+      <if test="gradeclass_id != null">
+        #{gradeclass_id,jdbcType=CHAR},
       </if>
-      <if test="homework != null">
-        #{homework,jdbcType=VARCHAR},
+      <if test="title != null">
+        #{title,jdbcType=VARCHAR},
       </if>
       <if test="creat_time != null">
         #{creat_time,jdbcType=TIMESTAMP},
       </if>
       <if test="update_time != null">
         #{update_time,jdbcType=TIMESTAMP},
+      </if>
+      <if test="homework != null">
+        #{homework,jdbcType=LONGVARCHAR},
       </if>
     </trim>
   </insert>
@@ -176,11 +206,11 @@
       <if test="record.subject_name != null">
         subject_name = #{record.subject_name,jdbcType=VARCHAR},
       </if>
-      <if test="record.grade_id != null">
-        grade_id = #{record.grade_id,jdbcType=CHAR},
+      <if test="record.gradeclass_id != null">
+        gradeclass_id = #{record.gradeclass_id,jdbcType=CHAR},
       </if>
-      <if test="record.homework != null">
-        Homework = #{record.homework,jdbcType=VARCHAR},
+      <if test="record.title != null">
+        title = #{record.title,jdbcType=VARCHAR},
       </if>
       <if test="record.creat_time != null">
         creat_time = #{record.creat_time,jdbcType=TIMESTAMP},
@@ -188,7 +218,24 @@
       <if test="record.update_time != null">
         update_time = #{record.update_time,jdbcType=TIMESTAMP},
       </if>
+      <if test="record.homework != null">
+        homework = #{record.homework,jdbcType=LONGVARCHAR},
+      </if>
     </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExampleWithBLOBs" parameterType="map">
+    update user_homework
+    set id = #{record.id,jdbcType=INTEGER},
+      account = #{record.account,jdbcType=CHAR},
+      subject_name = #{record.subject_name,jdbcType=VARCHAR},
+      gradeclass_id = #{record.gradeclass_id,jdbcType=CHAR},
+      title = #{record.title,jdbcType=VARCHAR},
+      creat_time = #{record.creat_time,jdbcType=TIMESTAMP},
+      update_time = #{record.update_time,jdbcType=TIMESTAMP},
+      homework = #{record.homework,jdbcType=LONGVARCHAR}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -198,8 +245,8 @@
     set id = #{record.id,jdbcType=INTEGER},
       account = #{record.account,jdbcType=CHAR},
       subject_name = #{record.subject_name,jdbcType=VARCHAR},
-      grade_id = #{record.grade_id,jdbcType=CHAR},
-      Homework = #{record.homework,jdbcType=VARCHAR},
+      gradeclass_id = #{record.gradeclass_id,jdbcType=CHAR},
+      title = #{record.title,jdbcType=VARCHAR},
       creat_time = #{record.creat_time,jdbcType=TIMESTAMP},
       update_time = #{record.update_time,jdbcType=TIMESTAMP}
     <if test="_parameter != null">
@@ -215,11 +262,11 @@
       <if test="subject_name != null">
         subject_name = #{subject_name,jdbcType=VARCHAR},
       </if>
-      <if test="grade_id != null">
-        grade_id = #{grade_id,jdbcType=CHAR},
+      <if test="gradeclass_id != null">
+        gradeclass_id = #{gradeclass_id,jdbcType=CHAR},
       </if>
-      <if test="homework != null">
-        Homework = #{homework,jdbcType=VARCHAR},
+      <if test="title != null">
+        title = #{title,jdbcType=VARCHAR},
       </if>
       <if test="creat_time != null">
         creat_time = #{creat_time,jdbcType=TIMESTAMP},
@@ -227,15 +274,29 @@
       <if test="update_time != null">
         update_time = #{update_time,jdbcType=TIMESTAMP},
       </if>
+      <if test="homework != null">
+        homework = #{homework,jdbcType=LONGVARCHAR},
+      </if>
     </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.aloogn.fs.user_homework.bean.UserHomework">
+    update user_homework
+    set account = #{account,jdbcType=CHAR},
+      subject_name = #{subject_name,jdbcType=VARCHAR},
+      gradeclass_id = #{gradeclass_id,jdbcType=CHAR},
+      title = #{title,jdbcType=VARCHAR},
+      creat_time = #{creat_time,jdbcType=TIMESTAMP},
+      update_time = #{update_time,jdbcType=TIMESTAMP},
+      homework = #{homework,jdbcType=LONGVARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.aloogn.fs.user_homework.bean.UserHomework">
     update user_homework
     set account = #{account,jdbcType=CHAR},
       subject_name = #{subject_name,jdbcType=VARCHAR},
-      grade_id = #{grade_id,jdbcType=CHAR},
-      Homework = #{homework,jdbcType=VARCHAR},
+      gradeclass_id = #{gradeclass_id,jdbcType=CHAR},
+      title = #{title,jdbcType=VARCHAR},
       creat_time = #{creat_time,jdbcType=TIMESTAMP},
       update_time = #{update_time,jdbcType=TIMESTAMP}
     where id = #{id,jdbcType=INTEGER}
@@ -243,21 +304,22 @@
 
   <!--  自定义查询  -->
   <select id="selectHomeworkByExample" parameterType="java.lang.String" resultMap="BaseResultMap">
-        select user_homework.* from user_homework where account = #{value}
-    </select>
+      select user_homework.* from user_homework where account = #{value}
+  </select>
 
   <!--  自定义查询  -->
   <select id="selectHomeworkByGrade_id" parameterType="java.lang.String" resultMap="BaseResultMap">
-        select user_homework.* from user_homework where grade_id = #{value}
-    </select>
+      select user_homework.* from user_homework where grade_id = #{value} order by id desc
+  </select>
 
   <!--  自定义查询  -->
   <select id="selectHomework" parameterType="java.lang.String" resultMap="BaseResultMap">
-        select user_homework.* from user_homework where grade_id = #{grade_id} and subject_name = #{subject_name}
-    </select>
+      select user_homework.* from user_homework where grade_id = #{grade_id} and subject_name = #{subject_name}
+  </select>
 
   <!--  自定义删除  -->
   <delete id="deleteHomeworkByExample" parameterType="java.lang.String">
-        delete from user_homework where account = #{account} and grade_id = #{grade_id} and homework = #{homework}
-    </delete>
+      delete from user_homework where account = #{account} and grade_id = #{grade_id} and homework = #{homework}
+  </delete>
+
 </mapper>

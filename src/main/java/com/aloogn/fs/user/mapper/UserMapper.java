@@ -2,32 +2,31 @@ package com.aloogn.fs.user.mapper;
 
 import com.aloogn.fs.user.bean.User;
 import com.aloogn.fs.user.bean.UserCriteria;
+import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
-import java.util.List;
-
 public interface UserMapper {
-    long countByExample(UserCriteria example);//按条件计数
+    long countByExample(UserCriteria example);
 
-    int deleteByExample(UserCriteria example);//按条件删除
+    int deleteByExample(UserCriteria example);
 
-    int deleteByPrimaryKey(String id);//按主键删除
+    int deleteByPrimaryKey(String id);
 
-    int insert(User record);//插入数据（返回值为ID）
+    int insert(User record);
 
-    int insertSelective(User record);//插入不为null的字段的数据
+    int insertSelective(User record);
 
-    List<User> selectByExample(UserCriteria example);//按条件查询
+    List<User> selectByExample(UserCriteria example);
 
-    User selectByPrimaryKey(String id);//按主键查询
+    User selectByPrimaryKey(String id);
 
-    int updateByExampleSelective(@Param("record") User record, @Param("example") UserCriteria example);//按条件更新值不为null的字段
+    int updateByExampleSelective(@Param("record") User record, @Param("example") UserCriteria example);
 
-    int updateByExample(@Param("record") User record, @Param("example") UserCriteria example);//按条件更新
+    int updateByExample(@Param("record") User record, @Param("example") UserCriteria example);
 
-    int updateByPrimaryKeySelective(User record);//按主键更新值不为null的字段
+    int updateByPrimaryKeySelective(User record);
 
-    int updateByPrimaryKey(User record);//按主键更新
+    int updateByPrimaryKey(User record);
 
     //自定义mysql语句
     // 模糊查询

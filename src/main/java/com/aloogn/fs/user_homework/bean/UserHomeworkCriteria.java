@@ -305,143 +305,143 @@ public class UserHomeworkCriteria {
             return (Criteria) this;
         }
 
-        public Criteria andGrade_idIsNull() {
-            addCriterion("grade_id is null");
+        public Criteria andGradeclass_idIsNull() {
+            addCriterion("gradeclass_id is null");
             return (Criteria) this;
         }
 
-        public Criteria andGrade_idIsNotNull() {
-            addCriterion("grade_id is not null");
+        public Criteria andGradeclass_idIsNotNull() {
+            addCriterion("gradeclass_id is not null");
             return (Criteria) this;
         }
 
-        public Criteria andGrade_idEqualTo(String value) {
-            addCriterion("grade_id =", value, "grade_id");
+        public Criteria andGradeclass_idEqualTo(String value) {
+            addCriterion("gradeclass_id =", value, "gradeclass_id");
             return (Criteria) this;
         }
 
-        public Criteria andGrade_idNotEqualTo(String value) {
-            addCriterion("grade_id <>", value, "grade_id");
+        public Criteria andGradeclass_idNotEqualTo(String value) {
+            addCriterion("gradeclass_id <>", value, "gradeclass_id");
             return (Criteria) this;
         }
 
-        public Criteria andGrade_idGreaterThan(String value) {
-            addCriterion("grade_id >", value, "grade_id");
+        public Criteria andGradeclass_idGreaterThan(String value) {
+            addCriterion("gradeclass_id >", value, "gradeclass_id");
             return (Criteria) this;
         }
 
-        public Criteria andGrade_idGreaterThanOrEqualTo(String value) {
-            addCriterion("grade_id >=", value, "grade_id");
+        public Criteria andGradeclass_idGreaterThanOrEqualTo(String value) {
+            addCriterion("gradeclass_id >=", value, "gradeclass_id");
             return (Criteria) this;
         }
 
-        public Criteria andGrade_idLessThan(String value) {
-            addCriterion("grade_id <", value, "grade_id");
+        public Criteria andGradeclass_idLessThan(String value) {
+            addCriterion("gradeclass_id <", value, "gradeclass_id");
             return (Criteria) this;
         }
 
-        public Criteria andGrade_idLessThanOrEqualTo(String value) {
-            addCriterion("grade_id <=", value, "grade_id");
+        public Criteria andGradeclass_idLessThanOrEqualTo(String value) {
+            addCriterion("gradeclass_id <=", value, "gradeclass_id");
             return (Criteria) this;
         }
 
-        public Criteria andGrade_idLike(String value) {
-            addCriterion("grade_id like", value, "grade_id");
+        public Criteria andGradeclass_idLike(String value) {
+            addCriterion("gradeclass_id like", value, "gradeclass_id");
             return (Criteria) this;
         }
 
-        public Criteria andGrade_idNotLike(String value) {
-            addCriterion("grade_id not like", value, "grade_id");
+        public Criteria andGradeclass_idNotLike(String value) {
+            addCriterion("gradeclass_id not like", value, "gradeclass_id");
             return (Criteria) this;
         }
 
-        public Criteria andGrade_idIn(List<String> values) {
-            addCriterion("grade_id in", values, "grade_id");
+        public Criteria andGradeclass_idIn(List<String> values) {
+            addCriterion("gradeclass_id in", values, "gradeclass_id");
             return (Criteria) this;
         }
 
-        public Criteria andGrade_idNotIn(List<String> values) {
-            addCriterion("grade_id not in", values, "grade_id");
+        public Criteria andGradeclass_idNotIn(List<String> values) {
+            addCriterion("gradeclass_id not in", values, "gradeclass_id");
             return (Criteria) this;
         }
 
-        public Criteria andGrade_idBetween(String value1, String value2) {
-            addCriterion("grade_id between", value1, value2, "grade_id");
+        public Criteria andGradeclass_idBetween(String value1, String value2) {
+            addCriterion("gradeclass_id between", value1, value2, "gradeclass_id");
             return (Criteria) this;
         }
 
-        public Criteria andGrade_idNotBetween(String value1, String value2) {
-            addCriterion("grade_id not between", value1, value2, "grade_id");
+        public Criteria andGradeclass_idNotBetween(String value1, String value2) {
+            addCriterion("gradeclass_id not between", value1, value2, "gradeclass_id");
             return (Criteria) this;
         }
 
-        public Criteria andHomeworkIsNull() {
-            addCriterion("Homework is null");
+        public Criteria andTitleIsNull() {
+            addCriterion("title is null");
             return (Criteria) this;
         }
 
-        public Criteria andHomeworkIsNotNull() {
-            addCriterion("Homework is not null");
+        public Criteria andTitleIsNotNull() {
+            addCriterion("title is not null");
             return (Criteria) this;
         }
 
-        public Criteria andHomeworkEqualTo(String value) {
-            addCriterion("Homework =", value, "homework");
+        public Criteria andTitleEqualTo(String value) {
+            addCriterion("title =", value, "title");
             return (Criteria) this;
         }
 
-        public Criteria andHomeworkNotEqualTo(String value) {
-            addCriterion("Homework <>", value, "homework");
+        public Criteria andTitleNotEqualTo(String value) {
+            addCriterion("title <>", value, "title");
             return (Criteria) this;
         }
 
-        public Criteria andHomeworkGreaterThan(String value) {
-            addCriterion("Homework >", value, "homework");
+        public Criteria andTitleGreaterThan(String value) {
+            addCriterion("title >", value, "title");
             return (Criteria) this;
         }
 
-        public Criteria andHomeworkGreaterThanOrEqualTo(String value) {
-            addCriterion("Homework >=", value, "homework");
+        public Criteria andTitleGreaterThanOrEqualTo(String value) {
+            addCriterion("title >=", value, "title");
             return (Criteria) this;
         }
 
-        public Criteria andHomeworkLessThan(String value) {
-            addCriterion("Homework <", value, "homework");
+        public Criteria andTitleLessThan(String value) {
+            addCriterion("title <", value, "title");
             return (Criteria) this;
         }
 
-        public Criteria andHomeworkLessThanOrEqualTo(String value) {
-            addCriterion("Homework <=", value, "homework");
+        public Criteria andTitleLessThanOrEqualTo(String value) {
+            addCriterion("title <=", value, "title");
             return (Criteria) this;
         }
 
-        public Criteria andHomeworkLike(String value) {
-            addCriterion("Homework like", value, "homework");
+        public Criteria andTitleLike(String value) {
+            addCriterion("title like", value, "title");
             return (Criteria) this;
         }
 
-        public Criteria andHomeworkNotLike(String value) {
-            addCriterion("Homework not like", value, "homework");
+        public Criteria andTitleNotLike(String value) {
+            addCriterion("title not like", value, "title");
             return (Criteria) this;
         }
 
-        public Criteria andHomeworkIn(List<String> values) {
-            addCriterion("Homework in", values, "homework");
+        public Criteria andTitleIn(List<String> values) {
+            addCriterion("title in", values, "title");
             return (Criteria) this;
         }
 
-        public Criteria andHomeworkNotIn(List<String> values) {
-            addCriterion("Homework not in", values, "homework");
+        public Criteria andTitleNotIn(List<String> values) {
+            addCriterion("title not in", values, "title");
             return (Criteria) this;
         }
 
-        public Criteria andHomeworkBetween(String value1, String value2) {
-            addCriterion("Homework between", value1, value2, "homework");
+        public Criteria andTitleBetween(String value1, String value2) {
+            addCriterion("title between", value1, value2, "title");
             return (Criteria) this;
         }
 
-        public Criteria andHomeworkNotBetween(String value1, String value2) {
-            addCriterion("Homework not between", value1, value2, "homework");
+        public Criteria andTitleNotBetween(String value1, String value2) {
+            addCriterion("title not between", value1, value2, "title");
             return (Criteria) this;
         }
 

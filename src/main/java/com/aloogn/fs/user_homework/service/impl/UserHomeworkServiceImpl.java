@@ -16,7 +16,7 @@ public class UserHomeworkServiceImpl implements UserHomeworkService {
         //将信息插入数据库表中
         UserHomework userHomework = new UserHomework();
         userHomework.setAccount(account);
-        userHomework.setGrade_id(grade_id);
+//        userHomework.setGrade_id(grade_id);
         userHomework.setHomework(homework);
         userHomework.setSubject_name(subject_name);
 
@@ -46,3 +46,4 @@ public class UserHomeworkServiceImpl implements UserHomeworkService {
         return list;
     }
 }
+

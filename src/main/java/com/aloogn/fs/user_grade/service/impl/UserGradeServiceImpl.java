@@ -14,6 +14,7 @@ public class UserGradeServiceImpl implements UserGradeService {
     @Autowired
     UserGradeMapper userGradeMapper;
 
+
     @Autowired
     RedisService redisService;
 
@@ -25,9 +26,9 @@ public class UserGradeServiceImpl implements UserGradeService {
     }
 
     @Override
-    public List<Grade> userClass(String account, String token) throws Exception {
+    public UserGrade userClass(String account, String token) throws Exception {
         //根据账号查询学生所在的班级
-        List<Grade> list = userGradeMapper.selectGradeByExample(account);
-        return list;
+        UserGrade userGrade = userGradeMapper.selectGradeByAccount(account);
+        return userGrade;
     }
 }

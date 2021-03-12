@@ -4,7 +4,9 @@ import java.io.Serializable;
 import java.util.Date;
 
 public class Grade implements Serializable {
-    private String id;
+    private Integer id;
+
+    private String gradeclass_id;
 
     private String grade_name;
 
@@ -20,12 +22,20 @@ public class Grade implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    public String getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(String id) {
-        this.id = id == null ? null : id.trim();
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getGradeclass_id() {
+        return gradeclass_id;
+    }
+
+    public void setGradeclass_id(String gradeclass_id) {
+        this.gradeclass_id = gradeclass_id == null ? null : gradeclass_id.trim();
     }
 
     public String getGrade_name() {
@@ -89,6 +99,7 @@ public class Grade implements Serializable {
         }
         Grade other = (Grade) that;
         return (this.getId() == null ? other.getId() == null : this.getId().equals(other.getId()))
+            && (this.getGradeclass_id() == null ? other.getGradeclass_id() == null : this.getGradeclass_id().equals(other.getGradeclass_id()))
             && (this.getGrade_name() == null ? other.getGrade_name() == null : this.getGrade_name().equals(other.getGrade_name()))
             && (this.getGrade_number() == null ? other.getGrade_number() == null : this.getGrade_number().equals(other.getGrade_number()))
             && (this.getClass_name() == null ? other.getClass_name() == null : this.getClass_name().equals(other.getClass_name()))
@@ -102,6 +113,7 @@ public class Grade implements Serializable {
         final int prime = 31;
         int result = 1;
         result = prime * result + ((getId() == null) ? 0 : getId().hashCode());
+        result = prime * result + ((getGradeclass_id() == null) ? 0 : getGradeclass_id().hashCode());
         result = prime * result + ((getGrade_name() == null) ? 0 : getGrade_name().hashCode());
         result = prime * result + ((getGrade_number() == null) ? 0 : getGrade_number().hashCode());
         result = prime * result + ((getClass_name() == null) ? 0 : getClass_name().hashCode());

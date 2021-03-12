@@ -10,7 +10,7 @@ public interface GradeMapper {
 
     int deleteByExample(GradeCriteria example);
 
-    int deleteByPrimaryKey(String id);
+    int deleteByPrimaryKey(Integer id);
 
     int insert(Grade record);
 
@@ -18,7 +18,7 @@ public interface GradeMapper {
 
     List<Grade> selectByExample(GradeCriteria example);
 
-    Grade selectByPrimaryKey(String id);
+    Grade selectByPrimaryKey(Integer id);
 
     int updateByExampleSelective(@Param("record") Grade record, @Param("example") GradeCriteria example);
 
@@ -27,4 +27,10 @@ public interface GradeMapper {
     int updateByPrimaryKeySelective(Grade record);
 
     int updateByPrimaryKey(Grade record);
+
+    // 根据班级与年级名称查询班级与年级id
+    Grade selectGradeClassByAccount(@Param("grade_name") String grade_name, @Param("class_name") String class_name);
+
+    // 根据班级与年级id查询班级与年级名称
+    Grade selectIdByGradeClassName(String gradeclass_id);
 }

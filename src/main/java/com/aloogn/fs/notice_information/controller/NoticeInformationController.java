@@ -25,7 +25,7 @@ public class NoticeInformationController {
 
     @RequestMapping("/schoolNoticeInformationRelease")
     @ResponseBody
-    public JSONUtil schoolNoticeInformationRelease(String account, String grade_id, String information, String token){
+    public JSONUtil schoolNoticeInformationRelease(String account, String grade_id, String title, String information, String token){
         jsonUtil.setCode(-1);
 
         if(StringUtils.isNullOrEmpty(account)){
@@ -44,7 +44,7 @@ public class NoticeInformationController {
         }
 
         try{
-            noticeInformationService.schoolNoticeInformationRelease(account, grade_id, information, token);
+            noticeInformationService.schoolNoticeInformationRelease(account, grade_id, title, information, token);
             jsonUtil.setCode(1);
             jsonUtil.setMsg("信息发布成功");
         } catch (Exception e) {
@@ -95,7 +95,7 @@ public class NoticeInformationController {
 
     @RequestMapping("/noticeFamilyDetails")
     @ResponseBody
-    public JSONUtil noticeFamilyDetails(String grade_id, String token){
+    public JSONUtil noticeFamilyDetails(String grade_id, Integer curPage, Integer pageSize, String token){
         jsonUtil.setCode(-1);
 
         if(StringUtils.isNullOrEmpty(grade_id)){
@@ -104,7 +104,7 @@ public class NoticeInformationController {
         }
 
         try{
-            List<NoticeInformation> list = noticeInformationService.noticeFamilyDetails(grade_id, token);
+            List<NoticeInformation> list = noticeInformationService.noticeFamilyDetails(grade_id, curPage, pageSize, token);
             jsonUtil.setCode(1);
             jsonUtil.setMsg("获取通知成功");
             jsonUtil.setData(list);

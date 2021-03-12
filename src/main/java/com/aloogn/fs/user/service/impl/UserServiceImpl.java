@@ -22,7 +22,7 @@ public class UserServiceImpl implements UserService {
     RedisService redisService;
 
     @Override
-    public AuthUser signIn(String account, String password, HttpServletRequest request) throws Exception {
+    public AuthUser signIn(String account, String name, String password, HttpServletRequest request) throws Exception {
 
         //检查账号是否存在
         UserCriteria example = new UserCriteria();
@@ -30,24 +30,31 @@ public class UserServiceImpl implements UserService {
 
         List<User> list = userMapper.selectByExample(example);
 
+        AuthUser authUser = null;
+        authUser = new AuthUser();
+
         if(list.size() > 1){
-            new Exception("存在多个帐号,请联系管理员");
+            authUser.setMsg("存在多个帐号,请联系管理员");
+            return authUser;
+//            new Exception("存在多个帐号,请联系管理员");
         }
 
         if(list.size() <= 0){
-            new Exception("帐号不存在");
+            authUser.setMsg("帐号不存在");
+            return authUser;
+//            new Exception("帐号不存在");
         }
 
         //检查密码
         User user = list.get(0);
         if(!user.getPassword().equals(password)){
-            new Exception("密码错误");
+            authUser.setMsg("密码错误");
+            return authUser;
+//            new Exception("密码错误");
         }
 
 //        String uid = request.getHeader("uid");
 //        String version = request.getHeader("version");
-
-        AuthUser authUser = null;
         try{
             Map<String, Object> map = new HashMap<String, Object>();
             map.put("account", user.getId()+""); // 用户id
@@ -62,7 +69,7 @@ public class UserServiceImpl implements UserService {
 //            //将登录用户的uid存入缓存,
 //            redisService.hashSet(Constant.REDIS_TOKEN_KEY,user.getId()+"",token);
 
-            authUser = new AuthUser();
+
             authUser.setUserId(user.getId());
             authUser.setUserPassword(user.getPassword());
             authUser.setUserName(user.getName());
@@ -95,7 +102,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public void personalInformationFamily(String account, String studentName, String studentSex, String parentName, String parentPhone, String parentQQ, String parentWechat, String email, String token) throws Exception {
+    public void personalInformationFamily(String account, String studentName, String studentSex, String phone, String QQ, String wechat, String address, String parentName, String parentPhone, String parentQQ, String parentWechat, String parentAddress, String token) throws Exception {
         //根据账号进行修改信息
         User user = userMapper.selectByPrimaryKey(account);
         if(user == null){
@@ -107,16 +114,20 @@ public class UserServiceImpl implements UserService {
         user.setId(account);
         user.setName(studentName);
         user.setSex(studentSex);
+        user.setPhone(phone);
+        user.setQQ(QQ);
+        user.setWechat(wechat);
+        user.setAddress(address);
         user.setParent_name(parentName);
         user.setParent_phone(parentPhone);
         user.setParent_QQ(parentQQ);
         user.setParent_wechat(parentWechat);
-        user.setEmail(email);
+        user.setParent_address(parentAddress);
         userMapper.updateByPrimaryKeySelective(user);
     }
 
     @Override
-    public void personalInformationSchool(String account, String name, String sex, String phone, String QQ, String wechat, String email, String token) throws Exception {
+    public void personalInformationSchool(String account, String name, String sex, String phone, String QQ, String wechat, String email, String address, String token) throws Exception {
         //根据账号进行修改信息
         User user = userMapper.selectByPrimaryKey(account);
         if(user == null){

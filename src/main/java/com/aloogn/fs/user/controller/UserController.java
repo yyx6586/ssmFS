@@ -6,6 +6,7 @@ import com.aloogn.fs.redis.service.RedisService;
 import com.aloogn.fs.user.bean.AuthUser;
 import com.aloogn.fs.user.bean.User;
 import com.aloogn.fs.user.service.UserService;
+import net.minidev.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
@@ -32,10 +33,15 @@ public class UserController {
 
     @RequestMapping("/signIn")
     @ResponseBody
-    public JSONUtil signIn(String account, String password, HttpServletRequest request) throws Exception {
+    public JSONUtil signIn(String account, String name, String password, HttpServletRequest request) throws Exception {
         jsonUtil.setCode(-1);
         if(StringUtils.isNullOrEmpty(account)){
             jsonUtil.setMsg("账号不能为空");
+            return jsonUtil;
+        }
+
+        if(StringUtils.isNullOrEmpty(name)){
+            jsonUtil.setMsg("姓名不能为空");
             return jsonUtil;
         }
 
@@ -44,19 +50,34 @@ public class UserController {
             return jsonUtil;
         }
 
-        AuthUser authUser = userService.signIn(account,password,request);
+        AuthUser authUser = userService.signIn(account,name,password,request);
+
+        if (authUser.getMsg() != null){
+            jsonUtil.setMsg(authUser.getMsg());
+            return jsonUtil;
+        }
 
         if (authUser.getUserPassword() == null){
             jsonUtil.setMsg("该用户不存在");
             return jsonUtil;
         }
 
-        if (authUser.getUserPassword().equals(password)){
+        if (!authUser.getUserName().equals(name)){
+            jsonUtil.setMsg("姓名错误，请重新登录");
+            return jsonUtil;
+        }
+
+        if (!authUser.getUserPassword().equals(password)){
+            jsonUtil.setMsg("密码错误，请重新登录");
+            return jsonUtil;
+        }
+
+        if (authUser.getUserPassword().equals(password) && authUser.getUserName().equals(name)){
             jsonUtil.setCode(1);
             jsonUtil.setData(authUser);
             jsonUtil.setMsg("登录成功");
         }else {
-            jsonUtil.setMsg("密码错误，请重新登录");
+            jsonUtil.setMsg("姓名或者密码错误，请重新登录");
         }
         return jsonUtil;
     }
@@ -67,11 +88,16 @@ public class UserController {
         jsonUtil.setCode(-1);
 
         if(StringUtils.isNullOrEmpty(account)){
-            jsonUtil.setMsg("原密码不能为空");
+            jsonUtil.setMsg("账号不能为空");
             return jsonUtil;
         }
 
         if(StringUtils.isNullOrEmpty(password)){
+            jsonUtil.setMsg("原密码不能为空");
+            return jsonUtil;
+        }
+
+        if(StringUtils.isNullOrEmpty(resetPassword)){
             jsonUtil.setMsg("新密码不能为空");
             return jsonUtil;
         }
@@ -89,7 +115,7 @@ public class UserController {
 
     @RequestMapping("/personalInformationFamily")
     @ResponseBody
-    public JSONUtil personalInformationFamily(String account, String studentName, String studentSex, String parentName, String parentPhone, String parentQQ, String parentWechat, String email, String token) throws Exception{
+    public JSONUtil personalInformationFamily(String account, String studentName, String studentSex, String phone, String QQ, String wechat, String address, String parentName, String parentPhone, String parentQQ, String parentWechat, String parentAddress, String token) throws Exception{
         JSONUtil jsonUtil = new JSONUtil();
         jsonUtil.setCode(-1);
 
@@ -119,7 +145,7 @@ public class UserController {
         }
 
         try {
-            userService.personalInformationFamily(account, studentName, studentSex, parentName, parentPhone, parentQQ, parentWechat, email, token);
+            userService.personalInformationFamily(account, studentName, studentSex, phone, QQ, wechat, address, parentName, parentPhone, parentQQ, parentWechat, parentAddress, token);
             jsonUtil.setCode(1);
             jsonUtil.setMsg("保存成功");
         }catch (Exception e){
@@ -130,7 +156,7 @@ public class UserController {
 
     @RequestMapping("/personalInformationSchool")
     @ResponseBody
-    public JSONUtil personalInformationSchool(String account, String name, String sex, String phone, String QQ, String wechat, String email, String token) throws Exception{
+    public JSONUtil personalInformationSchool(String account, String name, String sex, String phone, String QQ, String wechat, String address, String email, String token) throws Exception{
         jsonUtil.setCode(-1);
         if(StringUtils.isNullOrEmpty(account)){
             jsonUtil.setMsg("账号错误，请联系管理员");
@@ -153,7 +179,7 @@ public class UserController {
         }
 
         try{
-            userService.personalInformationSchool(account, name, sex, phone, QQ, wechat, email, token);
+            userService.personalInformationSchool(account, name, sex, phone, QQ, wechat, email, address, token);
             jsonUtil.setCode(1);
             jsonUtil.setMsg("保存成功");
         }catch (Exception e){

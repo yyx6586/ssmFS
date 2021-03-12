@@ -218,4 +218,9 @@
   <select id="selectGradeByExample" parameterType="java.lang.String" resultType="com.aloogn.fs.grade.bean.Grade">
         select grade.* from grade where id in(select grade_id from user_grade where account = #{account})
     </select>
+
+  <select id="selectGradeByAccount" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select * from user_grade where account = #{account}
+  </select>
+
 </mapper>

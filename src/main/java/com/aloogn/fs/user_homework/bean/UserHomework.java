@@ -10,13 +10,15 @@ public class UserHomework implements Serializable {
 
     private String subject_name;
 
-    private String grade_id;
+    private String gradeclass_id;
 
-    private String homework;
+    private String title;
 
     private Date creat_time;
 
     private Date update_time;
+
+    private String homework;
 
     private static final long serialVersionUID = 1L;
 
@@ -44,20 +46,20 @@ public class UserHomework implements Serializable {
         this.subject_name = subject_name == null ? null : subject_name.trim();
     }
 
-    public String getGrade_id() {
-        return grade_id;
+    public String getGradeclass_id() {
+        return gradeclass_id;
     }
 
-    public void setGrade_id(String grade_id) {
-        this.grade_id = grade_id == null ? null : grade_id.trim();
+    public void setGradeclass_id(String gradeclass_id) {
+        this.gradeclass_id = gradeclass_id == null ? null : gradeclass_id.trim();
     }
 
-    public String getHomework() {
-        return homework;
+    public String getTitle() {
+        return title;
     }
 
-    public void setHomework(String homework) {
-        this.homework = homework == null ? null : homework.trim();
+    public void setTitle(String title) {
+        this.title = title == null ? null : title.trim();
     }
 
     public Date getCreat_time() {
@@ -76,6 +78,14 @@ public class UserHomework implements Serializable {
         this.update_time = update_time;
     }
 
+    public String getHomework() {
+        return homework;
+    }
+
+    public void setHomework(String homework) {
+        this.homework = homework == null ? null : homework.trim();
+    }
+
     @Override
     public boolean equals(Object that) {
         if (this == that) {
@@ -91,10 +101,11 @@ public class UserHomework implements Serializable {
         return (this.getId() == null ? other.getId() == null : this.getId().equals(other.getId()))
             && (this.getAccount() == null ? other.getAccount() == null : this.getAccount().equals(other.getAccount()))
             && (this.getSubject_name() == null ? other.getSubject_name() == null : this.getSubject_name().equals(other.getSubject_name()))
-            && (this.getGrade_id() == null ? other.getGrade_id() == null : this.getGrade_id().equals(other.getGrade_id()))
-            && (this.getHomework() == null ? other.getHomework() == null : this.getHomework().equals(other.getHomework()))
+            && (this.getGradeclass_id() == null ? other.getGradeclass_id() == null : this.getGradeclass_id().equals(other.getGradeclass_id()))
+            && (this.getTitle() == null ? other.getTitle() == null : this.getTitle().equals(other.getTitle()))
             && (this.getCreat_time() == null ? other.getCreat_time() == null : this.getCreat_time().equals(other.getCreat_time()))
-            && (this.getUpdate_time() == null ? other.getUpdate_time() == null : this.getUpdate_time().equals(other.getUpdate_time()));
+            && (this.getUpdate_time() == null ? other.getUpdate_time() == null : this.getUpdate_time().equals(other.getUpdate_time()))
+            && (this.getHomework() == null ? other.getHomework() == null : this.getHomework().equals(other.getHomework()));
     }
 
     @Override
@@ -104,10 +115,11 @@ public class UserHomework implements Serializable {
         result = prime * result + ((getId() == null) ? 0 : getId().hashCode());
         result = prime * result + ((getAccount() == null) ? 0 : getAccount().hashCode());
         result = prime * result + ((getSubject_name() == null) ? 0 : getSubject_name().hashCode());
-        result = prime * result + ((getGrade_id() == null) ? 0 : getGrade_id().hashCode());
-        result = prime * result + ((getHomework() == null) ? 0 : getHomework().hashCode());
+        result = prime * result + ((getGradeclass_id() == null) ? 0 : getGradeclass_id().hashCode());
+        result = prime * result + ((getTitle() == null) ? 0 : getTitle().hashCode());
         result = prime * result + ((getCreat_time() == null) ? 0 : getCreat_time().hashCode());
         result = prime * result + ((getUpdate_time() == null) ? 0 : getUpdate_time().hashCode());
+        result = prime * result + ((getHomework() == null) ? 0 : getHomework().hashCode());
         return result;
     }
 }

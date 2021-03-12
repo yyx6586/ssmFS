@@ -1,6 +1,6 @@
 package com.aloogn.fs.user_grade.mapper;
 
-import com.aloogn.fs.grade.bean.Grade;
+//import com.aloogn.fs.grade.bean.Grade;
 import com.aloogn.fs.user.bean.User;
 import com.aloogn.fs.user_grade.bean.UserGrade;
 import com.aloogn.fs.user_grade.bean.UserGradeCriteria;
@@ -36,5 +36,11 @@ public interface UserGradeMapper {
 
     //自定义查询
     //连表查询
-    List<Grade> selectGradeByExample(String account);
+//    List<Grade> selectGradeByExample(String account);
+
+    // 自定义查询
+    // 查询所在班级
+    UserGrade selectGradeByAccount(String account);
+
+
 }
