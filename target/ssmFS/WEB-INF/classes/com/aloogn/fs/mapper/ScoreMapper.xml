@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.aloogn.fs.score.mapper.ScoreMapper">
+  <resultMap id="BaseResultMap" type="com.aloogn.fs.score.bean.Score">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="student_account" jdbcType="CHAR" property="student_account" />
+    <result column="teacher_account" jdbcType="CHAR" property="teacher_account" />
+    <result column="gradeclass_id" jdbcType="CHAR" property="gradeclass_id" />
+    <result column="score_name" jdbcType="VARCHAR" property="score_name" />
+    <result column="score_subject" jdbcType="VARCHAR" property="score_subject" />
+    <result column="score_time" jdbcType="CHAR" property="score_time" />
+    <result column="score" jdbcType="CHAR" property="score" />
+    <result column="creat_time" jdbcType="TIMESTAMP" property="creat_time" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="update_time" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    id, student_account, teacher_account, gradeclass_id, score_name, score_subject, score_time, 
+    score, creat_time, update_time
+  </sql>
+  <select id="selectByExample" parameterType="com.aloogn.fs.score.bean.ScoreCriteria" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from score
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from score
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from score
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.aloogn.fs.score.bean.ScoreCriteria">
+    delete from score
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.aloogn.fs.score.bean.Score">
+    insert into score (id, student_account, teacher_account, 
+      gradeclass_id, score_name, score_subject, 
+      score_time, score, creat_time, 
+      update_time)
+    values (#{id,jdbcType=INTEGER}, #{student_account,jdbcType=CHAR}, #{teacher_account,jdbcType=CHAR}, 
+      #{gradeclass_id,jdbcType=CHAR}, #{score_name,jdbcType=VARCHAR}, #{score_subject,jdbcType=VARCHAR}, 
+      #{score_time,jdbcType=CHAR}, #{score,jdbcType=CHAR}, #{creat_time,jdbcType=TIMESTAMP}, 
+      #{update_time,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.aloogn.fs.score.bean.Score">
+    insert into score
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="student_account != null">
+        student_account,
+      </if>
+      <if test="teacher_account != null">
+        teacher_account,
+      </if>
+      <if test="gradeclass_id != null">
+        gradeclass_id,
+      </if>
+      <if test="score_name != null">
+        score_name,
+      </if>
+      <if test="score_subject != null">
+        score_subject,
+      </if>
+      <if test="score_time != null">
+        score_time,
+      </if>
+      <if test="score != null">
+        score,
+      </if>
+      <if test="creat_time != null">
+        creat_time,
+      </if>
+      <if test="update_time != null">
+        update_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="student_account != null">
+        #{student_account,jdbcType=CHAR},
+      </if>
+      <if test="teacher_account != null">
+        #{teacher_account,jdbcType=CHAR},
+      </if>
+      <if test="gradeclass_id != null">
+        #{gradeclass_id,jdbcType=CHAR},
+      </if>
+      <if test="score_name != null">
+        #{score_name,jdbcType=VARCHAR},
+      </if>
+      <if test="score_subject != null">
+        #{score_subject,jdbcType=VARCHAR},
+      </if>
+      <if test="score_time != null">
+        #{score_time,jdbcType=CHAR},
+      </if>
+      <if test="score != null">
+        #{score,jdbcType=CHAR},
+      </if>
+      <if test="creat_time != null">
+        #{creat_time,jdbcType=TIMESTAMP},
+      </if>
+      <if test="update_time != null">
+        #{update_time,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.aloogn.fs.score.bean.ScoreCriteria" resultType="java.lang.Long">
+    select count(*) from score
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update score
+    <set>
+      <if test="record.id != null">
+        id = #{record.id,jdbcType=INTEGER},
+      </if>
+      <if test="record.student_account != null">
+        student_account = #{record.student_account,jdbcType=CHAR},
+      </if>
+      <if test="record.teacher_account != null">
+        teacher_account = #{record.teacher_account,jdbcType=CHAR},
+      </if>
+      <if test="record.gradeclass_id != null">
+        gradeclass_id = #{record.gradeclass_id,jdbcType=CHAR},
+      </if>
+      <if test="record.score_name != null">
+        score_name = #{record.score_name,jdbcType=VARCHAR},
+      </if>
+      <if test="record.score_subject != null">
+        score_subject = #{record.score_subject,jdbcType=VARCHAR},
+      </if>
+      <if test="record.score_time != null">
+        score_time = #{record.score_time,jdbcType=CHAR},
+      </if>
+      <if test="record.score != null">
+        score = #{record.score,jdbcType=CHAR},
+      </if>
+      <if test="record.creat_time != null">
+        creat_time = #{record.creat_time,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.update_time != null">
+        update_time = #{record.update_time,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update score
+    set id = #{record.id,jdbcType=INTEGER},
+      student_account = #{record.student_account,jdbcType=CHAR},
+      teacher_account = #{record.teacher_account,jdbcType=CHAR},
+      gradeclass_id = #{record.gradeclass_id,jdbcType=CHAR},
+      score_name = #{record.score_name,jdbcType=VARCHAR},
+      score_subject = #{record.score_subject,jdbcType=VARCHAR},
+      score_time = #{record.score_time,jdbcType=CHAR},
+      score = #{record.score,jdbcType=CHAR},
+      creat_time = #{record.creat_time,jdbcType=TIMESTAMP},
+      update_time = #{record.update_time,jdbcType=TIMESTAMP}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.aloogn.fs.score.bean.Score">
+    update score
+    <set>
+      <if test="student_account != null">
+        student_account = #{student_account,jdbcType=CHAR},
+      </if>
+      <if test="teacher_account != null">
+        teacher_account = #{teacher_account,jdbcType=CHAR},
+      </if>
+      <if test="gradeclass_id != null">
+        gradeclass_id = #{gradeclass_id,jdbcType=CHAR},
+      </if>
+      <if test="score_name != null">
+        score_name = #{score_name,jdbcType=VARCHAR},
+      </if>
+      <if test="score_subject != null">
+        score_subject = #{score_subject,jdbcType=VARCHAR},
+      </if>
+      <if test="score_time != null">
+        score_time = #{score_time,jdbcType=CHAR},
+      </if>
+      <if test="score != null">
+        score = #{score,jdbcType=CHAR},
+      </if>
+      <if test="creat_time != null">
+        creat_time = #{creat_time,jdbcType=TIMESTAMP},
+      </if>
+      <if test="update_time != null">
+        update_time = #{update_time,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.aloogn.fs.score.bean.Score">
+    update score
+    set student_account = #{student_account,jdbcType=CHAR},
+      teacher_account = #{teacher_account,jdbcType=CHAR},
+      gradeclass_id = #{gradeclass_id,jdbcType=CHAR},
+      score_name = #{score_name,jdbcType=VARCHAR},
+      score_subject = #{score_subject,jdbcType=VARCHAR},
+      score_time = #{score_time,jdbcType=CHAR},
+      score = #{score,jdbcType=CHAR},
+      creat_time = #{creat_time,jdbcType=TIMESTAMP},
+      update_time = #{update_time,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+
+  <!--根据班级与年级 gradeclass_id 与科目 查询该班级该科目近五次考试的考试名称-->
+  <!--自定义查询-->
+  <select id="seclectScoreName" resultMap="BaseResultMap">
+      select distinct score.score_name from score where gradeclass_id = #{gradeclass_id} and score_subject = #{score_subject}
+  </select>
+
+  <!--根据班级与年级 gradeclass_id 、科目、考试名称 查询该班级所有学生的考试成绩-->
+  <!--自定义查询-->
+  <select id="selectStudentScore" resultMap="BaseResultMap">
+      select score.* from score where gradeclass_id = #{gradeclass_id} and score_subject = #{score_subject} and score_name = #{score_name}
+  </select>
+
+  <!--根据班级与年级 gradeclass_id 、科目、考试名称 删除该班级所有学生的考试成绩-->
+  <!--自定义删除-->
+  <delete id="deleteScore" parameterType="java.lang.String">
+      delete from score where gradeclass_id = #{gradeclass_id} and score_subject = #{score_subject} and score_name = #{score_name}
+  </delete>
+
+</mapper>

@@ -8,6 +8,7 @@ import com.aloogn.fs.user_grade.bean.UserGrade;
 import com.aloogn.fs.user_grade.service.UserGradeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -15,6 +16,7 @@ import java.util.List;
 
 @Controller
 @RequestMapping("/userGrade")
+@CrossOrigin("*")      //允许跨域请求
 public class UserGradeController {
 
     @Autowired

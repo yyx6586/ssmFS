@@ -50,9 +50,15 @@ public class LoginInterceptor implements HandlerInterceptor {
 //        request.setAttribute("msg", "您还没有登录，请先登录！");
 ////        request.getRequestDispatcher("/WEB-INF/index.jsp").forward(request, response);
 
+
         //获取请求api
         String servletPath = request.getServletPath();
         String token = request.getHeader("token");
+
+        //是否是图片或视频
+        if(servletPath.contains("/uploads/img")){
+            return true;
+        }
 
         //白名单
         if(StringUtils.isWhiteList(servletPath)){

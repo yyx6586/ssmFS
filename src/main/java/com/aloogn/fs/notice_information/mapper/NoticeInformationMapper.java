@@ -40,5 +40,5 @@ public interface NoticeInformationMapper {
     List<NoticeInformation> selectInforationByGrade_id(@Param("grade_id")String grade_id, @Param("curPage")Integer curPage, @Param("pageSize")Integer pageSize);
 
     //自定义删除
-    boolean deleteInforationByExample(@Param("account") String account, @Param("grade_id") String grade_id, @Param("information") String information);
+    boolean deleteInforationByExample(int id);
 }

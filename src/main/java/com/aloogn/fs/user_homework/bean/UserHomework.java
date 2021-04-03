@@ -18,6 +18,8 @@ public class UserHomework implements Serializable {
 
     private Date update_time;
 
+    private String showBadge;
+
     private String homework;
 
     private static final long serialVersionUID = 1L;
@@ -78,6 +80,14 @@ public class UserHomework implements Serializable {
         this.update_time = update_time;
     }
 
+    public String getShowBadge() {
+        return showBadge;
+    }
+
+    public void setShowBadge(String showBadge) {
+        this.showBadge = showBadge == null ? null : showBadge.trim();
+    }
+
     public String getHomework() {
         return homework;
     }
@@ -105,6 +115,7 @@ public class UserHomework implements Serializable {
             && (this.getTitle() == null ? other.getTitle() == null : this.getTitle().equals(other.getTitle()))
             && (this.getCreat_time() == null ? other.getCreat_time() == null : this.getCreat_time().equals(other.getCreat_time()))
             && (this.getUpdate_time() == null ? other.getUpdate_time() == null : this.getUpdate_time().equals(other.getUpdate_time()))
+            && (this.getShowBadge() == null ? other.getShowBadge() == null : this.getShowBadge().equals(other.getShowBadge()))
             && (this.getHomework() == null ? other.getHomework() == null : this.getHomework().equals(other.getHomework()));
     }
 
@@ -119,6 +130,7 @@ public class UserHomework implements Serializable {
         result = prime * result + ((getTitle() == null) ? 0 : getTitle().hashCode());
         result = prime * result + ((getCreat_time() == null) ? 0 : getCreat_time().hashCode());
         result = prime * result + ((getUpdate_time() == null) ? 0 : getUpdate_time().hashCode());
+        result = prime * result + ((getShowBadge() == null) ? 0 : getShowBadge().hashCode());
         result = prime * result + ((getHomework() == null) ? 0 : getHomework().hashCode());
         return result;
     }

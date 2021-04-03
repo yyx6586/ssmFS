@@ -564,6 +564,76 @@ public class UserHomeworkCriteria {
             addCriterion("update_time not between", value1, value2, "update_time");
             return (Criteria) this;
         }
+
+        public Criteria andShowBadgeIsNull() {
+            addCriterion("showBadge is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andShowBadgeIsNotNull() {
+            addCriterion("showBadge is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andShowBadgeEqualTo(String value) {
+            addCriterion("showBadge =", value, "showBadge");
+            return (Criteria) this;
+        }
+
+        public Criteria andShowBadgeNotEqualTo(String value) {
+            addCriterion("showBadge <>", value, "showBadge");
+            return (Criteria) this;
+        }
+
+        public Criteria andShowBadgeGreaterThan(String value) {
+            addCriterion("showBadge >", value, "showBadge");
+            return (Criteria) this;
+        }
+
+        public Criteria andShowBadgeGreaterThanOrEqualTo(String value) {
+            addCriterion("showBadge >=", value, "showBadge");
+            return (Criteria) this;
+        }
+
+        public Criteria andShowBadgeLessThan(String value) {
+            addCriterion("showBadge <", value, "showBadge");
+            return (Criteria) this;
+        }
+
+        public Criteria andShowBadgeLessThanOrEqualTo(String value) {
+            addCriterion("showBadge <=", value, "showBadge");
+            return (Criteria) this;
+        }
+
+        public Criteria andShowBadgeLike(String value) {
+            addCriterion("showBadge like", value, "showBadge");
+            return (Criteria) this;
+        }
+
+        public Criteria andShowBadgeNotLike(String value) {
+            addCriterion("showBadge not like", value, "showBadge");
+            return (Criteria) this;
+        }
+
+        public Criteria andShowBadgeIn(List<String> values) {
+            addCriterion("showBadge in", values, "showBadge");
+            return (Criteria) this;
+        }
+
+        public Criteria andShowBadgeNotIn(List<String> values) {
+            addCriterion("showBadge not in", values, "showBadge");
+            return (Criteria) this;
+        }
+
+        public Criteria andShowBadgeBetween(String value1, String value2) {
+            addCriterion("showBadge between", value1, value2, "showBadge");
+            return (Criteria) this;
+        }
+
+        public Criteria andShowBadgeNotBetween(String value1, String value2) {
+            addCriterion("showBadge not between", value1, value2, "showBadge");
+            return (Criteria) this;
+        }
     }
 
     public static class Criteria extends GeneratedCriteria {

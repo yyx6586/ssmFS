@@ -12,13 +12,15 @@ public class UserHomeworkServiceImpl implements UserHomeworkService {
     UserHomeworkMapper userHomeworkMapper;
 
     @Override
-    public UserHomework homeworkSchoolRelease(String account, String grade_id, String subject_name, String homework, String token) throws Exception {
+    public UserHomework homeworkSchoolRelease(String account, String gradeclass_id, String title, String subject_name, String homework, String showBadge, String token) throws Exception {
         //将信息插入数据库表中
         UserHomework userHomework = new UserHomework();
         userHomework.setAccount(account);
-//        userHomework.setGrade_id(grade_id);
+        userHomework.setGradeclass_id(gradeclass_id);
+        userHomework.setTitle(title);
         userHomework.setHomework(homework);
         userHomework.setSubject_name(subject_name);
+        userHomework.setShowBadge(showBadge);
 
         //将信息插入表中
         userHomeworkMapper.insertSelective(userHomework);
@@ -33,17 +35,66 @@ public class UserHomeworkServiceImpl implements UserHomeworkService {
     }
 
     @Override
-    public boolean homeworkSchoolDetails(String account, String grade_id, String homework, String token) throws Exception {
-        //根据账号、班级、作业，删除作业记录
-        boolean result = userHomeworkMapper.deleteHomeworkByExample(account, grade_id, homework);
+    public boolean homeworkSchoolDetails(int id, String token) throws Exception {
+        //根据 id 删除作业记录
+        boolean result = userHomeworkMapper.deleteHomeworkByExample(id);
         return result;
     }
 
     @Override
-    public List<UserHomework> homeworkFamily(String grade_id, String token) throws Exception {
+    public List<UserHomework> homeworkFamily(String gradeclass_id, Integer curPage, Integer pageSize, String token) throws Exception {
         //根据班级 id 查询作业的信息
-        List<UserHomework> list = userHomeworkMapper.selectHomeworkByGrade_id(grade_id);
+        List<UserHomework> list = userHomeworkMapper.selectHomeworkByGrade_id(gradeclass_id, curPage, pageSize);
         return list;
+    }
+
+    //  修改数据库里的 showBadge 属性
+    @Override
+    public void updateHomeworkShowBadge(int id, String showBadge, String token) throws Exception {
+        // 检查该通知是否存在
+        UserHomework userHomework = userHomeworkMapper.selectByPrimaryKey(id);
+        if(userHomework == null){
+            new Exception("获取信息错误");
+        }
+
+        // 修改 showBadge
+        userHomework = new UserHomework();
+        userHomework.setId(id);
+        userHomework.setShowBadge(showBadge);
+
+        userHomeworkMapper.updateByPrimaryKeySelective(userHomework);
+    }
+
+    // 根据 id 获取作业信息
+    @Override
+    public UserHomework homeworkById(int id, String token) throws Exception {
+        // 检查该通知是否存在
+        UserHomework userHomework = userHomeworkMapper.selectByPrimaryKey(id);
+        if(userHomework == null){
+            new Exception("获取信息错误");
+        }
+
+        return userHomework;
+    }
+
+    // 根据 id 修改作业信息
+    @Override
+    public void updateHomework(int id, String title, String homework, String showBadge,  String token) throws Exception {
+        // 检查该作业是否存在
+        UserHomework userHomework = userHomeworkMapper.selectByPrimaryKey(id);
+        if(userHomework == null){
+            new Exception("获取信息错误");
+        }
+
+        // 修改 作业 信息
+        userHomework = new UserHomework();
+        userHomework.setTitle(title);
+        userHomework.setId(id);
+        userHomework.setHomework(homework);
+        userHomework.setShowBadge(showBadge);
+
+        userHomeworkMapper.updateByPrimaryKeySelective(userHomework);
+
     }
 }
 

@@ -7,114 +7,104 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="68f2d31a-99d9-4e9f-ba74-88732a19abb9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/aloogn/fs/grade/controller/GradeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/aloogn/fs/grow_record/controller/GrowRecordContorller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/aloogn/fs/grow_record/service/GrowRecordService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/aloogn/fs/grow_record/service/impl/GrowRecordServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/aloogn/fs/picture/controller/PictureController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/aloogn/fs/picture/service/PictureService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/aloogn/fs/picture/service/impl/PictureServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/aloogn/fs/score/controller/ScoreController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/aloogn/fs/score/service/ScoreService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/aloogn/fs/score/service/impl/ScoreServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/spring/grow_record/applicationContext-service.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/spring/picture/applicationContext-service.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/spring/score/applicationContext-service.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aloogn/fs/grade/bean/Grade.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aloogn/fs/grade/bean/GradeCriteria.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aloogn/fs/grade/mapper/GradeMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aloogn/fs/grade/service/GradeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aloogn/fs/grade/service/GradeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aloogn/fs/grade/service/impl/GradeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aloogn/fs/grade/service/impl/GradeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aloogn/common/interceptor/LoginInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aloogn/common/interceptor/LoginInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aloogn/fs/grade/controller/GradeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aloogn/fs/grade/controller/GradeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/aloogn/fs/notice_information/bean/NoticeInformation.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/aloogn/fs/notice_information/bean/NoticeInformationCriteria.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/aloogn/fs/notice_information/controller/NoticeInformationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aloogn/fs/notice_information/controller/NoticeInformationController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/aloogn/fs/notice_information/mapper/NoticeInformationMapper.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/aloogn/fs/notice_information/service/NoticeInformationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aloogn/fs/notice_information/service/NoticeInformationService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/aloogn/fs/notice_information/service/impl/NoticeInformationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aloogn/fs/notice_information/service/impl/NoticeInformationServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aloogn/fs/user/bean/AuthUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aloogn/fs/user/bean/AuthUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aloogn/fs/user/bean/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aloogn/fs/user/bean/UserCriteria.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/aloogn/fs/user/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aloogn/fs/user/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aloogn/fs/user/mapper/UserMapper.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/aloogn/fs/user/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aloogn/fs/user/service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/aloogn/fs/user/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aloogn/fs/user/service/impl/UserServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/aloogn/fs/user_grade/controller/UserGradeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aloogn/fs/user_grade/controller/UserGradeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aloogn/fs/user_grade/mapper/UserGradeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aloogn/fs/user_grade/mapper/UserGradeMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aloogn/fs/user_grade/service/UserGradeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aloogn/fs/user_grade/service/UserGradeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aloogn/fs/user_grade/service/impl/UserGradeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aloogn/fs/user_grade/service/impl/UserGradeServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/aloogn/fs/user_homework/bean/UserHomework.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/aloogn/fs/user_homework/bean/UserHomeworkCriteria.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/aloogn/fs/user_homework/controller/UserHomeworkController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aloogn/fs/user_homework/controller/UserHomeworkController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/aloogn/fs/user_homework/mapper/UserHomeworkMapper.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/aloogn/fs/user_homework/service/UserHomeworkService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aloogn/fs/user_homework/service/UserHomeworkService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/aloogn/fs/user_homework/service/impl/UserHomeworkServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aloogn/fs/user_homework/service/impl/UserHomeworkServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/aloogn/fs/mapper/GradeMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aloogn/fs/user_subject/controller/UserSubjectController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aloogn/fs/user_subject/controller/UserSubjectController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/aloogn/fs/mapper/NoticeInformationMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/aloogn/fs/mapper/UserGradeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/aloogn/fs/mapper/UserGradeMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/aloogn/fs/mapper/UserHomeworkMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/aloogn/fs/mapper/UserMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/spring/notice_information/applicationContext-service.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/spring/notice_information/applicationContext-service.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/aloogn/fs/grade/bean/Grade.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/aloogn/fs/grade/bean/Grade.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/aloogn/fs/grade/bean/GradeCriteria$Criteria.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/aloogn/fs/grade/bean/GradeCriteria$Criteria.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/aloogn/fs/grade/bean/GradeCriteria$Criterion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/aloogn/fs/grade/bean/GradeCriteria$Criterion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/aloogn/fs/grade/bean/GradeCriteria$GeneratedCriteria.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/aloogn/fs/grade/bean/GradeCriteria$GeneratedCriteria.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/aloogn/fs/grade/mapper/GradeMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/aloogn/fs/grade/mapper/GradeMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/aloogn/fs/grade/service/GradeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/aloogn/fs/grade/service/GradeService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/aloogn/fs/grade/service/impl/GradeServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/aloogn/fs/grade/service/impl/GradeServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/aloogn/fs/mapper/GradeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/aloogn/fs/mapper/GradeMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generate/generateConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/generate/generateConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/properties/mysql.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/properties/mysql.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/spring/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/spring/applicationContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/spring/spring-mvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/spring/spring-mvc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/aloogn/common/interceptor/LoginInterceptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/aloogn/common/interceptor/LoginInterceptor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/aloogn/fs/grade/controller/GradeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/aloogn/fs/grade/controller/GradeController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/aloogn/fs/mapper/NoticeInformationMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/aloogn/fs/mapper/NoticeInformationMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/aloogn/fs/mapper/UserGradeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/aloogn/fs/mapper/UserGradeMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/aloogn/fs/mapper/UserHomeworkMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/aloogn/fs/mapper/UserHomeworkMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/aloogn/fs/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/aloogn/fs/mapper/UserMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/aloogn/fs/notice_information/bean/NoticeInformation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/aloogn/fs/notice_information/bean/NoticeInformation.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/aloogn/fs/notice_information/bean/NoticeInformationCriteria$Criteria.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/aloogn/fs/notice_information/bean/NoticeInformationCriteria$Criteria.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/aloogn/fs/notice_information/bean/NoticeInformationCriteria$Criterion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/aloogn/fs/notice_information/bean/NoticeInformationCriteria$Criterion.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/aloogn/fs/notice_information/bean/NoticeInformationCriteria$GeneratedCriteria.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/aloogn/fs/notice_information/bean/NoticeInformationCriteria$GeneratedCriteria.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/aloogn/fs/notice_information/controller/NoticeInformationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/aloogn/fs/notice_information/controller/NoticeInformationController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/aloogn/fs/notice_information/mapper/NoticeInformationMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/aloogn/fs/notice_information/mapper/NoticeInformationMapper.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/aloogn/fs/notice_information/service/NoticeInformationService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/aloogn/fs/notice_information/service/NoticeInformationService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/aloogn/fs/notice_information/service/impl/NoticeInformationServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/aloogn/fs/notice_information/service/impl/NoticeInformationServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/aloogn/fs/user/bean/AuthUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/aloogn/fs/user/bean/AuthUser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/aloogn/fs/user/bean/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/aloogn/fs/user/bean/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/aloogn/fs/user/bean/UserCriteria$Criteria.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/aloogn/fs/user/bean/UserCriteria$Criteria.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/aloogn/fs/user/bean/UserCriteria$GeneratedCriteria.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/aloogn/fs/user/bean/UserCriteria$GeneratedCriteria.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/aloogn/fs/user/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/aloogn/fs/user/controller/UserController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/aloogn/fs/user/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/aloogn/fs/user/service/UserService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/aloogn/fs/user/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/aloogn/fs/user/service/impl/UserServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/aloogn/fs/user_grade/controller/UserGradeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/aloogn/fs/user_grade/controller/UserGradeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/aloogn/fs/user_grade/mapper/UserGradeMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/aloogn/fs/user_grade/mapper/UserGradeMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/aloogn/fs/user_grade/service/UserGradeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/aloogn/fs/user_grade/service/UserGradeService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/aloogn/fs/user_grade/service/impl/UserGradeServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/aloogn/fs/user_grade/service/impl/UserGradeServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/aloogn/fs/user_homework/bean/UserHomework.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/aloogn/fs/user_homework/bean/UserHomework.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/aloogn/fs/user_homework/bean/UserHomeworkCriteria$Criteria.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/aloogn/fs/user_homework/bean/UserHomeworkCriteria$Criteria.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/aloogn/fs/user_homework/bean/UserHomeworkCriteria$Criterion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/aloogn/fs/user_homework/bean/UserHomeworkCriteria$Criterion.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/aloogn/fs/user_homework/bean/UserHomeworkCriteria$GeneratedCriteria.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/aloogn/fs/user_homework/bean/UserHomeworkCriteria$GeneratedCriteria.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/aloogn/fs/user_homework/controller/UserHomeworkController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/aloogn/fs/user_homework/controller/UserHomeworkController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/aloogn/fs/user_homework/mapper/UserHomeworkMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/aloogn/fs/user_homework/mapper/UserHomeworkMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/aloogn/fs/user_homework/service/UserHomeworkService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/aloogn/fs/user_homework/service/UserHomeworkService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/aloogn/fs/user_homework/service/impl/UserHomeworkServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/aloogn/fs/user_homework/service/impl/UserHomeworkServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/spring/notice_information/applicationContext-service.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/spring/notice_information/applicationContext-service.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/grade/bean/Grade.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/grade/bean/Grade.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/grade/bean/GradeCriteria$Criteria.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/grade/bean/GradeCriteria$Criteria.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/grade/bean/GradeCriteria$Criterion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/grade/bean/GradeCriteria$Criterion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/grade/bean/GradeCriteria$GeneratedCriteria.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/grade/bean/GradeCriteria$GeneratedCriteria.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/grade/mapper/GradeMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/grade/mapper/GradeMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/grade/service/GradeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/grade/service/GradeService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/grade/service/impl/GradeServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/grade/service/impl/GradeServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/mapper/GradeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/mapper/GradeMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/aloogn/fs/user_subject/controller/UserSubjectController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/aloogn/fs/user_subject/controller/UserSubjectController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/generate/generateConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/generate/generateConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/properties/mysql.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/properties/mysql.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/spring/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/spring/applicationContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/spring/spring-mvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/spring/spring-mvc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/common/interceptor/LoginInterceptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/common/interceptor/LoginInterceptor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/grade/controller/GradeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/grade/controller/GradeController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/mapper/NoticeInformationMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/mapper/NoticeInformationMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/mapper/UserGradeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/mapper/UserGradeMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/mapper/UserHomeworkMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/mapper/UserHomeworkMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/mapper/UserMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/notice_information/bean/NoticeInformation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/notice_information/bean/NoticeInformation.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/notice_information/bean/NoticeInformationCriteria$Criteria.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/notice_information/bean/NoticeInformationCriteria$Criteria.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/notice_information/bean/NoticeInformationCriteria$Criterion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/notice_information/bean/NoticeInformationCriteria$Criterion.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/notice_information/bean/NoticeInformationCriteria$GeneratedCriteria.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/notice_information/bean/NoticeInformationCriteria$GeneratedCriteria.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/notice_information/controller/NoticeInformationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/notice_information/controller/NoticeInformationController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/notice_information/mapper/NoticeInformationMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/notice_information/mapper/NoticeInformationMapper.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/notice_information/service/NoticeInformationService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/notice_information/service/NoticeInformationService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/notice_information/service/impl/NoticeInformationServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/notice_information/service/impl/NoticeInformationServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/user/bean/AuthUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/user/bean/AuthUser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/user/bean/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/user/bean/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/user/bean/UserCriteria$Criteria.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/user/bean/UserCriteria$Criteria.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/user/bean/UserCriteria$GeneratedCriteria.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/user/bean/UserCriteria$GeneratedCriteria.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/user/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/user/controller/UserController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/user/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/user/service/UserService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/user/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/user/service/impl/UserServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/user_grade/controller/UserGradeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/user_grade/controller/UserGradeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/user_grade/mapper/UserGradeMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/user_grade/mapper/UserGradeMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/user_grade/service/UserGradeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/user_grade/service/UserGradeService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/user_grade/service/impl/UserGradeServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/user_grade/service/impl/UserGradeServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/user_homework/bean/UserHomework.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/user_homework/bean/UserHomework.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/user_homework/bean/UserHomeworkCriteria$Criteria.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/user_homework/bean/UserHomeworkCriteria$Criteria.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/user_homework/bean/UserHomeworkCriteria$Criterion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/user_homework/bean/UserHomeworkCriteria$Criterion.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/user_homework/bean/UserHomeworkCriteria$GeneratedCriteria.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/user_homework/bean/UserHomeworkCriteria$GeneratedCriteria.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/user_homework/controller/UserHomeworkController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/user_homework/controller/UserHomeworkController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/user_homework/mapper/UserHomeworkMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/user_homework/mapper/UserHomeworkMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/user_homework/service/UserHomeworkService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/user_homework/service/UserHomeworkService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/user_homework/service/impl/UserHomeworkServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/user_homework/service/impl/UserHomeworkServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/spring/notice_information/applicationContext-service.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/spring/notice_information/applicationContext-service.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/user_subject/controller/UserSubjectController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/com/aloogn/fs/user_subject/controller/UserSubjectController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/generate/generateConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/generate/generateConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/properties/mysql.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/properties/mysql.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/spring/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/spring/applicationContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/spring/spring-mvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssmFS/WEB-INF/classes/spring/spring-mvc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ssmFS/WEB-INF/lib/commons-io-2.7.jar" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -128,17 +118,18 @@
     <session id="1714180878">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="36" />
+          <entry key="project.closed" value="44" />
           <entry key="project.open.time.1" value="8" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.12" value="4" />
           <entry key="project.open.time.13" value="1" />
-          <entry key="project.open.time.14" value="5" />
-          <entry key="project.open.time.15" value="2" />
-          <entry key="project.open.time.16" value="2" />
-          <entry key="project.open.time.17" value="2" />
+          <entry key="project.open.time.14" value="7" />
+          <entry key="project.open.time.15" value="4" />
+          <entry key="project.open.time.16" value="3" />
+          <entry key="project.open.time.17" value="3" />
           <entry key="project.open.time.18" value="2" />
-          <entry key="project.open.time.2" value="12" />
+          <entry key="project.open.time.19" value="1" />
+          <entry key="project.open.time.2" value="13" />
           <entry key="project.open.time.23" value="1" />
           <entry key="project.open.time.24" value="1" />
           <entry key="project.open.time.25" value="1" />
@@ -147,46 +138,50 @@
           <entry key="project.open.time.49" value="1" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="48" />
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.opened" value="57" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="class" value="20" />
+          <entry key="class" value="21" />
           <entry key="dtd" value="1" />
           <entry key="iml" value="1" />
-          <entry key="java" value="548" />
+          <entry key="java" value="750" />
+          <entry key="jpeg" value="1" />
+          <entry key="jpg" value="1" />
           <entry key="jsp" value="1" />
-          <entry key="properties" value="25" />
-          <entry key="xml" value="263" />
+          <entry key="properties" value="26" />
+          <entry key="xml" value="322" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="20" />
+          <entry key="CLASS" value="21" />
           <entry key="DTD" value="1" />
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="JAVA" value="548" />
+          <entry key="Image" value="2" />
+          <entry key="JAVA" value="750" />
           <entry key="JSP" value="1" />
-          <entry key="Properties" value="25" />
-          <entry key="XML" value="263" />
+          <entry key="Properties" value="26" />
+          <entry key="XML" value="322" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="4" />
-          <entry key="java" value="9964" />
-          <entry key="properties" value="2" />
-          <entry key="xml" value="2308" />
+          <entry key="java" value="12594" />
+          <entry key="properties" value="64" />
+          <entry key="xml" value="2648" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="9964" />
+          <entry key="JAVA" value="12594" />
           <entry key="PLAIN_TEXT" value="4" />
-          <entry key="Properties" value="2" />
+          <entry key="Properties" value="64" />
           <entry key="SQL" value="28" />
-          <entry key="XML" value="2280" />
+          <entry key="XML" value="2620" />
         </counts>
       </usages-collector>
     </session>
@@ -194,10 +189,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/notice_information/service/impl/NoticeInformationServiceImpl.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/grow_record/controller/GrowRecordContorller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="49" selection-start-line="49" selection-end-line="49" />
+            <state relative-caret-position="2508">
+              <caret line="131" selection-start-line="131" selection-end-line="131" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -206,31 +201,40 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/notice_information/controller/NoticeInformationController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/grow_record/service/impl/GrowRecordServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="982">
-              <caret line="100" selection-start-line="100" selection-end-line="100" />
+            <state relative-caret-position="792">
+              <caret line="42" selection-start-line="42" selection-end-line="42" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/com/aloogn/fs/mapper/GrowRecordMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="6138">
+              <caret line="279" column="103" selection-start-line="279" selection-start-column="103" selection-end-line="279" selection-end-column="103" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/grow_record/mapper/GrowRecordMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="616">
+              <caret line="31" column="119" selection-start-line="31" selection-start-column="119" selection-end-line="31" selection-end-column="119" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/notice_information/mapper/NoticeInformationMapper.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/user/controller/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-94">
-              <caret lean-forward="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/com/aloogn/fs/mapper/NoticeInformationMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="294" column="111" lean-forward="true" selection-start-line="294" selection-start-column="111" selection-end-line="294" selection-end-column="111" />
+            <state relative-caret-position="241">
+              <caret line="204" column="19" lean-forward="true" selection-start-line="204" selection-start-column="19" selection-end-line="204" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -251,6 +255,13 @@
       <find>com.aloogn.fs</find>
       <find>countByExample</find>
       <find>selectByPrimaryKey</find>
+      <find>updatePassword</find>
+      <find>selectHomeworkByGrade_id</find>
+      <find>commons-fileupload</find>
+      <find>selectInforationByGrade_id</find>
+      <find>deleteInforationByExample</find>
+      <find>noticeFamilyDetails</find>
+      <find>updateByPrimaryKeySelective</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -273,57 +284,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/resources/spring/user_subject/applicationContext-service.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/spring/subject/applicationContext-service.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aloogn/fs/subject/service/SubjectService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aloogn/fs/subject/service/impl/SubjectServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aloogn/fs/user_subject/bean/schoolUserSubject.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aloogn/fs/user_subject/bean/SchoolUserSubject.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aloogn/fs/user_subject/mapper/UserSubjectMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aloogn/fs/user_subject/service/impl/UserSubjectServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aloogn/fs/user_subject/controller/UserSubjectController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aloogn/fs/user_subject/service/UserSubjectService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aloogn/fs/user/bean/User.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/com/aloogn/fs/mapper/UserSubjectMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/spring/user_homework/applicationContext-service.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aloogn/fs/article/service/ArticleService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aloogn/fs/article/service/impl/ArticleServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/spring/article/applicationContext-service.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/spring/applicationContext.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/com/aloogn/fs/mapper/UserGradeMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aloogn/fs/user_homework/mapper/UserHomeworkMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aloogn/fs/user_homework/controller/UserHomeworkController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aloogn/fs/user_homework/service/UserHomeworkService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aloogn/fs/user_homework/service/impl/UserHomeworkServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/generate/generateConfig.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aloogn/fs/user/service/impl/UserServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aloogn/fs/user/service/UserService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aloogn/fs/user/controller/UserController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aloogn/fs/user_grade/service/UserGradeService.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com.aloogn/junit/UserTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aloogn/fs/user_grade/service/impl/UserGradeMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aloogn/fs/user/mapper/UserMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/com/aloogn/fs/mapper/UserMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aloogn/fs/user/bean/AuthUser.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aloogn/fs/user_grade/controller/UserGradeController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/aloogn/fs/user_grade/mapper/UserGradeMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/aloogn/fs/user_grade/service/impl/UserGradeServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/resources/spring/notice_information/applicationContext-service.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/spring/spring-mvc.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/com/aloogn/fs/mapper/GradeMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/aloogn/fs/grade/service/GradeService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/aloogn/fs/grade/service/impl/GradeServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aloogn/fs/grade/controller/GradeController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/aloogn/fs/grade/mapper/GradeMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/properties/mysql.properties" />
-        <option value="$PROJECT_DIR$/src/main/resources/com/aloogn/fs/mapper/UserHomeworkMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/mybatis/mybatis-config.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/aloogn/fs/notice_information/bean/Notice.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aloogn/fs/notice_information/service/NoticeInformationService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/aloogn/fs/notice_information/mapper/NoticeInformationMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aloogn/fs/notice_information/controller/NoticeInformationController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aloogn/fs/notice_information/service/impl/NoticeInformationServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/resources/com/aloogn/fs/mapper/NoticeInformationMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/aloogn/fs/user_homework/mapper/UserHomeworkMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/aloogn/fs/mapper/UserHomeworkMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/aloogn/fs/grow_record/service/impl/GradeServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/spring/grow_record/applicationContext-service.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/spring/spring-mvc.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/aloogn/fs/picture/bean/GradeCriteria.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/spring/picture/applicationContext-service.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/aloogn/fs/picture/service/PictureService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/aloogn/fs/picture/service/impl/PictureServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/aloogn/fs/score/bean/PictureCriteria.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/spring/score/applicationContext-service.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/spring/applicationContext.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/aloogn/fs/score/service/ScoreService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/aloogn/fs/score/mapper/ScoreMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/aloogn/fs/score/service/impl/ScoreServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/aloogn/fs/mapper/ScoreMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/aloogn/fs/user_homework/service/UserHomeworkService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/aloogn/fs/user_homework/service/impl/UserHomeworkServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/aloogn/fs/notice_information/service/NoticeInformationService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/aloogn/fs/notice_information/service/impl/NoticeInformationServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/aloogn/fs/score/bean/Score.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/aloogn/common/interceptor/LoginInterceptor.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/properties/mysql.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/aloogn/fs/grade/controller/GradeController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/aloogn/fs/notice_information/controller/NoticeInformationController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/aloogn/fs/picture/controller/PictureController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/aloogn/fs/score/controller/ScoreController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/aloogn/fs/user_grade/controller/UserGradeController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/aloogn/fs/user_homework/controller/UserHomeworkController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/aloogn/fs/user_subject/controller/UserSubjectController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/aloogn/fs/user/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/aloogn/fs/user/service/UserService.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/generate/generateConfig.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/aloogn/fs/grow_record/service/GrowRecordService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/aloogn/fs/grow_record/controller/GrowRecordContorller.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/aloogn/fs/grow_record/service/impl/GrowRecordServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/aloogn/fs/user/service/impl/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/aloogn/fs/mapper/GrowRecordMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/aloogn/fs/grow_record/mapper/GrowRecordMapper.java" />
       </list>
     </option>
   </component>
@@ -354,6 +365,22 @@
         <option name="importAutomatically" value="true" />
       </MavenImportingSettings>
     </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="ssmFS Maven Webapp" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="ssmFS Maven Webapp" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
@@ -420,6 +447,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -461,6 +489,15 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="aloogn" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ssmFS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ssmFS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="aloogn" type="462c0819:PsiDirectoryNode" />
               <item name="fs" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -471,7 +508,7 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="aloogn" type="462c0819:PsiDirectoryNode" />
               <item name="fs" type="462c0819:PsiDirectoryNode" />
-              <item name="notice_information" type="462c0819:PsiDirectoryNode" />
+              <item name="grow_record" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ssmFS" type="b2602c69:ProjectViewProjectNode" />
@@ -481,18 +518,7 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="aloogn" type="462c0819:PsiDirectoryNode" />
               <item name="fs" type="462c0819:PsiDirectoryNode" />
-              <item name="notice_information" type="462c0819:PsiDirectoryNode" />
-              <item name="bean" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ssmFS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ssmFS" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="aloogn" type="462c0819:PsiDirectoryNode" />
-              <item name="fs" type="462c0819:PsiDirectoryNode" />
-              <item name="notice_information" type="462c0819:PsiDirectoryNode" />
+              <item name="grow_record" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -503,7 +529,7 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="aloogn" type="462c0819:PsiDirectoryNode" />
               <item name="fs" type="462c0819:PsiDirectoryNode" />
-              <item name="notice_information" type="462c0819:PsiDirectoryNode" />
+              <item name="grow_record" type="462c0819:PsiDirectoryNode" />
               <item name="mapper" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -514,7 +540,7 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="aloogn" type="462c0819:PsiDirectoryNode" />
               <item name="fs" type="462c0819:PsiDirectoryNode" />
-              <item name="notice_information" type="462c0819:PsiDirectoryNode" />
+              <item name="grow_record" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -525,7 +551,72 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="aloogn" type="462c0819:PsiDirectoryNode" />
               <item name="fs" type="462c0819:PsiDirectoryNode" />
-              <item name="notice_information" type="462c0819:PsiDirectoryNode" />
+              <item name="grow_record" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ssmFS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ssmFS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="aloogn" type="462c0819:PsiDirectoryNode" />
+              <item name="fs" type="462c0819:PsiDirectoryNode" />
+              <item name="score" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ssmFS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ssmFS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="aloogn" type="462c0819:PsiDirectoryNode" />
+              <item name="fs" type="462c0819:PsiDirectoryNode" />
+              <item name="score" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ssmFS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ssmFS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="aloogn" type="462c0819:PsiDirectoryNode" />
+              <item name="fs" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ssmFS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ssmFS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="aloogn" type="462c0819:PsiDirectoryNode" />
+              <item name="fs" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ssmFS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ssmFS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="aloogn" type="462c0819:PsiDirectoryNode" />
+              <item name="fs" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ssmFS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ssmFS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="aloogn" type="462c0819:PsiDirectoryNode" />
+              <item name="fs" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
               <item name="impl" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -557,8 +648,7 @@
               <item name="ssmFS" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="mybatis" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ssmFS" type="b2602c69:ProjectViewProjectNode" />
@@ -566,51 +656,43 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ssmFS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ssmFS" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1615536865169" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1616952497894" />
     <property name="ignore_missing_gitignore" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/test/java" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="project.structure.side.proportion" value="0.4417939" />
+    <property name="settings.editor.selected.configurable" value="project.propDebugger" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/resources" />
-      <recent name="$PROJECT_DIR$/src/main/java" />
-      <recent name="$PROJECT_DIR$/src/main" />
-      <recent name="$PROJECT_DIR$/src/main/com.aloogn" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.aloogn.fs.user_grade.service.impl" />
+      <recent name="com.aloogn.fs.user.service.impl" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.aloogn.fs.user" />
       <recent name="com.aloogn.fs.user.service" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/java/com/aloogn/fs/grade" />
-      <recent name="$PROJECT_DIR$/src/main/resources/spring/article" />
-      <recent name="$PROJECT_DIR$/src/main/resources/spring/user_homework" />
-      <recent name="$PROJECT_DIR$/src/main/resources/com/aloogn/fs/mapper" />
-      <recent name="$PROJECT_DIR$/src/main/resources/spring/notice_information" />
+      <recent name="$PROJECT_DIR$/src/main/resources/spring/score" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/aloogn/fs/score" />
+      <recent name="$PROJECT_DIR$/src/main/resources/spring/picture" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/aloogn/fs/picture" />
+      <recent name="$PROJECT_DIR$/src/main/resources/spring/grow_record" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.aloogn.fs.user.bean" />
@@ -619,9 +701,11 @@
       <recent name="com.aloogn" />
       <recent name="com.aloogn.common.utils" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.aloogn.fs.user_grade.service.impl" />
-      <recent name="com.aloogn.fs.user.service.impl" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+      <recent name="$PROJECT_DIR$/src/main/java" />
+      <recent name="$PROJECT_DIR$/src/main" />
+      <recent name="$PROJECT_DIR$/src/main/com.aloogn" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -636,8 +720,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Tomcat Server.fs">
-    <configuration name="GenMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Tomcat Server.Unnamed">
+    <configuration name="GenMain" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.aloogn.GenMain" />
       <module name="ssmFS" />
       <extension name="coverage">
@@ -663,7 +747,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="fs" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.40" ALTERNATIVE_JRE_ENABLED="false">
+    <configuration name="Unnamed" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.0.91" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8081/" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="ssmFS:war exploded">
@@ -673,7 +758,8 @@
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="Unnamed_ssmFS" />
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_ssmFS_6" />
+        <option name="HTTP_PORT" value="8081" />
       </server-settings>
       <predefined_log_file id="Tomcat" enabled="true" />
       <predefined_log_file id="Tomcat Catalina" enabled="true" />
@@ -681,7 +767,7 @@
       <predefined_log_file id="Tomcat Host Manager" enabled="false" />
       <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="55051" />
+        <option name="DEBUG_PORT" value="58601" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -729,20 +815,18 @@
         </SHUTDOWN>
       </ConfigurationWrapper>
       <method v="2">
-        <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
           <artifact name="ssmFS:war exploded" />
         </option>
       </method>
     </configuration>
     <list>
-      <item itemvalue="Tomcat Server.fs" />
       <item itemvalue="Application.GenMain" />
+      <item itemvalue="Tomcat Server.Unnamed" />
       <item itemvalue="Application.test" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.GenMain" />
         <item itemvalue="Application.test" />
       </list>
     </recent_temporary>
@@ -804,14 +888,23 @@
       <workItem from="1615271088857" duration="20537000" />
       <workItem from="1615383684037" duration="9038000" />
       <workItem from="1615451729205" duration="8147000" />
-      <workItem from="1615511627364" duration="19392000" />
+      <workItem from="1615511627364" duration="36401000" />
+      <workItem from="1615616447985" duration="23657000" />
+      <workItem from="1615773096350" duration="8749000" />
+      <workItem from="1615859276480" duration="1365000" />
+      <workItem from="1615878548405" duration="28337000" />
+      <workItem from="1616050400933" duration="1417000" />
+      <workItem from="1616500378786" duration="4098000" />
+      <workItem from="1616645443854" duration="5454000" />
+      <workItem from="1616675313332" duration="21245000" />
+      <workItem from="1617065756722" duration="1102000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="321360000" />
+    <option name="totallyTimeSpent" value="433793000" />
   </component>
-  <component name="TodoView">
+  <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
       <is-autoscroll-to-source value="true" />
     </todo-panel>
@@ -824,7 +917,7 @@
     <frame x="0" y="23" width="1440" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49358973" visible="true" weight="0.1595136" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49358973" visible="true" weight="0.1788269" />
       <window_info id="Structure" order="1" sideWeight="0.50641024" side_tool="true" weight="0.29041487" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -835,16 +928,16 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3299363" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.355414" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49928468" visible="true" weight="0.40382165" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49713877" weight="0.2878981" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.3299363" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4985694" weight="0.3299363" />
       <window_info anchor="bottom" id="Application Servers" order="7" weight="0.3299363" />
-      <window_info anchor="bottom" id="Spring" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5007153" side_tool="true" weight="0.4" />
-      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49928468" weight="0.3299363" />
-      <window_info anchor="bottom" id="Java Enterprise" order="12" />
+      <window_info anchor="bottom" id="Spring" order="8" weight="0.3299363" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.3299363" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5028612" side_tool="true" weight="0.40382165" />
+      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.4985694" weight="0.3299363" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.3299363" />
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="14" show_stripe_button="false" />
       <window_info anchor="bottom" id="Thumbnails" order="15" weight="0.3299363" />
@@ -853,7 +946,7 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Maven Projects" order="5" />
+      <window_info anchor="right" id="Maven Projects" order="5" weight="0.3297568" />
       <window_info anchor="right" id="Database" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
@@ -876,11 +969,6 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
-    <watches-manager>
-      <configuration name="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory">
-        <watch expression="e" language="JAVA" />
-      </configuration>
-    </watches-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
@@ -892,377 +980,326 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/common/utils/StringUtils.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/score/mapper/PictureMapper.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/score/bean/PictureCriteria.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/score/controller/PictureController.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/score/service/PictureService.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/spring-mvc.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-          <folding>
-            <element signature="e#230#231#0" expanded="true" />
-            <element signature="e#277#278#0" expanded="true" />
-            <element signature="e#311#312#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-261">
+          <caret line="17" column="58" selection-start-line="17" selection-start-column="58" selection-end-line="17" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/applicationContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="57" column="27" selection-start-line="57" selection-start-column="27" selection-end-line="57" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/score/applicationContext-service.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="17" column="86" selection-start-line="17" selection-start-column="86" selection-end-line="17" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/picture/service/PictureService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="9" column="81" lean-forward="true" selection-start-line="9" selection-start-column="64" selection-end-line="9" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/picture/service/impl/PictureServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="13" column="30" selection-start-line="12" selection-start-column="4" selection-end-line="13" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/notice_information/mapper/NoticeInformationMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="42" column="46" selection-start-line="41" selection-start-column="4" selection-end-line="42" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/aloogn/fs/mapper/UserHomeworkMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6978" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/aloogn/fs/mapper/GradeMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5607" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/aloogn/fs/mapper/NoticeInformationMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="385">
+          <caret line="317" column="11" lean-forward="true" selection-start-line="315" selection-start-column="2" selection-end-line="317" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/aloogn/fs/mapper/SubjectMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4001" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/score/mapper/ScoreMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="37" column="35" selection-start-line="37" selection-start-column="35" selection-end-line="37" selection-end-column="35" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/com/aloogn/fs/mapper/UserGradeMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4950">
-          <caret line="225" column="9" lean-forward="true" selection-start-line="225" selection-start-column="9" selection-end-line="225" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/user_homework/mapper/UserHomeworkMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="667">
-          <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
-        </state>
+        <state relative-caret-position="-4660" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/user_homework/service/impl/UserHomeworkServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="18" column="45" lean-forward="true" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="45" />
+        <state relative-caret-position="1936">
+          <caret line="93" column="43" selection-start-line="93" selection-start-column="43" selection-end-line="93" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/user_grade/service/UserGradeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/notice_information/service/impl/NoticeInformationServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="694">
+          <caret line="97" column="48" selection-start-line="97" selection-start-column="48" selection-end-line="97" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/notice_information/service/NoticeInformationService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="25" column="86" selection-start-line="25" selection-start-column="86" selection-end-line="25" selection-end-column="86" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/user_homework/service/UserHomeworkService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="462">
+          <caret line="24" column="80" selection-start-line="24" selection-start-column="80" selection-end-line="24" selection-end-column="80" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/user_homework/controller/UserHomeworkController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="667">
-          <caret line="133" selection-start-line="133" selection-end-line="133" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/generate/generateConfig.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="68" column="54" selection-start-line="68" selection-start-column="54" selection-end-line="68" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com.aloogn/junit/UserTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="46" selection-start-line="2" selection-end-line="2" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/user_grade/service/impl/UserGradeMapper.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/user/mapper/UserMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="638">
-          <caret line="32" column="39" selection-start-line="32" selection-start-column="39" selection-end-line="32" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/user/bean/AuthUser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
-          <folding>
-            <element signature="e#330#331#0" expanded="true" />
-            <element signature="e#368#369#0" expanded="true" />
-            <element signature="e#398#399#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/user_grade/mapper/UserGradeMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="47" selection-start-line="5" selection-start-column="47" selection-end-line="5" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/maven-repo/org/springframework/spring-core/4.3.18.RELEASE/spring-core-4.3.18.RELEASE.jar!/org/springframework/util/ClassUtils.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="118" selection-start-line="118" selection-end-line="118" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/user/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="669">
-          <caret line="52" column="18" selection-start-line="52" selection-start-column="18" selection-end-line="52" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/user/bean/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2552">
-          <caret line="177" lean-forward="true" selection-start-line="177" selection-end-line="177" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/applicationContext-redis.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/user_grade/service/UserGradeService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="8" selection-start-line="9" selection-end-line="9" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/user/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/notice_information/applicationContext-service.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/user/applicationContext-service.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="18" column="11" lean-forward="true" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/user_grade/service/impl/UserGradeServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/user_grade/controller/UserGradeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="671">
-          <caret line="42" column="17" lean-forward="true" selection-start-line="42" selection-start-column="17" selection-end-line="42" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/user/service/impl/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-34">
-          <caret line="35" column="28" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/grade/service/GradeService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="9" column="24" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/grade/mapper/GradeMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="31" column="94" selection-start-line="31" selection-start-column="94" selection-end-line="31" selection-end-column="94" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/aloogn/fs/mapper/UserSubjectMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4727" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/aloogn/fs/mapper/UserMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="434" column="13" selection-start-line="434" selection-start-column="13" selection-end-line="434" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/grade/bean/Grade.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/user_subject/bean/UserSubject.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
           <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/aloogn/fs/mapper/GradeMapper.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/user_grade/bean/UserGrade.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="259" selection-start-line="259" selection-end-line="260" />
+        <state relative-caret-position="88">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/notice_information/bean/NoticeInformation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/score/bean/Score.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="33" lean-forward="true" selection-start-column="33" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/score/service/ScoreService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mybatis-config.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/ssmFS/uploads/img/2c2a1b2308ac46498f7df97e4a2580ce_touristappid.o6zAJs531mHNJOdCjDTJnlf0PiSE.12Muq3qLXMKKbc2ae11d49a4e026077347ef079e3e24.jpeg">
+      <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1716">
-          <caret line="78" column="32" lean-forward="true" selection-start-line="78" selection-start-column="32" selection-end-line="78" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/spring-mvc.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="37" column="8" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="836">
-          <caret line="183" column="32" selection-start-line="183" selection-start-column="32" selection-end-line="183" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ssmFS.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/applicationContext.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        <state relative-caret-position="-535">
+          <caret line="61" column="42" selection-start-line="61" selection-start-column="42" selection-end-line="61" selection-end-column="42" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/properties/mysql.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
-          <caret line="1" column="101" selection-start-line="1" selection-start-column="101" selection-end-line="1" selection-end-column="101" />
+          <caret line="1" column="44" lean-forward="true" selection-start-line="1" selection-start-column="44" selection-end-line="1" selection-end-column="44" />
         </state>
       </provider>
     </entry>
-    <entry file="jar:///Library/maven-repo/org/springframework/spring-webmvc/4.3.14.RELEASE/spring-webmvc-4.3.14.RELEASE-sources.jar!/org/springframework/web/servlet/HandlerExecutionChain.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/user_homework/controller/UserHomeworkController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="132" selection-start-line="132" selection-end-line="132" />
+        <state relative-caret-position="132">
+          <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/grade/service/impl/GradeServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/picture/controller/PictureController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/common/utils/TokenUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1254">
-          <caret line="68" selection-start-line="68" selection-end-line="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/common/interceptor/LoginInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="53" selection-start-line="53" selection-end-line="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/grade/controller/GradeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/aloogn/fs/mapper/UserHomeworkMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="311" column="80" selection-start-line="311" selection-start-column="80" selection-end-line="311" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/maven-repo/org/springframework/spring-web/4.3.14.RELEASE/spring-web-4.3.14.RELEASE-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="204" selection-start-line="204" selection-end-line="204" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mybatis-config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="15" column="15" lean-forward="true" selection-start-line="15" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/notice_information/bean/Notice.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/notice_information/bean/NoticeInformation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="112" column="1" lean-forward="true" selection-start-line="5" selection-end-line="112" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/notice_information/service/NoticeInformationService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="15" column="89" selection-start-line="15" selection-start-column="89" selection-end-line="15" selection-end-column="89" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/notice_information/service/impl/NoticeInformationServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="49" selection-start-line="49" selection-end-line="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/aloogn/fs/mapper/NoticeInformationMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="294" column="111" lean-forward="true" selection-start-line="294" selection-start-column="111" selection-end-line="294" selection-end-column="111" />
+        <state relative-caret-position="94">
+          <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/notice_information/controller/NoticeInformationController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="982">
-          <caret line="100" selection-start-line="100" selection-end-line="100" />
+        <state relative-caret-position="132">
+          <caret line="17" column="31" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/grade/controller/GradeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/user_subject/controller/UserSubjectController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/user/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="13" column="36" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/user_grade/service/impl/UserGradeServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/score/service/impl/ScoreServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="43" selection-start-line="43" selection-end-line="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/user_grade/controller/UserGradeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="46" selection-start-line="46" selection-end-line="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/maven-repo/org/springframework/spring-web/4.3.14.RELEASE/spring-web-4.3.14.RELEASE-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="204" selection-start-line="204" selection-end-line="204" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/common/interceptor/LoginInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="54" selection-start-line="54" selection-end-line="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/generate/generateConfig.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="68" column="58" selection-start-line="68" selection-start-column="58" selection-end-line="68" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/grow_record/service/GrowRecordService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/user/service/impl/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="152" selection-start-line="152" selection-end-line="152" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/aloogn/fs/mapper/ScoreMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="454">
+          <caret line="306" column="58" selection-start-line="306" selection-start-column="58" selection-end-line="306" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/score/controller/ScoreController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="47" selection-start-line="47" selection-end-line="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/grow_record/controller/GrowRecordContorller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2508">
+          <caret line="131" selection-start-line="131" selection-end-line="131" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/notice_information/mapper/NoticeInformationMapper.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/grow_record/service/impl/GrowRecordServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-94">
-          <caret lean-forward="true" />
+        <state relative-caret-position="792">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/aloogn/fs/mapper/GrowRecordMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6138">
+          <caret line="279" column="103" selection-start-line="279" selection-start-column="103" selection-end-line="279" selection-end-column="103" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/grow_record/mapper/GrowRecordMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="616">
+          <caret line="31" column="119" selection-start-line="31" selection-start-column="119" selection-end-line="31" selection-end-column="119" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/user/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="204" column="19" lean-forward="true" selection-start-line="204" selection-start-column="19" selection-end-line="204" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -1274,17 +1311,17 @@
           <artifact-editor>
             <show-sorted>false</show-sorted>
             <show-content>
-              <type id="library" />
-              <type id="javaee-facet-resources" />
-              <type id="jpa-descriptors" />
               <type id="artifact" />
+              <type id="library" />
+              <type id="jpa-descriptors" />
+              <type id="javaee-facet-resources" />
             </show-content>
           </artifact-editor>
           <last-edited>ssmFS:war exploded</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.4417939" />
                 <option value="0.5" />
               </list>
             </option>
@@ -1297,7 +1334,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.4417939" />
               </list>
             </option>
           </splitter-proportions>
@@ -1356,7 +1393,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.4417939" />
               </list>
             </option>
           </splitter-proportions>

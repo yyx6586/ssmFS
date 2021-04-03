@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.aloogn.fs.grow_record.mapper.GrowRecordMapper">
+  <resultMap id="BaseResultMap" type="com.aloogn.fs.grow_record.bean.GrowRecord">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="account" jdbcType="CHAR" property="account" />
+    <result column="gradeclass_id" jdbcType="CHAR" property="gradeclass_id" />
+    <result column="description" jdbcType="VARCHAR" property="description" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="showBadge" jdbcType="VARCHAR" property="showBadge" />
+    <result column="creat_time" jdbcType="TIMESTAMP" property="creat_time" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="update_time" />
+    <result column="status" jdbcType="CHAR" property="status" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    id, account, gradeclass_id, description, name, showBadge, creat_time, update_time, 
+    status
+  </sql>
+  <select id="selectByExample" parameterType="com.aloogn.fs.grow_record.bean.GrowRecordCriteria" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from grow_record
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from grow_record
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from grow_record
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.aloogn.fs.grow_record.bean.GrowRecordCriteria">
+    delete from grow_record
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.aloogn.fs.grow_record.bean.GrowRecord">
+    insert into grow_record (id, account, gradeclass_id, 
+      description, name, showBadge, 
+      creat_time, update_time, status
+      )
+    values (#{id,jdbcType=INTEGER}, #{account,jdbcType=CHAR}, #{gradeclass_id,jdbcType=CHAR}, 
+      #{description,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, #{showBadge,jdbcType=VARCHAR}, 
+      #{creat_time,jdbcType=TIMESTAMP}, #{update_time,jdbcType=TIMESTAMP}, #{status,jdbcType=CHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.aloogn.fs.grow_record.bean.GrowRecord">
+    insert into grow_record
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="account != null">
+        account,
+      </if>
+      <if test="gradeclass_id != null">
+        gradeclass_id,
+      </if>
+      <if test="description != null">
+        description,
+      </if>
+      <if test="name != null">
+        name,
+      </if>
+      <if test="showBadge != null">
+        showBadge,
+      </if>
+      <if test="creat_time != null">
+        creat_time,
+      </if>
+      <if test="update_time != null">
+        update_time,
+      </if>
+      <if test="status != null">
+        status,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="account != null">
+        #{account,jdbcType=CHAR},
+      </if>
+      <if test="gradeclass_id != null">
+        #{gradeclass_id,jdbcType=CHAR},
+      </if>
+      <if test="description != null">
+        #{description,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null">
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="showBadge != null">
+        #{showBadge,jdbcType=VARCHAR},
+      </if>
+      <if test="creat_time != null">
+        #{creat_time,jdbcType=TIMESTAMP},
+      </if>
+      <if test="update_time != null">
+        #{update_time,jdbcType=TIMESTAMP},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=CHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.aloogn.fs.grow_record.bean.GrowRecordCriteria" resultType="java.lang.Long">
+    select count(*) from grow_record
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update grow_record
+    <set>
+      <if test="record.id != null">
+        id = #{record.id,jdbcType=INTEGER},
+      </if>
+      <if test="record.account != null">
+        account = #{record.account,jdbcType=CHAR},
+      </if>
+      <if test="record.gradeclass_id != null">
+        gradeclass_id = #{record.gradeclass_id,jdbcType=CHAR},
+      </if>
+      <if test="record.description != null">
+        description = #{record.description,jdbcType=VARCHAR},
+      </if>
+      <if test="record.name != null">
+        name = #{record.name,jdbcType=VARCHAR},
+      </if>
+      <if test="record.showBadge != null">
+        showBadge = #{record.showBadge,jdbcType=VARCHAR},
+      </if>
+      <if test="record.creat_time != null">
+        creat_time = #{record.creat_time,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.update_time != null">
+        update_time = #{record.update_time,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.status != null">
+        status = #{record.status,jdbcType=CHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update grow_record
+    set id = #{record.id,jdbcType=INTEGER},
+      account = #{record.account,jdbcType=CHAR},
+      gradeclass_id = #{record.gradeclass_id,jdbcType=CHAR},
+      description = #{record.description,jdbcType=VARCHAR},
+      name = #{record.name,jdbcType=VARCHAR},
+      showBadge = #{record.showBadge,jdbcType=VARCHAR},
+      creat_time = #{record.creat_time,jdbcType=TIMESTAMP},
+      update_time = #{record.update_time,jdbcType=TIMESTAMP},
+      status = #{record.status,jdbcType=CHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.aloogn.fs.grow_record.bean.GrowRecord">
+    update grow_record
+    <set>
+      <if test="account != null">
+        account = #{account,jdbcType=CHAR},
+      </if>
+      <if test="gradeclass_id != null">
+        gradeclass_id = #{gradeclass_id,jdbcType=CHAR},
+      </if>
+      <if test="description != null">
+        description = #{description,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null">
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="showBadge != null">
+        showBadge = #{showBadge,jdbcType=VARCHAR},
+      </if>
+      <if test="creat_time != null">
+        creat_time = #{creat_time,jdbcType=TIMESTAMP},
+      </if>
+      <if test="update_time != null">
+        update_time = #{update_time,jdbcType=TIMESTAMP},
+      </if>
+      <if test="status != null">
+        status = #{status,jdbcType=CHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.aloogn.fs.grow_record.bean.GrowRecord">
+    update grow_record
+    set account = #{account,jdbcType=CHAR},
+      gradeclass_id = #{gradeclass_id,jdbcType=CHAR},
+      description = #{description,jdbcType=VARCHAR},
+      name = #{name,jdbcType=VARCHAR},
+      showBadge = #{showBadge,jdbcType=VARCHAR},
+      creat_time = #{creat_time,jdbcType=TIMESTAMP},
+      update_time = #{update_time,jdbcType=TIMESTAMP},
+      status = #{status,jdbcType=CHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+  <!-- 自定义查询成长记录信息 -->
+  <!--  自定义查询  -->
+  <select id="selectRecordInforation" resultMap="BaseResultMap">
+    select grow_record.* from grow_record where gradeclass_id = #{gradeclass_id} and status = #{status} and showBadge = #{showBadge} order by id desc limit #{curPage}, #{pageSize}
+</select>
+
+  <!--自定义查询-->
+  <select id="selectRecordByGradeClass_id" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select grow_record.*from grow_record where gradeclass_id = #{gradeclass_id} and description = #{description}
+</select>
+
+  <!--  自定义删除  -->
+  <delete id="deleteRecordByExample" parameterType="java.lang.Integer">
+    delete from grow_record where id = #{id}
+</delete>
+
+</mapper>

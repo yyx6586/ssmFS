@@ -12,6 +12,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -20,6 +21,7 @@ import java.util.List;
 
 @Controller
 @RequestMapping("/user")
+@CrossOrigin("*")      //允许跨域请求
 public class UserController {
 
 //    @Qualifier("userService")
@@ -33,15 +35,10 @@ public class UserController {
 
     @RequestMapping("/signIn")
     @ResponseBody
-    public JSONUtil signIn(String account, String name, String password, HttpServletRequest request) throws Exception {
+    public JSONUtil signIn(String account, String password, HttpServletRequest request) throws Exception {
         jsonUtil.setCode(-1);
         if(StringUtils.isNullOrEmpty(account)){
             jsonUtil.setMsg("账号不能为空");
-            return jsonUtil;
-        }
-
-        if(StringUtils.isNullOrEmpty(name)){
-            jsonUtil.setMsg("姓名不能为空");
             return jsonUtil;
         }
 
@@ -50,7 +47,7 @@ public class UserController {
             return jsonUtil;
         }
 
-        AuthUser authUser = userService.signIn(account,name,password,request);
+        AuthUser authUser = userService.signIn(account,password,request);
 
         if (authUser.getMsg() != null){
             jsonUtil.setMsg(authUser.getMsg());
@@ -62,17 +59,12 @@ public class UserController {
             return jsonUtil;
         }
 
-        if (!authUser.getUserName().equals(name)){
-            jsonUtil.setMsg("姓名错误，请重新登录");
-            return jsonUtil;
-        }
-
         if (!authUser.getUserPassword().equals(password)){
             jsonUtil.setMsg("密码错误，请重新登录");
             return jsonUtil;
         }
 
-        if (authUser.getUserPassword().equals(password) && authUser.getUserName().equals(name)){
+        if (authUser.getUserPassword().equals(password)){
             jsonUtil.setCode(1);
             jsonUtil.setData(authUser);
             jsonUtil.setMsg("登录成功");

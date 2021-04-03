@@ -13,6 +13,11 @@
     <!-- 扫描注解，这样com.xjt包下的文件都能被扫描 -->
     <context:component-scan base-package="com.aloogn"/>
 
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <property name="defaultEncoding" value="utf-8"></property>
+        <property name="maxUploadSize" value="100000000000"></property>
+    </bean>
+
     <!-- 开启SpringMVC注解模式 -->
     <mvc:annotation-driven/>
 

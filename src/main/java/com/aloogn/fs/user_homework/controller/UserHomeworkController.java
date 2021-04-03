@@ -6,6 +6,7 @@ import com.aloogn.fs.user_homework.bean.UserHomework;
 import com.aloogn.fs.user_homework.service.UserHomeworkService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -13,6 +14,7 @@ import java.util.List;
 
 @Controller
 @RequestMapping("/userHomework")
+@CrossOrigin("*")      //允许跨域请求
 public class UserHomeworkController {
 
     @Autowired
@@ -22,7 +24,7 @@ public class UserHomeworkController {
 
     @RequestMapping("/homeworkSchoolRelease")
     @ResponseBody
-    public JSONUtil homeworkSchoolRelease(String account, String grade_id, String subject_name, String homework, String token){
+    public JSONUtil homeworkSchoolRelease(String account, String gradeclass_id, String title, String subject_name, String homework, String showBadge, String token){
         jsonUtil.setCode(-1);
 
         if(StringUtils.isNullOrEmpty(account)){
@@ -30,7 +32,7 @@ public class UserHomeworkController {
             return jsonUtil;
         }
 
-        if(StringUtils.isNullOrEmpty(grade_id)){
+        if(StringUtils.isNullOrEmpty(gradeclass_id)){
             jsonUtil.setMsg("班级错误，请联系管理员");
             return jsonUtil;
         }
@@ -46,7 +48,7 @@ public class UserHomeworkController {
         }
 
         try{
-            userHomeworkService.homeworkSchoolRelease(account, grade_id, subject_name, homework, token);
+            userHomeworkService.homeworkSchoolRelease(account, gradeclass_id, title, subject_name, homework, showBadge, token);
             jsonUtil.setCode(1);
             jsonUtil.setMsg("作业发布成功");
         } catch (Exception e) {
@@ -78,26 +80,11 @@ public class UserHomeworkController {
 
     @RequestMapping("/homeworkSchoolDetails")
     @ResponseBody
-    public JSONUtil homeworkSchoolDetails(String account, String grade_id, String homework, String token){
+    public JSONUtil homeworkSchoolDetails(int id, String token){
         jsonUtil.setCode(-1);
 
-        if(StringUtils.isNullOrEmpty(account)){
-            jsonUtil.setMsg("账号信息错误，请联系管理员");
-            return jsonUtil;
-        }
-
-        if(StringUtils.isNullOrEmpty(grade_id)){
-            jsonUtil.setMsg("班级错误，请联系管理员");
-            return jsonUtil;
-        }
-
-        if(StringUtils.isNullOrEmpty(homework)){
-            jsonUtil.setMsg("发布作业信息不能为空");
-            return jsonUtil;
-        }
-
         try{
-            boolean result = userHomeworkService.homeworkSchoolDetails(account, grade_id, homework, token);
+            boolean result = userHomeworkService.homeworkSchoolDetails(id, token);
             if(result){
                 jsonUtil.setData(1);
                 jsonUtil.setMsg("作业删除成功");
@@ -112,21 +99,75 @@ public class UserHomeworkController {
 
     @RequestMapping("/homeworkFamily")
     @ResponseBody
-    public JSONUtil homeworkFamily(String grade_id, String token){
+    public JSONUtil homeworkFamily(String gradeclass_id, Integer curPage, Integer pageSize, String token){
         jsonUtil.setCode(-1);
 
-        if(StringUtils.isNullOrEmpty(grade_id)){
+        if(StringUtils.isNullOrEmpty(gradeclass_id)){
             jsonUtil.setMsg("班级错误，请联系管理员");
             return jsonUtil;
         }
 
         try{
-            List<UserHomework> list = userHomeworkService.homeworkFamily(grade_id, token);
+            List<UserHomework> list = userHomeworkService.homeworkFamily(gradeclass_id,curPage, pageSize, token);
             jsonUtil.setCode(1);
             jsonUtil.setMsg("获取作业信息成功");
             jsonUtil.setData(list);
         } catch (Exception e) {
             jsonUtil.setMsg("获取作业信息失败，请重新登录" + e.getMessage());
+        }
+        return jsonUtil;
+    }
+
+    // 修改数据库里的 showBadge 属性
+    @RequestMapping("/updateHomeworkShowBadge")
+    @ResponseBody
+    public JSONUtil updateHomeworkShowBadge(int id, String showBadge, String token) throws Exception{
+        jsonUtil.setCode(-1);
+
+        if(StringUtils.isNullOrEmpty(showBadge)){
+            jsonUtil.setMsg("获取数据错误，请重新点击");
+            return jsonUtil;
+        }
+
+        try {
+            userHomeworkService.updateHomeworkShowBadge(id, showBadge,token);
+            jsonUtil.setCode(1);
+            jsonUtil.setMsg("修改成功");
+        }catch (Exception e){
+            jsonUtil.setMsg("修改错误" + e.getMessage());
+        }
+        return jsonUtil;
+    }
+
+    // 根据 id 获取作业信息
+    @RequestMapping("/homeworkById")
+    @ResponseBody
+    public JSONUtil informationById(int id, String token){
+        jsonUtil.setCode(-1);
+
+        try {
+            UserHomework userHomework = userHomeworkService.homeworkById(id, token);
+            jsonUtil.setCode(1);
+            jsonUtil.setMsg("获取作业成功");
+            jsonUtil.setData(userHomework);
+        } catch (Exception e) {
+            jsonUtil.setMsg("作业查询错误，请重新登录" + e.getMessage());
+        }
+        return jsonUtil;
+    }
+
+    // 根据 id 修改作业信息
+    @RequestMapping("/updateHomework")
+    @ResponseBody
+    public JSONUtil updateInformation(int id, String title, String homework, String showBadge, String token) throws Exception{
+        jsonUtil.setCode(-1);
+
+        try {
+            userHomeworkService.updateHomework(id, title, homework, showBadge, token);
+            jsonUtil.setCode(1);
+            jsonUtil.setMsg("作业修改成功");
+        }catch (Exception e){
+            jsonUtil.setMsg("作业修改错误" + e.getMessage());
         }
         return jsonUtil;
     }

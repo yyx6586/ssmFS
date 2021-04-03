@@ -11,7 +11,7 @@ import java.util.List;
 
 @Service
 public interface UserService {
-    AuthUser signIn(String account, String name, String password, HttpServletRequest request) throws Exception;
+    AuthUser signIn(String account, String password, HttpServletRequest request) throws Exception;
 
     void updatePassword(String account, String password, String resetPassword, String token) throws Exception;
 

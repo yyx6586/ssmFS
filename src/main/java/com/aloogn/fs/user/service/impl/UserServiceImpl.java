@@ -22,7 +22,7 @@ public class UserServiceImpl implements UserService {
     RedisService redisService;
 
     @Override
-    public AuthUser signIn(String account, String name, String password, HttpServletRequest request) throws Exception {
+    public AuthUser signIn(String account, String password, HttpServletRequest request) throws Exception {
 
         //检查账号是否存在
         UserCriteria example = new UserCriteria();
@@ -142,6 +142,7 @@ public class UserServiceImpl implements UserService {
         user.setPhone(phone);
         user.setQQ(QQ);
         user.setWechat(wechat);
+        user.setAddress(address);
         user.setEmail(email);
         userMapper.updateByPrimaryKeySelective(user);
     }

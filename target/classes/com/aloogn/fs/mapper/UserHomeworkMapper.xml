@@ -9,6 +9,7 @@
     <result column="title" jdbcType="VARCHAR" property="title" />
     <result column="creat_time" jdbcType="TIMESTAMP" property="creat_time" />
     <result column="update_time" jdbcType="TIMESTAMP" property="update_time" />
+    <result column="showBadge" jdbcType="VARCHAR" property="showBadge" />
   </resultMap>
   <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.aloogn.fs.user_homework.bean.UserHomework">
     <result column="homework" jdbcType="LONGVARCHAR" property="homework" />
@@ -72,7 +73,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    id, account, subject_name, gradeclass_id, title, creat_time, update_time
+    id, account, subject_name, gradeclass_id, title, creat_time, update_time, showBadge
   </sql>
   <sql id="Blob_Column_List">
     homework
@@ -128,10 +129,12 @@
   <insert id="insert" parameterType="com.aloogn.fs.user_homework.bean.UserHomework">
     insert into user_homework (id, account, subject_name, 
       gradeclass_id, title, creat_time, 
-      update_time, homework)
+      update_time, showBadge, homework
+      )
     values (#{id,jdbcType=INTEGER}, #{account,jdbcType=CHAR}, #{subject_name,jdbcType=VARCHAR}, 
       #{gradeclass_id,jdbcType=CHAR}, #{title,jdbcType=VARCHAR}, #{creat_time,jdbcType=TIMESTAMP}, 
-      #{update_time,jdbcType=TIMESTAMP}, #{homework,jdbcType=LONGVARCHAR})
+      #{update_time,jdbcType=TIMESTAMP}, #{showBadge,jdbcType=VARCHAR}, #{homework,jdbcType=LONGVARCHAR}
+      )
   </insert>
   <insert id="insertSelective" parameterType="com.aloogn.fs.user_homework.bean.UserHomework">
     insert into user_homework
@@ -156,6 +159,9 @@
       </if>
       <if test="update_time != null">
         update_time,
+      </if>
+      <if test="showBadge != null">
+        showBadge,
       </if>
       <if test="homework != null">
         homework,
@@ -182,6 +188,9 @@
       </if>
       <if test="update_time != null">
         #{update_time,jdbcType=TIMESTAMP},
+      </if>
+      <if test="showBadge != null">
+        #{showBadge,jdbcType=VARCHAR},
       </if>
       <if test="homework != null">
         #{homework,jdbcType=LONGVARCHAR},
@@ -218,6 +227,9 @@
       <if test="record.update_time != null">
         update_time = #{record.update_time,jdbcType=TIMESTAMP},
       </if>
+      <if test="record.showBadge != null">
+        showBadge = #{record.showBadge,jdbcType=VARCHAR},
+      </if>
       <if test="record.homework != null">
         homework = #{record.homework,jdbcType=LONGVARCHAR},
       </if>
@@ -235,6 +247,7 @@
       title = #{record.title,jdbcType=VARCHAR},
       creat_time = #{record.creat_time,jdbcType=TIMESTAMP},
       update_time = #{record.update_time,jdbcType=TIMESTAMP},
+      showBadge = #{record.showBadge,jdbcType=VARCHAR},
       homework = #{record.homework,jdbcType=LONGVARCHAR}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
@@ -248,7 +261,8 @@
       gradeclass_id = #{record.gradeclass_id,jdbcType=CHAR},
       title = #{record.title,jdbcType=VARCHAR},
       creat_time = #{record.creat_time,jdbcType=TIMESTAMP},
-      update_time = #{record.update_time,jdbcType=TIMESTAMP}
+      update_time = #{record.update_time,jdbcType=TIMESTAMP},
+      showBadge = #{record.showBadge,jdbcType=VARCHAR}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -274,6 +288,9 @@
       <if test="update_time != null">
         update_time = #{update_time,jdbcType=TIMESTAMP},
       </if>
+      <if test="showBadge != null">
+        showBadge = #{showBadge,jdbcType=VARCHAR},
+      </if>
       <if test="homework != null">
         homework = #{homework,jdbcType=LONGVARCHAR},
       </if>
@@ -288,6 +305,7 @@
       title = #{title,jdbcType=VARCHAR},
       creat_time = #{creat_time,jdbcType=TIMESTAMP},
       update_time = #{update_time,jdbcType=TIMESTAMP},
+      showBadge = #{showBadge,jdbcType=VARCHAR},
       homework = #{homework,jdbcType=LONGVARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
@@ -298,28 +316,28 @@
       gradeclass_id = #{gradeclass_id,jdbcType=CHAR},
       title = #{title,jdbcType=VARCHAR},
       creat_time = #{creat_time,jdbcType=TIMESTAMP},
-      update_time = #{update_time,jdbcType=TIMESTAMP}
+      update_time = #{update_time,jdbcType=TIMESTAMP},
+      showBadge = #{showBadge,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
 
   <!--  自定义查询  -->
   <select id="selectHomeworkByExample" parameterType="java.lang.String" resultMap="BaseResultMap">
-      select user_homework.* from user_homework where account = #{value}
-  </select>
+    select user_homework.* from user_homework where account = #{value}
+</select>
 
   <!--  自定义查询  -->
-  <select id="selectHomeworkByGrade_id" parameterType="java.lang.String" resultMap="BaseResultMap">
-      select user_homework.* from user_homework where grade_id = #{value} order by id desc
-  </select>
+  <select id="selectHomeworkByGrade_id" resultMap="BaseResultMap">
+    select user_homework.* from user_homework where gradeclass_id = #{gradeclass_id} order by id desc limit #{curPage}, #{pageSize}
+</select>
 
   <!--  自定义查询  -->
   <select id="selectHomework" parameterType="java.lang.String" resultMap="BaseResultMap">
-      select user_homework.* from user_homework where grade_id = #{grade_id} and subject_name = #{subject_name}
-  </select>
+    select user_homework.* from user_homework where grade_id = #{grade_id} and subject_name = #{subject_name}
+</select>
 
   <!--  自定义删除  -->
-  <delete id="deleteHomeworkByExample" parameterType="java.lang.String">
-      delete from user_homework where account = #{account} and grade_id = #{grade_id} and homework = #{homework}
-  </delete>
-
+  <delete id="deleteHomeworkByExample" parameterType="java.lang.Integer">
+    delete from user_homework where id = #{id}
+</delete>
 </mapper>
