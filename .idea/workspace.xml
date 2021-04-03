@@ -123,7 +123,7 @@
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.12" value="4" />
           <entry key="project.open.time.13" value="1" />
-          <entry key="project.open.time.14" value="7" />
+          <entry key="project.open.time.14" value="8" />
           <entry key="project.open.time.15" value="4" />
           <entry key="project.open.time.16" value="3" />
           <entry key="project.open.time.17" value="3" />
@@ -139,7 +139,7 @@
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="57" />
+          <entry key="project.opened" value="58" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -184,62 +184,15 @@
           <entry key="XML" value="2620" />
         </counts>
       </usages-collector>
+      <usages-collector id="statistics.vcs.git.usages">
+        <counts>
+          <entry key="git.branch.checkout.local" value="1" />
+        </counts>
+      </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/grow_record/controller/GrowRecordContorller.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2508">
-              <caret line="131" selection-start-line="131" selection-end-line="131" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/grow_record/service/impl/GrowRecordServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="792">
-              <caret line="42" selection-start-line="42" selection-end-line="42" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/com/aloogn/fs/mapper/GrowRecordMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6138">
-              <caret line="279" column="103" selection-start-line="279" selection-start-column="103" selection-end-line="279" selection-end-column="103" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/grow_record/mapper/GrowRecordMapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="616">
-              <caret line="31" column="119" selection-start-line="31" selection-start-column="119" selection-end-line="31" selection-end-column="119" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/user/controller/UserController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="241">
-              <caret line="204" column="19" lean-forward="true" selection-start-line="204" selection-start-column="19" selection-end-line="204" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -266,6 +219,11 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="dev" />
+      </map>
+    </option>
   </component>
   <component name="GradleLocalSettings">
     <option name="projectSyncType">
@@ -447,7 +405,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -662,6 +619,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -828,6 +786,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.test" />
+        <item itemvalue="Application.test" />
       </list>
     </recent_temporary>
   </component>
@@ -898,11 +857,12 @@
       <workItem from="1616645443854" duration="5454000" />
       <workItem from="1616675313332" duration="21245000" />
       <workItem from="1617065756722" duration="1102000" />
+      <workItem from="1617430925191" duration="478000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="433793000" />
+    <option name="totallyTimeSpent" value="434271000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -915,9 +875,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49358973" visible="true" weight="0.1788269" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49358973" visible="true" weight="0.18097281" />
       <window_info id="Structure" order="1" sideWeight="0.50641024" side_tool="true" weight="0.29041487" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -927,7 +886,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3299363" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.355414" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.355414" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49713877" weight="0.2878981" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1262,19 +1221,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/grow_record/controller/GrowRecordContorller.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/user/controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2508">
-          <caret line="131" selection-start-line="131" selection-end-line="131" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="2486">
+          <caret line="204" column="19" selection-start-line="204" selection-start-column="19" selection-end-line="204" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/grow_record/mapper/GrowRecordMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="415">
+          <caret line="31" column="119" selection-start-line="31" selection-start-column="119" selection-end-line="31" selection-end-column="119" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/aloogn/fs/mapper/GrowRecordMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="415">
+          <caret line="279" column="103" selection-start-line="279" selection-start-column="103" selection-end-line="279" selection-end-column="103" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/grow_record/service/impl/GrowRecordServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
+        <state relative-caret-position="415">
           <caret line="42" selection-start-line="42" selection-end-line="42" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1282,24 +1252,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/aloogn/fs/mapper/GrowRecordMapper.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/grow_record/controller/GrowRecordContorller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6138">
-          <caret line="279" column="103" selection-start-line="279" selection-start-column="103" selection-end-line="279" selection-end-column="103" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/grow_record/mapper/GrowRecordMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="616">
-          <caret line="31" column="119" selection-start-line="31" selection-start-column="119" selection-end-line="31" selection-end-column="119" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aloogn/fs/user/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="204" column="19" lean-forward="true" selection-start-line="204" selection-start-column="19" selection-end-line="204" selection-end-column="19" />
+        <state relative-caret-position="415">
+          <caret line="131" selection-start-line="131" selection-end-line="131" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
