@@ -27,7 +27,7 @@ public class NoticeInformationController {
 
     @RequestMapping("/schoolNoticeInformationRelease")
     @ResponseBody
-    public JSONUtil schoolNoticeInformationRelease(String account, String grade_id, String title, String information, String showBadge, String token){
+    public JSONUtil schoolNoticeInformationRelease(String account, String grade_id, String title, String information, String show_teacher, String show_student, String token){
         jsonUtil.setCode(-1);
 
         if(StringUtils.isNullOrEmpty(account)){
@@ -46,7 +46,7 @@ public class NoticeInformationController {
         }
 
         try{
-            noticeInformationService.schoolNoticeInformationRelease(account, grade_id, title, information, showBadge, token);
+            noticeInformationService.schoolNoticeInformationRelease(account, grade_id, title, information, show_teacher, show_student, token);
             jsonUtil.setCode(1);
             jsonUtil.setMsg("信息发布成功");
         } catch (Exception e) {
@@ -120,16 +120,21 @@ public class NoticeInformationController {
     // 修改数据库里的 showBadge 属性
     @RequestMapping("/updateShowBadge")
     @ResponseBody
-    public JSONUtil updateShowBadge(int id, String showBadge, String token) throws Exception{
+    public JSONUtil updateShowBadge(int id, String show_teacher, String show_student, String token) throws Exception{
         jsonUtil.setCode(-1);
 
-        if(StringUtils.isNullOrEmpty(showBadge)){
+        if(StringUtils.isNullOrEmpty(show_teacher)){
+            jsonUtil.setMsg("获取数据错误，请重新点击");
+            return jsonUtil;
+        }
+
+        if(StringUtils.isNullOrEmpty(show_student)){
             jsonUtil.setMsg("获取数据错误，请重新点击");
             return jsonUtil;
         }
 
         try {
-            noticeInformationService.updateShowBadge(id, showBadge,token);
+            noticeInformationService.updateShowBadge(id, show_teacher, show_student, token);
             jsonUtil.setCode(1);
             jsonUtil.setMsg("修改成功");
         }catch (Exception e){
@@ -158,11 +163,11 @@ public class NoticeInformationController {
     // 根据 id 修改通知信息
     @RequestMapping("/updateInformation")
     @ResponseBody
-    public JSONUtil updateInformation(int id, String title, String information, String showBadge, String token) throws Exception{
+    public JSONUtil updateInformation(int id, String title, String information, String show_teacher, String token) throws Exception{
         jsonUtil.setCode(-1);
 
         try {
-            noticeInformationService.updateInformation(id, title,information, showBadge, token);
+            noticeInformationService.updateInformation(id, title,information, show_teacher, token);
             jsonUtil.setCode(1);
             jsonUtil.setMsg("通知修改成功");
         }catch (Exception e){

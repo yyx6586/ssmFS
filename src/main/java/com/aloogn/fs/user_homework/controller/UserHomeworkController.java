@@ -24,7 +24,7 @@ public class UserHomeworkController {
 
     @RequestMapping("/homeworkSchoolRelease")
     @ResponseBody
-    public JSONUtil homeworkSchoolRelease(String account, String gradeclass_id, String title, String subject_name, String homework, String showBadge, String token){
+    public JSONUtil homeworkSchoolRelease(String account, String gradeclass_id, String title, String subject_name, String homework, String show_teacher, String show_student, String token){
         jsonUtil.setCode(-1);
 
         if(StringUtils.isNullOrEmpty(account)){
@@ -48,7 +48,7 @@ public class UserHomeworkController {
         }
 
         try{
-            userHomeworkService.homeworkSchoolRelease(account, gradeclass_id, title, subject_name, homework, showBadge, token);
+            userHomeworkService.homeworkSchoolRelease(account, gradeclass_id, title, subject_name, homework, show_teacher, show_student, token);
             jsonUtil.setCode(1);
             jsonUtil.setMsg("作业发布成功");
         } catch (Exception e) {
@@ -121,16 +121,21 @@ public class UserHomeworkController {
     // 修改数据库里的 showBadge 属性
     @RequestMapping("/updateHomeworkShowBadge")
     @ResponseBody
-    public JSONUtil updateHomeworkShowBadge(int id, String showBadge, String token) throws Exception{
+    public JSONUtil updateHomeworkShowBadge(int id, String show_teacher, String show_student, String token) throws Exception{
         jsonUtil.setCode(-1);
 
-        if(StringUtils.isNullOrEmpty(showBadge)){
+        if(StringUtils.isNullOrEmpty(show_teacher)){
+            jsonUtil.setMsg("获取数据错误，请重新点击");
+            return jsonUtil;
+        }
+
+        if(StringUtils.isNullOrEmpty(show_student)){
             jsonUtil.setMsg("获取数据错误，请重新点击");
             return jsonUtil;
         }
 
         try {
-            userHomeworkService.updateHomeworkShowBadge(id, showBadge,token);
+            userHomeworkService.updateHomeworkShowBadge(id, show_teacher, show_student, token);
             jsonUtil.setCode(1);
             jsonUtil.setMsg("修改成功");
         }catch (Exception e){
@@ -159,11 +164,11 @@ public class UserHomeworkController {
     // 根据 id 修改作业信息
     @RequestMapping("/updateHomework")
     @ResponseBody
-    public JSONUtil updateInformation(int id, String title, String homework, String showBadge, String token) throws Exception{
+    public JSONUtil updateInformation(int id, String title, String homework, String show_teacher, String token) throws Exception{
         jsonUtil.setCode(-1);
 
         try {
-            userHomeworkService.updateHomework(id, title, homework, showBadge, token);
+            userHomeworkService.updateHomework(id, title, homework, show_teacher, token);
             jsonUtil.setCode(1);
             jsonUtil.setMsg("作业修改成功");
         }catch (Exception e){

@@ -49,7 +49,7 @@ public class GradeController {
     @ResponseBody
     public JSONUtil gradeClassName(String gradeclass_id, String token){
         if(StringUtils.isNullOrEmpty(gradeclass_id)){
-            jsonUtil.setMsg("id不能为空");
+            jsonUtil.setMsg("获取班级错误");
             return jsonUtil;
         }
 

@@ -131,11 +131,6 @@ public class UserController {
             return jsonUtil;
         }
 
-        if(StringUtils.isNullOrEmpty(parentPhone)){
-            jsonUtil.setMsg("家长电话不能为空");
-            return jsonUtil;
-        }
-
         try {
             userService.personalInformationFamily(account, studentName, studentSex, phone, QQ, wechat, address, parentName, parentPhone, parentQQ, parentWechat, parentAddress, token);
             jsonUtil.setCode(1);

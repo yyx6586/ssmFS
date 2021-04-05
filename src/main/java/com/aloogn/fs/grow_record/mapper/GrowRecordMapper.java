@@ -28,8 +28,11 @@ public interface GrowRecordMapper {
 
     int updateByPrimaryKey(GrowRecord record);
 
-    // 自定义查询成长记录信息
-    List<GrowRecord> selectRecordInforation(@Param("gradeclass_id")String gradeclass_id, @Param("status")String status, @Param("showBadge")String showBadge,  @Param("curPage")Integer curPage, @Param("pageSize")Integer pageSize);
+    // 自定义查询成长记录信息列表
+    List<GrowRecord> selectRecordInforation(@Param("gradeclass_id")String gradeclass_id, @Param("status")String status);
+
+    // 自定义查询成长记录信息详情
+    List<GrowRecord> selectRecordInforationDetails(@Param("gradeclass_id")String gradeclass_id, @Param("status")String status, @Param("release_time")String release_time);
 
     // 自定义查询
     List<GrowRecord> selectRecordByGradeClass_id(@Param("gradeclass_id")String gradeclass_id, @Param("description")String description);

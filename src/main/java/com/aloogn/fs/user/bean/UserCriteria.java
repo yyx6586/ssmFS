@@ -735,73 +735,73 @@ public class UserCriteria {
             return (Criteria) this;
         }
 
-        public Criteria andQQIsNull() {
-            addCriterion("QQ is null");
+        public Criteria andQqIsNull() {
+            addCriterion("qq is null");
             return (Criteria) this;
         }
 
-        public Criteria andQQIsNotNull() {
-            addCriterion("QQ is not null");
+        public Criteria andQqIsNotNull() {
+            addCriterion("qq is not null");
             return (Criteria) this;
         }
 
-        public Criteria andQQEqualTo(String value) {
-            addCriterion("QQ =", value, "QQ");
+        public Criteria andQqEqualTo(String value) {
+            addCriterion("qq =", value, "qq");
             return (Criteria) this;
         }
 
-        public Criteria andQQNotEqualTo(String value) {
-            addCriterion("QQ <>", value, "QQ");
+        public Criteria andQqNotEqualTo(String value) {
+            addCriterion("qq <>", value, "qq");
             return (Criteria) this;
         }
 
-        public Criteria andQQGreaterThan(String value) {
-            addCriterion("QQ >", value, "QQ");
+        public Criteria andQqGreaterThan(String value) {
+            addCriterion("qq >", value, "qq");
             return (Criteria) this;
         }
 
-        public Criteria andQQGreaterThanOrEqualTo(String value) {
-            addCriterion("QQ >=", value, "QQ");
+        public Criteria andQqGreaterThanOrEqualTo(String value) {
+            addCriterion("qq >=", value, "qq");
             return (Criteria) this;
         }
 
-        public Criteria andQQLessThan(String value) {
-            addCriterion("QQ <", value, "QQ");
+        public Criteria andQqLessThan(String value) {
+            addCriterion("qq <", value, "qq");
             return (Criteria) this;
         }
 
-        public Criteria andQQLessThanOrEqualTo(String value) {
-            addCriterion("QQ <=", value, "QQ");
+        public Criteria andQqLessThanOrEqualTo(String value) {
+            addCriterion("qq <=", value, "qq");
             return (Criteria) this;
         }
 
-        public Criteria andQQLike(String value) {
-            addCriterion("QQ like", value, "QQ");
+        public Criteria andQqLike(String value) {
+            addCriterion("qq like", value, "qq");
             return (Criteria) this;
         }
 
-        public Criteria andQQNotLike(String value) {
-            addCriterion("QQ not like", value, "QQ");
+        public Criteria andQqNotLike(String value) {
+            addCriterion("qq not like", value, "qq");
             return (Criteria) this;
         }
 
-        public Criteria andQQIn(List<String> values) {
-            addCriterion("QQ in", values, "QQ");
+        public Criteria andQqIn(List<String> values) {
+            addCriterion("qq in", values, "qq");
             return (Criteria) this;
         }
 
-        public Criteria andQQNotIn(List<String> values) {
-            addCriterion("QQ not in", values, "QQ");
+        public Criteria andQqNotIn(List<String> values) {
+            addCriterion("qq not in", values, "qq");
             return (Criteria) this;
         }
 
-        public Criteria andQQBetween(String value1, String value2) {
-            addCriterion("QQ between", value1, value2, "QQ");
+        public Criteria andQqBetween(String value1, String value2) {
+            addCriterion("qq between", value1, value2, "qq");
             return (Criteria) this;
         }
 
-        public Criteria andQQNotBetween(String value1, String value2) {
-            addCriterion("QQ not between", value1, value2, "QQ");
+        public Criteria andQqNotBetween(String value1, String value2) {
+            addCriterion("qq not between", value1, value2, "qq");
             return (Criteria) this;
         }
 
@@ -1085,73 +1085,73 @@ public class UserCriteria {
             return (Criteria) this;
         }
 
-        public Criteria andParent_QQIsNull() {
-            addCriterion("parent_QQ is null");
+        public Criteria andParent_qqIsNull() {
+            addCriterion("parent_qq is null");
             return (Criteria) this;
         }
 
-        public Criteria andParent_QQIsNotNull() {
-            addCriterion("parent_QQ is not null");
+        public Criteria andParent_qqIsNotNull() {
+            addCriterion("parent_qq is not null");
             return (Criteria) this;
         }
 
-        public Criteria andParent_QQEqualTo(String value) {
-            addCriterion("parent_QQ =", value, "parent_QQ");
+        public Criteria andParent_qqEqualTo(String value) {
+            addCriterion("parent_qq =", value, "parent_qq");
             return (Criteria) this;
         }
 
-        public Criteria andParent_QQNotEqualTo(String value) {
-            addCriterion("parent_QQ <>", value, "parent_QQ");
+        public Criteria andParent_qqNotEqualTo(String value) {
+            addCriterion("parent_qq <>", value, "parent_qq");
             return (Criteria) this;
         }
 
-        public Criteria andParent_QQGreaterThan(String value) {
-            addCriterion("parent_QQ >", value, "parent_QQ");
+        public Criteria andParent_qqGreaterThan(String value) {
+            addCriterion("parent_qq >", value, "parent_qq");
             return (Criteria) this;
         }
 
-        public Criteria andParent_QQGreaterThanOrEqualTo(String value) {
-            addCriterion("parent_QQ >=", value, "parent_QQ");
+        public Criteria andParent_qqGreaterThanOrEqualTo(String value) {
+            addCriterion("parent_qq >=", value, "parent_qq");
             return (Criteria) this;
         }
 
-        public Criteria andParent_QQLessThan(String value) {
-            addCriterion("parent_QQ <", value, "parent_QQ");
+        public Criteria andParent_qqLessThan(String value) {
+            addCriterion("parent_qq <", value, "parent_qq");
             return (Criteria) this;
         }
 
-        public Criteria andParent_QQLessThanOrEqualTo(String value) {
-            addCriterion("parent_QQ <=", value, "parent_QQ");
+        public Criteria andParent_qqLessThanOrEqualTo(String value) {
+            addCriterion("parent_qq <=", value, "parent_qq");
             return (Criteria) this;
         }
 
-        public Criteria andParent_QQLike(String value) {
-            addCriterion("parent_QQ like", value, "parent_QQ");
+        public Criteria andParent_qqLike(String value) {
+            addCriterion("parent_qq like", value, "parent_qq");
             return (Criteria) this;
         }
 
-        public Criteria andParent_QQNotLike(String value) {
-            addCriterion("parent_QQ not like", value, "parent_QQ");
+        public Criteria andParent_qqNotLike(String value) {
+            addCriterion("parent_qq not like", value, "parent_qq");
             return (Criteria) this;
         }
 
-        public Criteria andParent_QQIn(List<String> values) {
-            addCriterion("parent_QQ in", values, "parent_QQ");
+        public Criteria andParent_qqIn(List<String> values) {
+            addCriterion("parent_qq in", values, "parent_qq");
             return (Criteria) this;
         }
 
-        public Criteria andParent_QQNotIn(List<String> values) {
-            addCriterion("parent_QQ not in", values, "parent_QQ");
+        public Criteria andParent_qqNotIn(List<String> values) {
+            addCriterion("parent_qq not in", values, "parent_qq");
             return (Criteria) this;
         }
 
-        public Criteria andParent_QQBetween(String value1, String value2) {
-            addCriterion("parent_QQ between", value1, value2, "parent_QQ");
+        public Criteria andParent_qqBetween(String value1, String value2) {
+            addCriterion("parent_qq between", value1, value2, "parent_qq");
             return (Criteria) this;
         }
 
-        public Criteria andParent_QQNotBetween(String value1, String value2) {
-            addCriterion("parent_QQ not between", value1, value2, "parent_QQ");
+        public Criteria andParent_qqNotBetween(String value1, String value2) {
+            addCriterion("parent_qq not between", value1, value2, "parent_qq");
             return (Criteria) this;
         }
 

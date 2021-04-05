@@ -7,10 +7,12 @@
     <result column="gradeclass_id" jdbcType="CHAR" property="gradeclass_id" />
     <result column="description" jdbcType="VARCHAR" property="description" />
     <result column="name" jdbcType="VARCHAR" property="name" />
-    <result column="showBadge" jdbcType="VARCHAR" property="showBadge" />
     <result column="creat_time" jdbcType="TIMESTAMP" property="creat_time" />
     <result column="update_time" jdbcType="TIMESTAMP" property="update_time" />
     <result column="status" jdbcType="CHAR" property="status" />
+    <result column="show_teacher" jdbcType="VARCHAR" property="show_teacher" />
+    <result column="show_student" jdbcType="VARCHAR" property="show_student" />
+    <result column="release_time" jdbcType="VARCHAR" property="release_time" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -71,8 +73,8 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    id, account, gradeclass_id, description, name, showBadge, creat_time, update_time, 
-    status
+    id, account, gradeclass_id, description, name, creat_time, update_time, status, show_teacher, 
+    show_student, release_time
   </sql>
   <select id="selectByExample" parameterType="com.aloogn.fs.grow_record.bean.GrowRecordCriteria" resultMap="BaseResultMap">
     select
@@ -106,13 +108,13 @@
   </delete>
   <insert id="insert" parameterType="com.aloogn.fs.grow_record.bean.GrowRecord">
     insert into grow_record (id, account, gradeclass_id, 
-      description, name, showBadge, 
-      creat_time, update_time, status
-      )
+      description, name, creat_time, 
+      update_time, status, show_teacher, 
+      show_student, release_time)
     values (#{id,jdbcType=INTEGER}, #{account,jdbcType=CHAR}, #{gradeclass_id,jdbcType=CHAR}, 
-      #{description,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, #{showBadge,jdbcType=VARCHAR}, 
-      #{creat_time,jdbcType=TIMESTAMP}, #{update_time,jdbcType=TIMESTAMP}, #{status,jdbcType=CHAR}
-      )
+      #{description,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, #{creat_time,jdbcType=TIMESTAMP}, 
+      #{update_time,jdbcType=TIMESTAMP}, #{status,jdbcType=CHAR}, #{show_teacher,jdbcType=VARCHAR}, 
+      #{show_student,jdbcType=VARCHAR}, #{release_time,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.aloogn.fs.grow_record.bean.GrowRecord">
     insert into grow_record
@@ -132,9 +134,6 @@
       <if test="name != null">
         name,
       </if>
-      <if test="showBadge != null">
-        showBadge,
-      </if>
       <if test="creat_time != null">
         creat_time,
       </if>
@@ -143,6 +142,15 @@
       </if>
       <if test="status != null">
         status,
+      </if>
+      <if test="show_teacher != null">
+        show_teacher,
+      </if>
+      <if test="show_student != null">
+        show_student,
+      </if>
+      <if test="release_time != null">
+        release_time,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
@@ -161,9 +169,6 @@
       <if test="name != null">
         #{name,jdbcType=VARCHAR},
       </if>
-      <if test="showBadge != null">
-        #{showBadge,jdbcType=VARCHAR},
-      </if>
       <if test="creat_time != null">
         #{creat_time,jdbcType=TIMESTAMP},
       </if>
@@ -172,6 +177,15 @@
       </if>
       <if test="status != null">
         #{status,jdbcType=CHAR},
+      </if>
+      <if test="show_teacher != null">
+        #{show_teacher,jdbcType=VARCHAR},
+      </if>
+      <if test="show_student != null">
+        #{show_student,jdbcType=VARCHAR},
+      </if>
+      <if test="release_time != null">
+        #{release_time,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -199,9 +213,6 @@
       <if test="record.name != null">
         name = #{record.name,jdbcType=VARCHAR},
       </if>
-      <if test="record.showBadge != null">
-        showBadge = #{record.showBadge,jdbcType=VARCHAR},
-      </if>
       <if test="record.creat_time != null">
         creat_time = #{record.creat_time,jdbcType=TIMESTAMP},
       </if>
@@ -210,6 +221,15 @@
       </if>
       <if test="record.status != null">
         status = #{record.status,jdbcType=CHAR},
+      </if>
+      <if test="record.show_teacher != null">
+        show_teacher = #{record.show_teacher,jdbcType=VARCHAR},
+      </if>
+      <if test="record.show_student != null">
+        show_student = #{record.show_student,jdbcType=VARCHAR},
+      </if>
+      <if test="record.release_time != null">
+        release_time = #{record.release_time,jdbcType=VARCHAR},
       </if>
     </set>
     <if test="_parameter != null">
@@ -223,10 +243,12 @@
       gradeclass_id = #{record.gradeclass_id,jdbcType=CHAR},
       description = #{record.description,jdbcType=VARCHAR},
       name = #{record.name,jdbcType=VARCHAR},
-      showBadge = #{record.showBadge,jdbcType=VARCHAR},
       creat_time = #{record.creat_time,jdbcType=TIMESTAMP},
       update_time = #{record.update_time,jdbcType=TIMESTAMP},
-      status = #{record.status,jdbcType=CHAR}
+      status = #{record.status,jdbcType=CHAR},
+      show_teacher = #{record.show_teacher,jdbcType=VARCHAR},
+      show_student = #{record.show_student,jdbcType=VARCHAR},
+      release_time = #{record.release_time,jdbcType=VARCHAR}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -246,9 +268,6 @@
       <if test="name != null">
         name = #{name,jdbcType=VARCHAR},
       </if>
-      <if test="showBadge != null">
-        showBadge = #{showBadge,jdbcType=VARCHAR},
-      </if>
       <if test="creat_time != null">
         creat_time = #{creat_time,jdbcType=TIMESTAMP},
       </if>
@@ -257,6 +276,15 @@
       </if>
       <if test="status != null">
         status = #{status,jdbcType=CHAR},
+      </if>
+      <if test="show_teacher != null">
+        show_teacher = #{show_teacher,jdbcType=VARCHAR},
+      </if>
+      <if test="show_student != null">
+        show_student = #{show_student,jdbcType=VARCHAR},
+      </if>
+      <if test="release_time != null">
+        release_time = #{release_time,jdbcType=VARCHAR},
       </if>
     </set>
     where id = #{id,jdbcType=INTEGER}
@@ -267,17 +295,25 @@
       gradeclass_id = #{gradeclass_id,jdbcType=CHAR},
       description = #{description,jdbcType=VARCHAR},
       name = #{name,jdbcType=VARCHAR},
-      showBadge = #{showBadge,jdbcType=VARCHAR},
       creat_time = #{creat_time,jdbcType=TIMESTAMP},
       update_time = #{update_time,jdbcType=TIMESTAMP},
-      status = #{status,jdbcType=CHAR}
+      status = #{status,jdbcType=CHAR},
+      show_teacher = #{show_teacher,jdbcType=VARCHAR},
+      show_student = #{show_student,jdbcType=VARCHAR},
+      release_time = #{release_time,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
 
-  <!-- 自定义查询成长记录信息 -->
+  <!-- 自定义查询成长记录信息列表 -->
   <!--  自定义查询  -->
   <select id="selectRecordInforation" resultMap="BaseResultMap">
-    select grow_record.* from grow_record where gradeclass_id = #{gradeclass_id} and status = #{status} and showBadge = #{showBadge} order by id desc limit #{curPage}, #{pageSize}
+    select distinct grow_record.release_time, grow_record.description,grow_record.show_teacher,grow_record.show_student from grow_record where gradeclass_id = #{gradeclass_id} and status = #{status}
+</select>
+
+  <!-- 自定义查询成长记录信息详情 -->
+  <!--  自定义查询  -->
+  <select id="selectRecordInforationDetails" resultMap="BaseResultMap">
+    select grow_record.* from grow_record where gradeclass_id = #{gradeclass_id} and status = #{status} and release_time = #{release_time}
 </select>
 
   <!--自定义查询-->
@@ -289,5 +325,4 @@
   <delete id="deleteRecordByExample" parameterType="java.lang.Integer">
     delete from grow_record where id = #{id}
 </delete>
-
 </mapper>
