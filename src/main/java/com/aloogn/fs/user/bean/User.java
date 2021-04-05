@@ -22,7 +22,7 @@ public class User implements Serializable {
 
     private String phone;
 
-    private String QQ;
+    private String qq;
 
     private String wechat;
 
@@ -32,7 +32,7 @@ public class User implements Serializable {
 
     private String parent_phone;
 
-    private String parent_QQ;
+    private String parent_qq;
 
     private String parent_wechat;
 
@@ -116,12 +116,12 @@ public class User implements Serializable {
         this.phone = phone == null ? null : phone.trim();
     }
 
-    public String getQQ() {
-        return QQ;
+    public String getQq() {
+        return qq;
     }
 
-    public void setQQ(String QQ) {
-        this.QQ = QQ == null ? null : QQ.trim();
+    public void setQq(String qq) {
+        this.qq = qq == null ? null : qq.trim();
     }
 
     public String getWechat() {
@@ -156,12 +156,12 @@ public class User implements Serializable {
         this.parent_phone = parent_phone == null ? null : parent_phone.trim();
     }
 
-    public String getParent_QQ() {
-        return parent_QQ;
+    public String getParent_qq() {
+        return parent_qq;
     }
 
-    public void setParent_QQ(String parent_QQ) {
-        this.parent_QQ = parent_QQ == null ? null : parent_QQ.trim();
+    public void setParent_qq(String parent_qq) {
+        this.parent_qq = parent_qq == null ? null : parent_qq.trim();
     }
 
     public String getParent_wechat() {
@@ -217,12 +217,12 @@ public class User implements Serializable {
             && (this.getState() == null ? other.getState() == null : this.getState().equals(other.getState()))
             && (this.getEmail() == null ? other.getEmail() == null : this.getEmail().equals(other.getEmail()))
             && (this.getPhone() == null ? other.getPhone() == null : this.getPhone().equals(other.getPhone()))
-            && (this.getQQ() == null ? other.getQQ() == null : this.getQQ().equals(other.getQQ()))
+            && (this.getQq() == null ? other.getQq() == null : this.getQq().equals(other.getQq()))
             && (this.getWechat() == null ? other.getWechat() == null : this.getWechat().equals(other.getWechat()))
             && (this.getAddress() == null ? other.getAddress() == null : this.getAddress().equals(other.getAddress()))
             && (this.getParent_name() == null ? other.getParent_name() == null : this.getParent_name().equals(other.getParent_name()))
             && (this.getParent_phone() == null ? other.getParent_phone() == null : this.getParent_phone().equals(other.getParent_phone()))
-            && (this.getParent_QQ() == null ? other.getParent_QQ() == null : this.getParent_QQ().equals(other.getParent_QQ()))
+            && (this.getParent_qq() == null ? other.getParent_qq() == null : this.getParent_qq().equals(other.getParent_qq()))
             && (this.getParent_wechat() == null ? other.getParent_wechat() == null : this.getParent_wechat().equals(other.getParent_wechat()))
             && (this.getParent_address() == null ? other.getParent_address() == null : this.getParent_address().equals(other.getParent_address()))
             && (this.getCreat_time() == null ? other.getCreat_time() == null : this.getCreat_time().equals(other.getCreat_time()))
@@ -242,12 +242,12 @@ public class User implements Serializable {
         result = prime * result + ((getState() == null) ? 0 : getState().hashCode());
         result = prime * result + ((getEmail() == null) ? 0 : getEmail().hashCode());
         result = prime * result + ((getPhone() == null) ? 0 : getPhone().hashCode());
-        result = prime * result + ((getQQ() == null) ? 0 : getQQ().hashCode());
+        result = prime * result + ((getQq() == null) ? 0 : getQq().hashCode());
         result = prime * result + ((getWechat() == null) ? 0 : getWechat().hashCode());
         result = prime * result + ((getAddress() == null) ? 0 : getAddress().hashCode());
         result = prime * result + ((getParent_name() == null) ? 0 : getParent_name().hashCode());
         result = prime * result + ((getParent_phone() == null) ? 0 : getParent_phone().hashCode());
-        result = prime * result + ((getParent_QQ() == null) ? 0 : getParent_QQ().hashCode());
+        result = prime * result + ((getParent_qq() == null) ? 0 : getParent_qq().hashCode());
         result = prime * result + ((getParent_wechat() == null) ? 0 : getParent_wechat().hashCode());
         result = prime * result + ((getParent_address() == null) ? 0 : getParent_address().hashCode());
         result = prime * result + ((getCreat_time() == null) ? 0 : getCreat_time().hashCode());

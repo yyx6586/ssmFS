@@ -115,12 +115,12 @@ public class UserServiceImpl implements UserService {
         user.setName(studentName);
         user.setSex(studentSex);
         user.setPhone(phone);
-        user.setQQ(QQ);
+        user.setQq(QQ);
         user.setWechat(wechat);
         user.setAddress(address);
         user.setParent_name(parentName);
         user.setParent_phone(parentPhone);
-        user.setParent_QQ(parentQQ);
+        user.setParent_qq(parentQQ);
         user.setParent_wechat(parentWechat);
         user.setParent_address(parentAddress);
         userMapper.updateByPrimaryKeySelective(user);
@@ -140,7 +140,7 @@ public class UserServiceImpl implements UserService {
         user.setName(name);
         user.setSex(sex);
         user.setPhone(phone);
-        user.setQQ(QQ);
+        user.setQq(QQ);
         user.setWechat(wechat);
         user.setAddress(address);
         user.setEmail(email);

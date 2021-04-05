@@ -11,12 +11,12 @@
     <result column="state" jdbcType="CHAR" property="state" />
     <result column="email" jdbcType="VARCHAR" property="email" />
     <result column="phone" jdbcType="CHAR" property="phone" />
-    <result column="QQ" jdbcType="VARCHAR" property="QQ" />
+    <result column="qq" jdbcType="VARCHAR" property="qq" />
     <result column="wechat" jdbcType="VARCHAR" property="wechat" />
     <result column="address" jdbcType="VARCHAR" property="address" />
     <result column="parent_name" jdbcType="VARCHAR" property="parent_name" />
     <result column="parent_phone" jdbcType="CHAR" property="parent_phone" />
-    <result column="parent_QQ" jdbcType="VARCHAR" property="parent_QQ" />
+    <result column="parent_qq" jdbcType="VARCHAR" property="parent_qq" />
     <result column="parent_wechat" jdbcType="VARCHAR" property="parent_wechat" />
     <result column="parent_address" jdbcType="VARCHAR" property="parent_address" />
     <result column="creat_time" jdbcType="TIMESTAMP" property="creat_time" />
@@ -81,8 +81,8 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    id, name, sex, birthdate, password, role, state, email, phone, QQ, wechat, address, 
-    parent_name, parent_phone, parent_QQ, parent_wechat, parent_address, creat_time, 
+    id, name, sex, birthdate, password, role, state, email, phone, qq, wechat, address, 
+    parent_name, parent_phone, parent_qq, parent_wechat, parent_address, creat_time, 
     update_time
   </sql>
   <select id="selectByExample" parameterType="com.aloogn.fs.user.bean.UserCriteria" resultMap="BaseResultMap">
@@ -118,14 +118,14 @@
   <insert id="insert" parameterType="com.aloogn.fs.user.bean.User">
     insert into user (id, name, sex, birthdate, 
       password, role, state, email, 
-      phone, QQ, wechat, address, 
-      parent_name, parent_phone, parent_QQ, 
+      phone, qq, wechat, address, 
+      parent_name, parent_phone, parent_qq, 
       parent_wechat, parent_address, creat_time, 
       update_time)
     values (#{id,jdbcType=CHAR}, #{name,jdbcType=VARCHAR}, #{sex,jdbcType=CHAR}, #{birthdate,jdbcType=CHAR}, 
       #{password,jdbcType=VARCHAR}, #{role,jdbcType=CHAR}, #{state,jdbcType=CHAR}, #{email,jdbcType=VARCHAR}, 
-      #{phone,jdbcType=CHAR}, #{QQ,jdbcType=VARCHAR}, #{wechat,jdbcType=VARCHAR}, #{address,jdbcType=VARCHAR}, 
-      #{parent_name,jdbcType=VARCHAR}, #{parent_phone,jdbcType=CHAR}, #{parent_QQ,jdbcType=VARCHAR}, 
+      #{phone,jdbcType=CHAR}, #{qq,jdbcType=VARCHAR}, #{wechat,jdbcType=VARCHAR}, #{address,jdbcType=VARCHAR}, 
+      #{parent_name,jdbcType=VARCHAR}, #{parent_phone,jdbcType=CHAR}, #{parent_qq,jdbcType=VARCHAR}, 
       #{parent_wechat,jdbcType=VARCHAR}, #{parent_address,jdbcType=VARCHAR}, #{creat_time,jdbcType=TIMESTAMP}, 
       #{update_time,jdbcType=TIMESTAMP})
   </insert>
@@ -159,8 +159,8 @@
       <if test="phone != null">
         phone,
       </if>
-      <if test="QQ != null">
-        QQ,
+      <if test="qq != null">
+        qq,
       </if>
       <if test="wechat != null">
         wechat,
@@ -174,8 +174,8 @@
       <if test="parent_phone != null">
         parent_phone,
       </if>
-      <if test="parent_QQ != null">
-        parent_QQ,
+      <if test="parent_qq != null">
+        parent_qq,
       </if>
       <if test="parent_wechat != null">
         parent_wechat,
@@ -218,8 +218,8 @@
       <if test="phone != null">
         #{phone,jdbcType=CHAR},
       </if>
-      <if test="QQ != null">
-        #{QQ,jdbcType=VARCHAR},
+      <if test="qq != null">
+        #{qq,jdbcType=VARCHAR},
       </if>
       <if test="wechat != null">
         #{wechat,jdbcType=VARCHAR},
@@ -233,8 +233,8 @@
       <if test="parent_phone != null">
         #{parent_phone,jdbcType=CHAR},
       </if>
-      <if test="parent_QQ != null">
-        #{parent_QQ,jdbcType=VARCHAR},
+      <if test="parent_qq != null">
+        #{parent_qq,jdbcType=VARCHAR},
       </if>
       <if test="parent_wechat != null">
         #{parent_wechat,jdbcType=VARCHAR},
@@ -286,8 +286,8 @@
       <if test="record.phone != null">
         phone = #{record.phone,jdbcType=CHAR},
       </if>
-      <if test="record.QQ != null">
-        QQ = #{record.QQ,jdbcType=VARCHAR},
+      <if test="record.qq != null">
+        qq = #{record.qq,jdbcType=VARCHAR},
       </if>
       <if test="record.wechat != null">
         wechat = #{record.wechat,jdbcType=VARCHAR},
@@ -301,8 +301,8 @@
       <if test="record.parent_phone != null">
         parent_phone = #{record.parent_phone,jdbcType=CHAR},
       </if>
-      <if test="record.parent_QQ != null">
-        parent_QQ = #{record.parent_QQ,jdbcType=VARCHAR},
+      <if test="record.parent_qq != null">
+        parent_qq = #{record.parent_qq,jdbcType=VARCHAR},
       </if>
       <if test="record.parent_wechat != null">
         parent_wechat = #{record.parent_wechat,jdbcType=VARCHAR},
@@ -332,12 +332,12 @@
       state = #{record.state,jdbcType=CHAR},
       email = #{record.email,jdbcType=VARCHAR},
       phone = #{record.phone,jdbcType=CHAR},
-      QQ = #{record.QQ,jdbcType=VARCHAR},
+      qq = #{record.qq,jdbcType=VARCHAR},
       wechat = #{record.wechat,jdbcType=VARCHAR},
       address = #{record.address,jdbcType=VARCHAR},
       parent_name = #{record.parent_name,jdbcType=VARCHAR},
       parent_phone = #{record.parent_phone,jdbcType=CHAR},
-      parent_QQ = #{record.parent_QQ,jdbcType=VARCHAR},
+      parent_qq = #{record.parent_qq,jdbcType=VARCHAR},
       parent_wechat = #{record.parent_wechat,jdbcType=VARCHAR},
       parent_address = #{record.parent_address,jdbcType=VARCHAR},
       creat_time = #{record.creat_time,jdbcType=TIMESTAMP},
@@ -373,8 +373,8 @@
       <if test="phone != null">
         phone = #{phone,jdbcType=CHAR},
       </if>
-      <if test="QQ != null">
-        QQ = #{QQ,jdbcType=VARCHAR},
+      <if test="qq != null">
+        qq = #{qq,jdbcType=VARCHAR},
       </if>
       <if test="wechat != null">
         wechat = #{wechat,jdbcType=VARCHAR},
@@ -388,8 +388,8 @@
       <if test="parent_phone != null">
         parent_phone = #{parent_phone,jdbcType=CHAR},
       </if>
-      <if test="parent_QQ != null">
-        parent_QQ = #{parent_QQ,jdbcType=VARCHAR},
+      <if test="parent_qq != null">
+        parent_qq = #{parent_qq,jdbcType=VARCHAR},
       </if>
       <if test="parent_wechat != null">
         parent_wechat = #{parent_wechat,jdbcType=VARCHAR},
@@ -416,12 +416,12 @@
       state = #{state,jdbcType=CHAR},
       email = #{email,jdbcType=VARCHAR},
       phone = #{phone,jdbcType=CHAR},
-      QQ = #{QQ,jdbcType=VARCHAR},
+      qq = #{qq,jdbcType=VARCHAR},
       wechat = #{wechat,jdbcType=VARCHAR},
       address = #{address,jdbcType=VARCHAR},
       parent_name = #{parent_name,jdbcType=VARCHAR},
       parent_phone = #{parent_phone,jdbcType=CHAR},
-      parent_QQ = #{parent_QQ,jdbcType=VARCHAR},
+      parent_qq = #{parent_qq,jdbcType=VARCHAR},
       parent_wechat = #{parent_wechat,jdbcType=VARCHAR},
       parent_address = #{parent_address,jdbcType=VARCHAR},
       creat_time = #{creat_time,jdbcType=TIMESTAMP},
@@ -431,6 +431,6 @@
 
   <!--  模糊查询  %名字%        -->
   <select id="findUserById" parameterType="java.lang.String" resultType="com.aloogn.fs.user.bean.User">
-        select * from user where id like '%' #{id} '%'
-    </select>
+      select * from user where id like '%' #{id} '%'
+  </select>
 </mapper>

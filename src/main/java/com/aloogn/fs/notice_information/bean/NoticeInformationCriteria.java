@@ -495,73 +495,143 @@ public class NoticeInformationCriteria {
             return (Criteria) this;
         }
 
-        public Criteria andShowBadgeIsNull() {
-            addCriterion("showBadge is null");
+        public Criteria andShow_teacherIsNull() {
+            addCriterion("show_teacher is null");
             return (Criteria) this;
         }
 
-        public Criteria andShowBadgeIsNotNull() {
-            addCriterion("showBadge is not null");
+        public Criteria andShow_teacherIsNotNull() {
+            addCriterion("show_teacher is not null");
             return (Criteria) this;
         }
 
-        public Criteria andShowBadgeEqualTo(String value) {
-            addCriterion("showBadge =", value, "showBadge");
+        public Criteria andShow_teacherEqualTo(String value) {
+            addCriterion("show_teacher =", value, "show_teacher");
             return (Criteria) this;
         }
 
-        public Criteria andShowBadgeNotEqualTo(String value) {
-            addCriterion("showBadge <>", value, "showBadge");
+        public Criteria andShow_teacherNotEqualTo(String value) {
+            addCriterion("show_teacher <>", value, "show_teacher");
             return (Criteria) this;
         }
 
-        public Criteria andShowBadgeGreaterThan(String value) {
-            addCriterion("showBadge >", value, "showBadge");
+        public Criteria andShow_teacherGreaterThan(String value) {
+            addCriterion("show_teacher >", value, "show_teacher");
             return (Criteria) this;
         }
 
-        public Criteria andShowBadgeGreaterThanOrEqualTo(String value) {
-            addCriterion("showBadge >=", value, "showBadge");
+        public Criteria andShow_teacherGreaterThanOrEqualTo(String value) {
+            addCriterion("show_teacher >=", value, "show_teacher");
             return (Criteria) this;
         }
 
-        public Criteria andShowBadgeLessThan(String value) {
-            addCriterion("showBadge <", value, "showBadge");
+        public Criteria andShow_teacherLessThan(String value) {
+            addCriterion("show_teacher <", value, "show_teacher");
             return (Criteria) this;
         }
 
-        public Criteria andShowBadgeLessThanOrEqualTo(String value) {
-            addCriterion("showBadge <=", value, "showBadge");
+        public Criteria andShow_teacherLessThanOrEqualTo(String value) {
+            addCriterion("show_teacher <=", value, "show_teacher");
             return (Criteria) this;
         }
 
-        public Criteria andShowBadgeLike(String value) {
-            addCriterion("showBadge like", value, "showBadge");
+        public Criteria andShow_teacherLike(String value) {
+            addCriterion("show_teacher like", value, "show_teacher");
             return (Criteria) this;
         }
 
-        public Criteria andShowBadgeNotLike(String value) {
-            addCriterion("showBadge not like", value, "showBadge");
+        public Criteria andShow_teacherNotLike(String value) {
+            addCriterion("show_teacher not like", value, "show_teacher");
             return (Criteria) this;
         }
 
-        public Criteria andShowBadgeIn(List<String> values) {
-            addCriterion("showBadge in", values, "showBadge");
+        public Criteria andShow_teacherIn(List<String> values) {
+            addCriterion("show_teacher in", values, "show_teacher");
             return (Criteria) this;
         }
 
-        public Criteria andShowBadgeNotIn(List<String> values) {
-            addCriterion("showBadge not in", values, "showBadge");
+        public Criteria andShow_teacherNotIn(List<String> values) {
+            addCriterion("show_teacher not in", values, "show_teacher");
             return (Criteria) this;
         }
 
-        public Criteria andShowBadgeBetween(String value1, String value2) {
-            addCriterion("showBadge between", value1, value2, "showBadge");
+        public Criteria andShow_teacherBetween(String value1, String value2) {
+            addCriterion("show_teacher between", value1, value2, "show_teacher");
             return (Criteria) this;
         }
 
-        public Criteria andShowBadgeNotBetween(String value1, String value2) {
-            addCriterion("showBadge not between", value1, value2, "showBadge");
+        public Criteria andShow_teacherNotBetween(String value1, String value2) {
+            addCriterion("show_teacher not between", value1, value2, "show_teacher");
+            return (Criteria) this;
+        }
+
+        public Criteria andShow_studentIsNull() {
+            addCriterion("show_student is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andShow_studentIsNotNull() {
+            addCriterion("show_student is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andShow_studentEqualTo(String value) {
+            addCriterion("show_student =", value, "show_student");
+            return (Criteria) this;
+        }
+
+        public Criteria andShow_studentNotEqualTo(String value) {
+            addCriterion("show_student <>", value, "show_student");
+            return (Criteria) this;
+        }
+
+        public Criteria andShow_studentGreaterThan(String value) {
+            addCriterion("show_student >", value, "show_student");
+            return (Criteria) this;
+        }
+
+        public Criteria andShow_studentGreaterThanOrEqualTo(String value) {
+            addCriterion("show_student >=", value, "show_student");
+            return (Criteria) this;
+        }
+
+        public Criteria andShow_studentLessThan(String value) {
+            addCriterion("show_student <", value, "show_student");
+            return (Criteria) this;
+        }
+
+        public Criteria andShow_studentLessThanOrEqualTo(String value) {
+            addCriterion("show_student <=", value, "show_student");
+            return (Criteria) this;
+        }
+
+        public Criteria andShow_studentLike(String value) {
+            addCriterion("show_student like", value, "show_student");
+            return (Criteria) this;
+        }
+
+        public Criteria andShow_studentNotLike(String value) {
+            addCriterion("show_student not like", value, "show_student");
+            return (Criteria) this;
+        }
+
+        public Criteria andShow_studentIn(List<String> values) {
+            addCriterion("show_student in", values, "show_student");
+            return (Criteria) this;
+        }
+
+        public Criteria andShow_studentNotIn(List<String> values) {
+            addCriterion("show_student not in", values, "show_student");
+            return (Criteria) this;
+        }
+
+        public Criteria andShow_studentBetween(String value1, String value2) {
+            addCriterion("show_student between", value1, value2, "show_student");
+            return (Criteria) this;
+        }
+
+        public Criteria andShow_studentNotBetween(String value1, String value2) {
+            addCriterion("show_student not between", value1, value2, "show_student");
             return (Criteria) this;
         }
     }

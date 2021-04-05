@@ -43,5 +43,4 @@ public interface UserHomeworkMapper {
 
     //自定义删除
     boolean deleteHomeworkByExample(int id);
-
 }

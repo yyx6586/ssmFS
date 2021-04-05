@@ -8,7 +8,8 @@
     <result column="title" jdbcType="VARCHAR" property="title" />
     <result column="creat_time" jdbcType="TIMESTAMP" property="creat_time" />
     <result column="update_time" jdbcType="TIMESTAMP" property="update_time" />
-    <result column="showBadge" jdbcType="VARCHAR" property="showBadge" />
+    <result column="show_teacher" jdbcType="VARCHAR" property="show_teacher" />
+    <result column="show_student" jdbcType="VARCHAR" property="show_student" />
   </resultMap>
   <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.aloogn.fs.notice_information.bean.NoticeInformation">
     <result column="information" jdbcType="LONGVARCHAR" property="information" />
@@ -72,7 +73,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    id, account, grade_id, title, creat_time, update_time, showBadge
+    id, account, grade_id, title, creat_time, update_time, show_teacher, show_student
   </sql>
   <sql id="Blob_Column_List">
     information
@@ -128,10 +129,12 @@
   <insert id="insert" parameterType="com.aloogn.fs.notice_information.bean.NoticeInformation">
     insert into notice_information (id, account, grade_id, 
       title, creat_time, update_time, 
-      showBadge, information)
+      show_teacher, show_student, information
+      )
     values (#{id,jdbcType=INTEGER}, #{account,jdbcType=CHAR}, #{grade_id,jdbcType=CHAR}, 
       #{title,jdbcType=VARCHAR}, #{creat_time,jdbcType=TIMESTAMP}, #{update_time,jdbcType=TIMESTAMP}, 
-      #{showBadge,jdbcType=VARCHAR}, #{information,jdbcType=LONGVARCHAR})
+      #{show_teacher,jdbcType=VARCHAR}, #{show_student,jdbcType=VARCHAR}, #{information,jdbcType=LONGVARCHAR}
+      )
   </insert>
   <insert id="insertSelective" parameterType="com.aloogn.fs.notice_information.bean.NoticeInformation">
     insert into notice_information
@@ -154,8 +157,11 @@
       <if test="update_time != null">
         update_time,
       </if>
-      <if test="showBadge != null">
-        showBadge,
+      <if test="show_teacher != null">
+        show_teacher,
+      </if>
+      <if test="show_student != null">
+        show_student,
       </if>
       <if test="information != null">
         information,
@@ -180,8 +186,11 @@
       <if test="update_time != null">
         #{update_time,jdbcType=TIMESTAMP},
       </if>
-      <if test="showBadge != null">
-        #{showBadge,jdbcType=VARCHAR},
+      <if test="show_teacher != null">
+        #{show_teacher,jdbcType=VARCHAR},
+      </if>
+      <if test="show_student != null">
+        #{show_student,jdbcType=VARCHAR},
       </if>
       <if test="information != null">
         #{information,jdbcType=LONGVARCHAR},
@@ -215,8 +224,11 @@
       <if test="record.update_time != null">
         update_time = #{record.update_time,jdbcType=TIMESTAMP},
       </if>
-      <if test="record.showBadge != null">
-        showBadge = #{record.showBadge,jdbcType=VARCHAR},
+      <if test="record.show_teacher != null">
+        show_teacher = #{record.show_teacher,jdbcType=VARCHAR},
+      </if>
+      <if test="record.show_student != null">
+        show_student = #{record.show_student,jdbcType=VARCHAR},
       </if>
       <if test="record.information != null">
         information = #{record.information,jdbcType=LONGVARCHAR},
@@ -234,7 +246,8 @@
       title = #{record.title,jdbcType=VARCHAR},
       creat_time = #{record.creat_time,jdbcType=TIMESTAMP},
       update_time = #{record.update_time,jdbcType=TIMESTAMP},
-      showBadge = #{record.showBadge,jdbcType=VARCHAR},
+      show_teacher = #{record.show_teacher,jdbcType=VARCHAR},
+      show_student = #{record.show_student,jdbcType=VARCHAR},
       information = #{record.information,jdbcType=LONGVARCHAR}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
@@ -248,7 +261,8 @@
       title = #{record.title,jdbcType=VARCHAR},
       creat_time = #{record.creat_time,jdbcType=TIMESTAMP},
       update_time = #{record.update_time,jdbcType=TIMESTAMP},
-      showBadge = #{record.showBadge,jdbcType=VARCHAR}
+      show_teacher = #{record.show_teacher,jdbcType=VARCHAR},
+      show_student = #{record.show_student,jdbcType=VARCHAR}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -271,8 +285,11 @@
       <if test="update_time != null">
         update_time = #{update_time,jdbcType=TIMESTAMP},
       </if>
-      <if test="showBadge != null">
-        showBadge = #{showBadge,jdbcType=VARCHAR},
+      <if test="show_teacher != null">
+        show_teacher = #{show_teacher,jdbcType=VARCHAR},
+      </if>
+      <if test="show_student != null">
+        show_student = #{show_student,jdbcType=VARCHAR},
       </if>
       <if test="information != null">
         information = #{information,jdbcType=LONGVARCHAR},
@@ -287,7 +304,8 @@
       title = #{title,jdbcType=VARCHAR},
       creat_time = #{creat_time,jdbcType=TIMESTAMP},
       update_time = #{update_time,jdbcType=TIMESTAMP},
-      showBadge = #{showBadge,jdbcType=VARCHAR},
+      show_teacher = #{show_teacher,jdbcType=VARCHAR},
+      show_student = #{show_student,jdbcType=VARCHAR},
       information = #{information,jdbcType=LONGVARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
@@ -298,22 +316,23 @@
       title = #{title,jdbcType=VARCHAR},
       creat_time = #{creat_time,jdbcType=TIMESTAMP},
       update_time = #{update_time,jdbcType=TIMESTAMP},
-      showBadge = #{showBadge,jdbcType=VARCHAR}
+      show_teacher = #{show_teacher,jdbcType=VARCHAR},
+      show_student = #{show_student,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
 
   <!--  自定义查询  -->
   <select id="selectInforationByExample" parameterType="java.lang.String" resultMap="BaseResultMap">
-      select notice_information.*from notice_information where account = #{value}
-  </select>
+    select notice_information.*from notice_information where account = #{value}
+</select>
 
   <!--  自定义查询  -->
   <select id="selectInforationByGrade_id" resultMap="BaseResultMap">
-      select notice_information.*from notice_information where grade_id = #{grade_id} order by id desc limit #{curPage}, #{pageSize}
-  </select>
+    select notice_information.*from notice_information where grade_id = #{grade_id} order by id desc limit #{curPage}, #{pageSize}
+</select>
 
   <!--  自定义删除  -->
   <delete id="deleteInforationByExample" parameterType="java.lang.Integer">
-      delete from notice_information where id = #{id}
-  </delete>
+    delete from notice_information where id = #{id}
+</delete>
 </mapper>

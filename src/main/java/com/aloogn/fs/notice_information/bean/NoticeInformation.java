@@ -16,7 +16,9 @@ public class NoticeInformation implements Serializable {
 
     private Date update_time;
 
-    private String showBadge;
+    private String show_teacher;
+
+    private String show_student;
 
     private String information;
 
@@ -70,12 +72,20 @@ public class NoticeInformation implements Serializable {
         this.update_time = update_time;
     }
 
-    public String getShowBadge() {
-        return showBadge;
+    public String getShow_teacher() {
+        return show_teacher;
     }
 
-    public void setShowBadge(String showBadge) {
-        this.showBadge = showBadge == null ? null : showBadge.trim();
+    public void setShow_teacher(String show_teacher) {
+        this.show_teacher = show_teacher == null ? null : show_teacher.trim();
+    }
+
+    public String getShow_student() {
+        return show_student;
+    }
+
+    public void setShow_student(String show_student) {
+        this.show_student = show_student == null ? null : show_student.trim();
     }
 
     public String getInformation() {
@@ -104,7 +114,8 @@ public class NoticeInformation implements Serializable {
             && (this.getTitle() == null ? other.getTitle() == null : this.getTitle().equals(other.getTitle()))
             && (this.getCreat_time() == null ? other.getCreat_time() == null : this.getCreat_time().equals(other.getCreat_time()))
             && (this.getUpdate_time() == null ? other.getUpdate_time() == null : this.getUpdate_time().equals(other.getUpdate_time()))
-            && (this.getShowBadge() == null ? other.getShowBadge() == null : this.getShowBadge().equals(other.getShowBadge()))
+            && (this.getShow_teacher() == null ? other.getShow_teacher() == null : this.getShow_teacher().equals(other.getShow_teacher()))
+            && (this.getShow_student() == null ? other.getShow_student() == null : this.getShow_student().equals(other.getShow_student()))
             && (this.getInformation() == null ? other.getInformation() == null : this.getInformation().equals(other.getInformation()));
     }
 
@@ -118,7 +129,8 @@ public class NoticeInformation implements Serializable {
         result = prime * result + ((getTitle() == null) ? 0 : getTitle().hashCode());
         result = prime * result + ((getCreat_time() == null) ? 0 : getCreat_time().hashCode());
         result = prime * result + ((getUpdate_time() == null) ? 0 : getUpdate_time().hashCode());
-        result = prime * result + ((getShowBadge() == null) ? 0 : getShowBadge().hashCode());
+        result = prime * result + ((getShow_teacher() == null) ? 0 : getShow_teacher().hashCode());
+        result = prime * result + ((getShow_student() == null) ? 0 : getShow_student().hashCode());
         result = prime * result + ((getInformation() == null) ? 0 : getInformation().hashCode());
         return result;
     }

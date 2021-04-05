@@ -93,7 +93,7 @@ public class GrowRecordContorller {
     // 将图片保存到数据库
     @RequestMapping("/saveImg")
     @ResponseBody
-    public JSONUtil saveImg(String account, String gradeclass_id, String description, String name, String showBadge, String status, String token){
+    public JSONUtil saveImg(String account, String gradeclass_id, String description, String name, String show_teacher, String show_student, String release_time, String status, String token){
         jsonUtil.setCode(-1);
 
         if(StringUtils.isNullOrEmpty(account)){
@@ -116,7 +116,7 @@ public class GrowRecordContorller {
 //            for(int i = 0; i < str.length; i ++){
 //                growRecordService.saveImg(account, gradeclass_id, description, name, token);
 //            }
-            growRecordService.saveImg(account, gradeclass_id, description, name, showBadge, status, token);
+            growRecordService.saveImg(account, gradeclass_id, description, name, show_teacher, show_student, release_time, status, token);
             jsonUtil.setCode(1);
             jsonUtil.setMsg("上传成功");
         } catch (Exception e) {
@@ -125,10 +125,10 @@ public class GrowRecordContorller {
         return jsonUtil;
     }
 
-    // 根据 gradeclass_id 获取成长记录
+    // 根据 gradeclass_id 获取成长记录列表
     @RequestMapping("/recordInformation")
     @ResponseBody
-    public JSONUtil recordInformation(String gradeclass_id, String showBadge, String status, Integer curPage, Integer pageSize, String token){
+    public JSONUtil recordInformation(String gradeclass_id, String status, String token){
         jsonUtil.setCode(-1);
 
         if(StringUtils.isNullOrEmpty(gradeclass_id)){
@@ -137,7 +137,30 @@ public class GrowRecordContorller {
         }
 
         try{
-            List<GrowRecord> list = growRecordService.recordInformation(gradeclass_id, showBadge, status, curPage, pageSize, token);
+            List<GrowRecord> list = growRecordService.recordInformation(gradeclass_id, status, token);
+            jsonUtil.setCode(1);
+            jsonUtil.setMsg("获取数据成功");
+            jsonUtil.setData(list);
+        } catch (Exception e) {
+            jsonUtil.setMsg("获取数据失败");
+        }
+
+        return jsonUtil;
+    }
+
+    // 根据 gradeclass_id 获取成长记录详情
+    @RequestMapping("/recordInformationDetails")
+    @ResponseBody
+    public JSONUtil recordInformationDetails(String gradeclass_id, String status,String release_time, String token){
+        jsonUtil.setCode(-1);
+
+        if(StringUtils.isNullOrEmpty(gradeclass_id)){
+            jsonUtil.setMsg("班级错误，请联系管理员");
+            return jsonUtil;
+        }
+
+        try{
+            List<GrowRecord> list = growRecordService.recordInformationDetails(gradeclass_id, status, release_time, token);
             jsonUtil.setCode(1);
             jsonUtil.setMsg("获取数据成功");
             jsonUtil.setData(list);
@@ -151,16 +174,16 @@ public class GrowRecordContorller {
     // 根据 gradeclass_id 与 描述 修改成长记录
     @RequestMapping("/updateRecord")
     @ResponseBody
-    public JSONUtil updateRecord(String gradeclass_id, String description, String showBadge, String token) throws Exception{
+    public JSONUtil updateRecord(String gradeclass_id, String description, String release_time, String show_teacher, String token) throws Exception{
         jsonUtil.setCode(-1);
 
-        if(StringUtils.isNullOrEmpty(showBadge)){
+        if(StringUtils.isNullOrEmpty(release_time)){
             jsonUtil.setMsg("获取数据错误，请重新点击");
             return jsonUtil;
         }
 
         try {
-            growRecordService.updateRecord(gradeclass_id, description, showBadge,token);
+            growRecordService.updateRecord(gradeclass_id, description, show_teacher, release_time, token);
             jsonUtil.setCode(1);
             jsonUtil.setMsg("修改成功");
         }catch (Exception e){
@@ -185,6 +208,42 @@ public class GrowRecordContorller {
             }
         } catch (Exception e) {
             jsonUtil.setMsg("删除失败，请重新删除");
+        }
+        return jsonUtil;
+    }
+
+    // 修改数据库里的 showBadge 属性
+    @RequestMapping("/updateRecordShowBadge")
+    @ResponseBody
+    public JSONUtil updateShowBadge(String id, String gradeclass_id, String release_time, String show_teacher, String show_student, String token) throws Exception{
+        jsonUtil.setCode(-1);
+
+        if(StringUtils.isNullOrEmpty(gradeclass_id)){
+            jsonUtil.setMsg("获取数据错误，请重新点击");
+            return jsonUtil;
+        }
+
+        if(StringUtils.isNullOrEmpty(release_time)){
+            jsonUtil.setMsg("获取数据错误，请重新点击");
+            return jsonUtil;
+        }
+
+        if(StringUtils.isNullOrEmpty(show_teacher)){
+            jsonUtil.setMsg("获取数据错误，请重新点击");
+            return jsonUtil;
+        }
+
+        if(StringUtils.isNullOrEmpty(show_student)){
+            jsonUtil.setMsg("获取数据错误，请重新点击");
+            return jsonUtil;
+        }
+
+        try {
+            growRecordService.updateShowBadge(id, gradeclass_id, release_time, show_teacher, show_student, token);
+            jsonUtil.setCode(1);
+            jsonUtil.setMsg("修改成功");
+        }catch (Exception e){
+            jsonUtil.setMsg("修改错误" + e.getMessage());
         }
         return jsonUtil;
     }

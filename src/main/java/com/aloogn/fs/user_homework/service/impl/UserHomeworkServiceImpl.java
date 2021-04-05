@@ -12,7 +12,7 @@ public class UserHomeworkServiceImpl implements UserHomeworkService {
     UserHomeworkMapper userHomeworkMapper;
 
     @Override
-    public UserHomework homeworkSchoolRelease(String account, String gradeclass_id, String title, String subject_name, String homework, String showBadge, String token) throws Exception {
+    public UserHomework homeworkSchoolRelease(String account, String gradeclass_id, String title, String subject_name, String homework, String show_teacher, String show_student, String token) throws Exception {
         //将信息插入数据库表中
         UserHomework userHomework = new UserHomework();
         userHomework.setAccount(account);
@@ -20,7 +20,8 @@ public class UserHomeworkServiceImpl implements UserHomeworkService {
         userHomework.setTitle(title);
         userHomework.setHomework(homework);
         userHomework.setSubject_name(subject_name);
-        userHomework.setShowBadge(showBadge);
+        userHomework.setShow_teacher(show_teacher);
+        userHomework.setShow_student(show_student);
 
         //将信息插入表中
         userHomeworkMapper.insertSelective(userHomework);
@@ -50,7 +51,7 @@ public class UserHomeworkServiceImpl implements UserHomeworkService {
 
     //  修改数据库里的 showBadge 属性
     @Override
-    public void updateHomeworkShowBadge(int id, String showBadge, String token) throws Exception {
+    public void updateHomeworkShowBadge(int id, String show_teacher, String show_student, String token) throws Exception {
         // 检查该通知是否存在
         UserHomework userHomework = userHomeworkMapper.selectByPrimaryKey(id);
         if(userHomework == null){
@@ -60,7 +61,8 @@ public class UserHomeworkServiceImpl implements UserHomeworkService {
         // 修改 showBadge
         userHomework = new UserHomework();
         userHomework.setId(id);
-        userHomework.setShowBadge(showBadge);
+        userHomework.setShow_teacher(show_teacher);
+        userHomework.setShow_student(show_student);
 
         userHomeworkMapper.updateByPrimaryKeySelective(userHomework);
     }
@@ -79,7 +81,7 @@ public class UserHomeworkServiceImpl implements UserHomeworkService {
 
     // 根据 id 修改作业信息
     @Override
-    public void updateHomework(int id, String title, String homework, String showBadge,  String token) throws Exception {
+    public void updateHomework(int id, String title, String homework, String show_teacher,  String token) throws Exception {
         // 检查该作业是否存在
         UserHomework userHomework = userHomeworkMapper.selectByPrimaryKey(id);
         if(userHomework == null){
@@ -91,7 +93,7 @@ public class UserHomeworkServiceImpl implements UserHomeworkService {
         userHomework.setTitle(title);
         userHomework.setId(id);
         userHomework.setHomework(homework);
-        userHomework.setShowBadge(showBadge);
+        userHomework.setShow_teacher(show_teacher);
 
         userHomeworkMapper.updateByPrimaryKeySelective(userHomework);
 

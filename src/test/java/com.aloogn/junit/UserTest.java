@@ -16,7 +16,7 @@ public class UserTest extends BaseTest {
 
 	@Autowired
 	private UserService userService;
-	
+
 	@Test
 	public void testSignIn() {
 		ResultActions resultActions;
@@ -43,8 +43,8 @@ public class UserTest extends BaseTest {
 			e.printStackTrace();
 			System.out.println("==========结果为：==========\n" + e.getMessage() + "\n");
 		}
-       
-        
+
+
 	}
 
 	@Test
